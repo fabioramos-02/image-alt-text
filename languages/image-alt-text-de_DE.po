@@ -1,0 +1,4311 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPretarget\n"
+"POT-Creation-Date: 2024-10-17 12:30+0530\n"
+"PO-Revision-Date: 2024-10-17 12:40+0530\n"
+"Last-Translator: Codepage GmbH <bri@codepage.net>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/class-iat.php:40 includes/class-iat.php:53
+#: includes/class-iat.php:244 includes/class-iat.php:283
+#: includes/class-iat.php:326 includes/class-iat.php:402
+msgid "Security check. Hacking not allowed"
+msgstr "Sicherheitsüberprüfung. Hacken nicht erlaubt"
+
+#: includes/class-iat.php:249 includes/class-iat.php:407
+msgid "Please enter alt text to update."
+msgstr "Bitte geben Sie zum Aktualisieren den Alternativtext ein."
+
+#: includes/class-iat.php:258
+msgid "Alt text added."
+msgstr "Alt-Text hinzugefügt."
+
+#: includes/class-iat.php:261
+msgid "Something is wrong to add alt text"
+msgstr "Beim Hinzufügen von Alternativtext stimmt etwas nicht"
+
+#: includes/class-iat.php:288
+msgid "Something is wrong with the copied text."
+msgstr "Mit dem kopierten Text stimmt etwas nicht."
+
+#: includes/class-iat.php:298
+msgid "The alt text is the same as the copied text."
+msgstr "Der Alternativtext ist derselbe wie der kopierte Text."
+
+#: includes/class-iat.php:302 includes/class-iat.php:421
+msgid "Alt text updated."
+msgstr "Alt-Text aktualisiert."
+
+#: includes/class-iat.php:305 includes/class-iat.php:424
+msgid "Failed to update alt text."
+msgstr "Alternativtext konnte nicht aktualisiert werden."
+
+#: includes/class-iat.php:341
+msgid "There are no attachments found that are missing alt text."
+msgstr "Es wurden keine Anhänge gefunden, in denen Alternativtext fehlt."
+
+#: includes/class-iat.php:417
+msgid ""
+"Alt text entered is the same as the previous one. Please add new alt text."
+msgstr ""
+"Der eingegebene Alt-Text ist derselbe wie der vorherige. Bitte fügen Sie "
+"neuen Alt-Text hinzu."
+
+#: includes/iat-general.php:36 includes/iat-general.php:37
+#: view/iat-admin-view-header.php:2
+msgid "Image Alt Text"
+msgstr "Bild-Alt-Text"
+
+#: includes/iat-general.php:45 includes/iat-general.php:46
+#: view/iat-admin-view-header.php:8
+msgid "With Alt"
+msgstr "Mit Alt"
+
+#: includes/iat-general.php:51 includes/iat-general.php:52
+#: view/iat-admin-view-header.php:9
+msgid "Without Alt"
+msgstr "Ohne Alt"
+
+#: includes/iat-general.php:126
+msgid ""
+"Are you sure you want to copy the alt text for all missing media items using "
+"the corresponding post media names?"
+msgstr ""
+"Sind Sie sicher, dass Sie den Alternativtext für alle fehlenden "
+"Medienelemente unter Verwendung der entsprechenden Post-Mediennamen kopieren "
+"möchten?"
+
+#: includes/iat-general.php:179 includes/iat-general.php:204
+msgid "Something is wrong"
+msgstr "Etwas stimmt nicht"
+
+#: includes/iat-general.php:233
+msgid ""
+"If you've found our WordPress plugin <strong>Image Alt Text</strong> "
+"helpful, we would greatly appreciate it if you could take a moment to leave "
+"us a review. Your feedback helps us improve our plugin and also lets other "
+"users know the value of our product. Thank you for taking the time to share "
+"your thoughts!"
+msgstr ""
+"Wenn Sie unser WordPress-Plugin <strong>Image Alt Text</strong> als "
+"hilfreich empfunden haben, würden wir uns freuen, wenn Sie sich einen Moment "
+"Zeit nehmen und uns eine Bewertung hinterlassen könnten. Ihr Feedback hilft "
+"uns, unser Plugin zu verbessern und zeigt anderen Nutzern, wie wertvoll "
+"unser Produkt ist. Vielen Dank, dass Sie sich die Zeit nehmen, uns Ihre "
+"Gedanken mitzuteilen!"
+
+#: includes/iat-general.php:238
+msgid "Review"
+msgstr "Rezension"
+
+#: includes/iat-general.php:241
+msgid "Remind me later"
+msgstr "Erinnern Sie mich später"
+
+#: includes/iat-general.php:244
+msgid "Do not show again"
+msgstr "Nicht mehr anzeigen"
+
+#: view/iat-admin-view-with-alt.php:16 view/iat-admin-view-without-alt.php:35
+msgid "Image"
+msgstr "Bild"
+
+#: view/iat-admin-view-with-alt.php:17 view/iat-admin-view-without-alt.php:36
+msgid "Name"
+msgstr "Name"
+
+#: view/iat-admin-view-with-alt.php:18 view/iat-admin-view-without-alt.php:37
+msgid "URL"
+msgstr "URL"
+
+#: view/iat-admin-view-with-alt.php:19 view/iat-admin-view-without-alt.php:38
+msgid "Created date"
+msgstr "Erstellungsdatum"
+
+#: view/iat-admin-view-with-alt.php:20 view/iat-admin-view-without-alt.php:39
+msgid "Add alt text"
+msgstr "Alternativtext hinzufügen"
+
+#: view/iat-admin-view-with-alt.php:21 view/iat-admin-view-without-alt.php:40
+msgid "Attached To"
+msgstr "Angehängt an"
+
+#: view/iat-admin-view-with-alt.php:22 view/iat-admin-view-without-alt.php:41
+msgid "Action"
+msgstr "Aktion"
+
+#: view/iat-admin-view-without-alt.php:22
+msgid ""
+"This button will copy post name to image alt text for all missing alt text "
+"media files."
+msgstr ""
+"Mit dieser Schaltfläche wird der Beitragsname für alle fehlenden "
+"Alternativtext-Mediendateien in den Bild-Alttext kopiert."
+
+#: view/iat-admin-view-without-alt.php:24
+msgid "Bulk Alt Text"
+msgstr "Massen-Alt-Text"
+
+#~ msgid "No data available."
+#~ msgstr "Keine Daten vorhanden."
+
+#~ msgid "Rest API"
+#~ msgstr "Rest API"
+
+#~ msgid "Add New"
+#~ msgstr "Hinzufügen"
+
+#~ msgid "Back to list"
+#~ msgstr "Zurück"
+
+#~ msgid "General"
+#~ msgstr "Allgemein"
+
+#~ msgid "Description"
+#~ msgstr "Beschreibung"
+
+#~ msgid "Friendly name for identifying these keys."
+#~ msgstr "Anzeigename zur Identifikation der API Keys."
+
+#~ msgid "User"
+#~ msgstr "Benutzer"
+
+#~ msgid "User of these keys."
+#~ msgstr "Nutzer dieser API Keys."
+
+#~ msgid "Nothing selected"
+#~ msgstr "Keine Auswahl"
+
+#~ msgid "Select user"
+#~ msgstr "Nutzer wählen"
+
+#~ msgid "Permission"
+#~ msgstr "Berechtigung"
+
+#~ msgid "Select the access type of these keys."
+#~ msgstr "Zugriffstyp für API Keys festlegen."
+
+#~ msgid "Read"
+#~ msgstr "Lesen"
+
+#~ msgid "Write"
+#~ msgstr "Schreiben"
+
+#~ msgid "Read/Write"
+#~ msgstr "Lesen/Schreiben"
+
+#~ msgid "Generated Keys"
+#~ msgstr "Generierte API Keys"
+
+#~ msgid "Consumer Key"
+#~ msgstr "Öffentlicher Schlüssel"
+
+#~ msgid "Consumer Secret"
+#~ msgstr "Geheimer Schlüssel"
+
+#~ msgid "Note"
+#~ msgstr "Notiz"
+
+#~ msgid "Generate API key"
+#~ msgstr "API Key generieren"
+
+#~ msgid "Description is missing."
+#~ msgstr "Beschreibung fehlt."
+
+#~ msgid "User is missing."
+#~ msgstr "Fehlende Benutzer-ID."
+
+#~ msgid "Permissions is missing."
+#~ msgstr "Fehlende Berechtigungen."
+
+#~ msgid "You do not have permission to assign API Keys to the selected user."
+#~ msgstr ""
+#~ "Keine Berechtigung, um dem ausgewählten Benutzer einen API Key zuzuweisen."
+
+#~ msgid "API Key updated successfully."
+#~ msgstr "API Key erfolgreich aktualisiert."
+
+#~ msgid ""
+#~ "API Key generated successfully. Make sure to copy your new keys now as "
+#~ "the secret key will be hidden once you leave this page."
+#~ msgstr ""
+#~ "API Key wurde erfolgreich generiert. Den neuen API Key jetzt kopieren, da "
+#~ "der geheime Schlüssel beim Verlassen dieser Seite ausgeblendet wird."
+
+#~ msgid "Edit"
+#~ msgstr "Bearbeiten"
+
+#~ msgid "Delete"
+#~ msgstr "Löschen"
+
+#~ msgid "Default"
+#~ msgstr "Standard"
+
+#~ msgid "For External Use"
+#~ msgstr "Für externe Nutzung"
+
+#~ msgid "On"
+#~ msgstr "Ein"
+
+#~ msgid "Off"
+#~ msgstr "Aus"
+
+#~ msgid "Shortcode"
+#~ msgstr "Shortcode"
+
+#~ msgid "Type"
+#~ msgstr "Typ"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Select bulk action"
+#~ msgstr "Massenaktion auswählen"
+
+#~ msgid "Bulk Actions"
+#~ msgstr "Massenaktionen"
+
+#~ msgid "Apply"
+#~ msgstr "Anwenden"
+
+#~ msgid "item"
+#~ msgstr "Eintrag"
+
+#~ msgid "items"
+#~ msgstr "Einträge"
+
+#, php-format
+#~ msgid "%s "
+#~ msgid_plural "%s "
+#~ msgstr[0] "%s "
+#~ msgstr[1] "%s "
+
+#~ msgid "First page"
+#~ msgstr "Erste Seite"
+
+#~ msgid "Previous page"
+#~ msgstr "Vorherige Seite"
+
+#~ msgid "Current Page"
+#~ msgstr "Aktuelle Seite"
+
+#, php-format
+#~ msgctxt "paging"
+#~ msgid "%1$s of %2$s"
+#~ msgstr "%1$s of %2$s"
+
+#~ msgid "Next page"
+#~ msgstr "Nächste Seite"
+
+#~ msgid "Last page"
+#~ msgstr "Letzte Seite"
+
+#~ msgid "Item per page"
+#~ msgstr "Einträge pro Seite"
+
+#~ msgid "Upgrade"
+#~ msgstr "Upgrade"
+
+#~ msgid "All Codes"
+#~ msgstr "Alle Codes"
+
+#~ msgid "All Smart Links"
+#~ msgstr "Alle Smart Links"
+
+#~ msgid "Add Code"
+#~ msgstr "Code hinzufügen"
+
+#~ msgid "Add Smart Link"
+#~ msgstr "Neuer Smart Link"
+
+#~ msgid "Cookie Notice"
+#~ msgstr "Cookie-Hinweise"
+
+#~ msgid "Settings"
+#~ msgstr "Einstellungen"
+
+#~ msgid "Read more"
+#~ msgstr "Mehr lesen"
+
+#~ msgid "More news coming soon"
+#~ msgstr "Weitere Nachrichten folgen in Kürze"
+
+#~ msgid "Read all entries"
+#~ msgstr "Alle Einträge lesen"
+
+#~ msgid "WPMarketingLabs.com Quick Access"
+#~ msgstr "WPMarketingLabs.com Quick Access"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nein"
+
+#~ msgid "None"
+#~ msgstr "Keine"
+
+#~ msgid "Code Name"
+#~ msgstr "Code Name"
+
+#~ msgid "Globally"
+#~ msgstr "Global"
+
+#~ msgid "Woo Integration"
+#~ msgstr "Woo Integration"
+
+#~ msgid "Code"
+#~ msgstr "Code"
+
+#~ msgid "Cookie-Category"
+#~ msgstr "Cookie-Kategorie"
+
+#~ msgid "There is error in bulk edit."
+#~ msgstr "Es liegt ein Fehler in der Massenbearbeitung vor."
+
+#~ msgid "Bulk tags removed successfully."
+#~ msgstr "Bulk-Tags erfolgreich entfernt."
+
+#~ msgid "There is error in bulk tag remove."
+#~ msgstr "Es liegt ein Fehler beim Entfernen von Bulk-Tags vor."
+
+#~ msgid "Cookie Notice WordPress (Default internal)"
+#~ msgstr "Cookie Hinweis WordPress (Standard intern)"
+
+#~ msgid "Internal"
+#~ msgstr "Intern"
+
+#~ msgid "External"
+#~ msgstr "Extern"
+
+#~ msgid "External Overlay"
+#~ msgstr "Externes Overlay"
+
+#~ msgid "Internal Overlay"
+#~ msgstr "Internes Overlay"
+
+#~ msgid "Call To Action"
+#~ msgstr "Call-to-Action"
+
+#~ msgid "Content Box"
+#~ msgstr "Content Box"
+
+#~ msgid "Social Proof Bubble"
+#~ msgstr "Social Proof Bubble"
+
+#~ msgid "Chat Box"
+#~ msgstr "Chat Box"
+
+#~ msgid "Add My Own Script"
+#~ msgstr "Mein eigenes Skript hinzufügen"
+
+#~ msgid "Link"
+#~ msgstr "Link"
+
+#~ msgid "seconds"
+#~ msgstr "Sekunden"
+
+#~ msgid "Reset Stats"
+#~ msgstr "Statistiken zurücksetzen"
+
+#~ msgid "ROI Booster"
+#~ msgstr "ROI Booster"
+
+#~ msgid "Copy"
+#~ msgstr "Kopieren"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "In Zwischenablage kopieren"
+
+#~ msgid "Hits"
+#~ msgstr "Aufrufe"
+
+#~ msgid "Codes"
+#~ msgstr "Codes"
+
+#~ msgid "Tags"
+#~ msgstr "Tags"
+
+#~ msgid "Target"
+#~ msgstr "Linkziel"
+
+#~ msgid "Top Bar"
+#~ msgstr "Top Bar"
+
+#~ msgid "Smart Link"
+#~ msgstr "Smart Link"
+
+#~ msgid "All"
+#~ msgstr "Alle"
+
+#~ msgid "Filter"
+#~ msgstr "Auswahl einschränken"
+
+#~ msgid "Bulk Tag Edit"
+#~ msgstr "Bulk-Tag bearbeiten"
+
+#~ msgid "Top Bar Enable"
+#~ msgstr "Top Bar Ein"
+
+#~ msgid "Top Bar Disable"
+#~ msgstr "Top Bar Aus"
+
+#~ msgid "Enable Status"
+#~ msgstr "Status Ein"
+
+#~ msgid "Disable Status"
+#~ msgstr "Status Aus"
+
+#~ msgid "Consumer Key Ending in..."
+#~ msgstr "Öffentlicher Schlüssel endet in…"
+
+#~ msgid "Revoke"
+#~ msgstr "Widerrufen"
+
+#~ msgid "User does not exists with given cosumer key and secrets."
+#~ msgstr "Benutzer mit dem angegebenen Schlüssel existiert nicht."
+
+#~ msgid "Consumer secret is invalid."
+#~ msgstr "Geheimer Schlüssel ist ungültig."
+
+#~ msgid "Campaign id should be numeric."
+#~ msgstr "Kampagnen ID muss numerisch sein."
+
+#~ msgid "Campaign Type out of scope."
+#~ msgstr "Kampagnen-Typ außerhalb des Gültigkeitsbereichs."
+
+#~ msgid "No valid JSON format found."
+#~ msgstr "Kein gültiges JSON Format gefunden."
+
+#~ msgid "Internal Smart Link"
+#~ msgstr "Externer Smart Link"
+
+#~ msgid "Please upgrade to unlock unlimited codes and smart links."
+#~ msgstr ""
+#~ "Bitte auf die PRO Version upgraden, um unbegrenzte Codes und Smart Links "
+#~ "zu nutzen."
+
+#~ msgid "was successfully saved"
+#~ msgstr "erfolgreich gespeichert"
+
+#~ msgid "was successfully updated"
+#~ msgstr "erfolgreich aktualisiert"
+
+#~ msgid "There was an error while saving"
+#~ msgstr "Leider trat beim Speichern ein Fehler auf"
+
+#~ msgid "Internal Overlay Smart Link"
+#~ msgstr "Internes Overlay"
+
+#~ msgid ""
+#~ "campaign_post_id should be blank object while adding new data in External "
+#~ "and External Overlay Smart Link."
+#~ msgstr ""
+#~ "Campaign_post_id sollte leer sein, während neue Daten für die Felder "
+#~ "External und External Overlay Smart Link hinzugefügt werden."
+
+#~ msgid "external_url is required."
+#~ msgstr "Externe URL wird benötigt."
+
+#~ msgid "custom_post_slug name is required"
+#~ msgstr "Custom Post Slug wird benötigt"
+
+#~ msgid "External Overlay Smart Link"
+#~ msgstr "Externes Overlay"
+
+#~ msgid ""
+#~ "Please make sure to select an active Cookie Notice. You can create and "
+#~ "customize them in the menu 'Cookie Notice'."
+#~ msgstr ""
+#~ "Bitte einen aktiven Cookie-Hinweis auswählen. Diese können im Menü "
+#~ "'Cookie Hinweis' erstellt und bearbeitet werden."
+
+#~ msgid "External Smart Link"
+#~ msgstr "URL der Zielseite"
+
+#~ msgid "Iframe is not allowed"
+#~ msgstr "Iframe ist nicht erlaubt"
+
+#~ msgid "This Custom Smart Link already exists"
+#~ msgstr "Dieser Smart Link ist bereits vorhanden"
+
+#~ msgid "This Facebook Photo Link Ad Smart Link already exists"
+#~ msgstr "Dieser Foto-Smart Link ist bereits vorhanden"
+
+#~ msgid "Iframe is not allowed."
+#~ msgstr "Iframe ist nicht erlaubt."
+
+#~ msgid "Iframe is allowed."
+#~ msgstr "Iframe ist erlaubt."
+
+#~ msgid "Smart Link Deleted Successfully"
+#~ msgstr "Smart Link erfolgreich gelöscht"
+
+#~ msgid "There is an error to delete Smart Link"
+#~ msgstr "Es gab einen Fehler beim Löschen des Smart Link"
+
+#~ msgid "Unique identifier for the object."
+#~ msgstr "Eindeutige Identifikation für das Objekt."
+
+#~ msgid "Campaign Name"
+#~ msgstr "Kampagnen Name"
+
+#~ msgid "Campaign Type"
+#~ msgstr "Kampagnen Typ"
+
+#~ msgid "The API key provided does not have read permissions."
+#~ msgstr "Dieser API Schlüssel hat keine Leseberechtigung."
+
+#~ msgid "The API key provided does not have write permissions."
+#~ msgstr "Dieser API Schlüssel hat keine Schreibberechtigung."
+
+#~ msgid "Unknown request method."
+#~ msgstr "Unbekannte Anfrage."
+
+#~ msgid ""
+#~ "WPMarketingLabs API. Use a consumer key in the username field and a "
+#~ "consumer secret in the password field."
+#~ msgstr ""
+#~ "WPMarketingLabs API. Den öffentlichen Schlüssel im Feld Benutzername "
+#~ "eingeben und den geheimen Schlüssel im Feld Kennwort erfassen."
+
+#, php-format
+#~ msgid "Items deleted: %d"
+#~ msgstr "%d Element(e) gelöscht"
+
+#~ msgid "Item not found"
+#~ msgstr "Nicht gefunden"
+
+#~ msgid "Update Code"
+#~ msgstr "Code aktualisieren"
+
+#~ msgid "Add New Code"
+#~ msgstr "Neuen Code hinzufügen"
+
+#~ msgid "Notes"
+#~ msgstr "Notizen"
+
+#~ msgid ""
+#~ "This tab allows you to add internal notes to this code (only you can see "
+#~ "this). This can be helpful to have quick access to all the associated "
+#~ "Smart Links (e.g. ads, analytics, conversion tracking, management, ...), "
+#~ "or to collect the relevant details/change history in one place."
+#~ msgstr ""
+#~ "Auf dieser Registerkarte können dem Code interne Notizen hinzugefügt "
+#~ "werden (nicht öffentlich, kann nur in dieser Ansicht gesehen werden). "
+#~ "Dies kann hilfreich sein, um zugehörige URLs (z. B. Anzeigen, "
+#~ "Statistiken, Conversion-Tracking, Verwaltung usw.) zu hinterlegen oder "
+#~ "die relevanten Details / Änderungsprotokoll zentral zu verwalten."
+
+#~ msgid "Save Settings"
+#~ msgstr "Einstellungen speichern"
+
+#~ msgid "Cancel"
+#~ msgstr "Abbrechen"
+
+#~ msgid "Event Parameter"
+#~ msgstr "Event Parameter"
+
+#~ msgid ""
+#~ "Enter additional value for each given parameter. These will only be "
+#~ "loaded on selected pages, posts or categories.<br><br><strong>Note:</"
+#~ "strong> If you've activated WooCommerce, all of these parameters are "
+#~ "already filled and passed back to Facebook™ or Google™.<br>"
+#~ msgstr ""
+#~ "Fügt bei Bedarf zusätzliche Werte zu den folgenden Parametern hinzu. "
+#~ "Diese werden nur auf den gewählten Seiten, Beiträgen oder Kategorien "
+#~ "geladen.<br><br><strong>Hinweis:</strong> Wenn die Option WooCommerce "
+#~ "aktiviert ist, dann werden diese Parameter automatisch mit den Werten aus "
+#~ "den Produkt-Einstellungen gefüllt und an Facebook™/Google™ übertragen.<br>"
+
+#~ msgid "Content Type"
+#~ msgstr "Art des Inhalts"
+
+#~ msgid "Value"
+#~ msgstr "Wert"
+
+#~ msgid "Currency"
+#~ msgstr "Währung"
+
+#~ msgid "Content Name"
+#~ msgstr "Content Name"
+
+#~ msgid "Content ID"
+#~ msgstr "Content ID"
+
+#~ msgid "Close"
+#~ msgstr "Schließen"
+
+#~ msgid "Submit"
+#~ msgstr "Speichern"
+
+#~ msgid "Post/Page/Category Selection"
+#~ msgstr "Seite/Beitrag/Kategorien Auswahl"
+
+#~ msgid "Code name is required"
+#~ msgstr "Name wird benötigt"
+
+#~ msgid "Platform is required"
+#~ msgstr "Plattform wird benötigt"
+
+#~ msgid "Code is required"
+#~ msgstr "PixelID wird benötigt"
+
+#~ msgid "Please enter correct Facebook Pixel ID"
+#~ msgstr "Korrekte Facebook™ Pixel ID eintragen"
+
+#~ msgid "Please enter correct Site Tag ID"
+#~ msgstr "Korrekte Google Ads ID eintragen"
+
+#~ msgid "Please enter only numeric Site Tag ID"
+#~ msgstr "Bitte nur den numerischen Teil der Site Tag ID eingeben"
+
+#~ msgid "Please enter Google Ads Event Snippet ID"
+#~ msgstr "Bitte Google Ads Event Snippet-ID eintragen"
+
+#~ msgid "Please select event type"
+#~ msgstr "Event-Typ wählen"
+
+#~ msgid "Please enter only Google Analytics ID"
+#~ msgstr "Bitte Google Ads Event Snippet-ID eintragen"
+
+#~ msgid ""
+#~ "Please select page, post or category to trigger your events because you "
+#~ "don't have woocommerce integration active for this code."
+#~ msgstr ""
+#~ "Bitte Seite, Beitrag oder Kategorie auswählen, um die Events aufzulösen "
+#~ "(keine aktive WooCommerce Integration für diesen Code)."
+
+#~ msgid "Please select page, post or category to trigger your events."
+#~ msgstr ""
+#~ "Bitte Seite, Beitrag oder Kategorie auswählen, um die Events auszulösen."
+
+#~ msgid "Code was successfully saved. "
+#~ msgstr "Code erfolgreich gespeichert. "
+
+#~ msgid ""
+#~ "IMPORTANT: Since this code has not been assigned to a cookie category, it "
+#~ "will ALWAYS be loaded according to the settings below, regardless of the "
+#~ "user choice regarding cookie usage. For example, this can be used for "
+#~ "conversion tracking codes."
+#~ msgstr ""
+#~ "WICHTIG: Da dieser Code keiner Cookie-Kategorie zugewiesen ist, wird er "
+#~ "IMMER gemäß untenstehenden Einstellungen geladen, unabhängig von der "
+#~ "Benutzerwahl hinsichtlich Cookie-Einsatz. Das kann bspw. für Conversion "
+#~ "Tracking Codes eingesetzt werden."
+
+#~ msgid "There was an error while saving platform"
+#~ msgstr "Leider trat beim Speichern des Tag ein Fehler auf"
+
+#~ msgid "Code was successfully updated. "
+#~ msgstr "Code erfolgreich aktualisiert. "
+
+#~ msgid "There was an error while updating platform"
+#~ msgstr "Leider trat beim Aktualisieren ein Fehler auf"
+
+#~ msgid "Transfer from Post/Page=>"
+#~ msgstr "Transfer von Seite/Beitrag =>"
+
+#~ msgid "lengthMenu"
+#~ msgstr "Anzeigen _MENU_ Einträge"
+
+#~ msgid "zeroRecords"
+#~ msgstr "Keine passenden Datensätze gefunden"
+
+#~ msgid "info"
+#~ msgstr "Zeigt _START_ bis _END_ von _TOTAL_ Einträgen"
+
+#~ msgid "infoEmpty"
+#~ msgstr "Keine Datensätze verfügbar"
+
+#~ msgid "infoFiltered"
+#~ msgstr "(gefiltert aus _MAX_ Summensätzen)"
+
+#~ msgid "search"
+#~ msgstr "Suchen"
+
+#~ msgid "first"
+#~ msgstr "Beginn"
+
+#~ msgid "last"
+#~ msgstr "Ende"
+
+#~ msgid "next"
+#~ msgstr "Nächste"
+
+#~ msgid "previous"
+#~ msgstr "Vorherige"
+
+#~ msgid "Pages"
+#~ msgstr "Seiten"
+
+#~ msgid "Posts"
+#~ msgstr "Beiträge"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorien"
+
+#~ msgid "More"
+#~ msgstr "Mehr"
+
+#~ msgid "Confirm"
+#~ msgstr "Bestätigen"
+
+#~ msgid "Conversion Tracking Code?"
+#~ msgstr "Conversion Tracking aktivieren?"
+
+#~ msgid "Conversion Code"
+#~ msgstr "Conversion Code"
+
+#~ msgid ""
+#~ "Activate this option to load a conversion tracking code (e.g. Facebook "
+#~ "Event or Google Conversion Event Snippet) code on selected WordPress "
+#~ "content (e.g. thank you page after email optin, or upsell page in the "
+#~ "checkout process etc.)"
+#~ msgstr ""
+#~ "Diese Option aktivieren, um einen Conversion Tracking Code (bspw. "
+#~ "Facebook Event oder Google Conversion Event Snippet) Code auf "
+#~ "ausgewählten WordPress Inhalten zu laden (bspw. Danke-Seite nach E-Mail "
+#~ "Optin, oder Upsell-Seite im Verkaufsprozess etc.)"
+
+#~ msgid "Platform"
+#~ msgstr "Codes"
+
+#~ msgid "Select Platform"
+#~ msgstr "Plattform wählen"
+
+#~ msgid ""
+#~ "If you enable this option, the conversion code will always be loaded, no "
+#~ "matter what selection the user might have made regarding the Cookie "
+#~ "Notice settings."
+#~ msgstr ""
+#~ "Wenn diese Option aktiviert ist, wird der Conversion-Code immer geladen, "
+#~ "unabhängig davon, welche Auswahl der Benutzer in den Cookie Hinweis "
+#~ "Einstellungen getroffen hat."
+
+#~ msgid "Always load base code"
+#~ msgstr "Basis-Code immer laden"
+
+#~ msgid "Select Facebook Pixel"
+#~ msgstr "Facebook™ Pixel wählen"
+
+#~ msgid "Select Google Ads Pixel"
+#~ msgstr "Google Ads Site Tag wählen"
+
+#~ msgid "Only numeric values"
+#~ msgstr "Nur numerische Werte"
+
+#~ msgid "Click here to find your pixel ID"
+#~ msgstr "Hier klicken, um Pixel ID aufzurufen"
+
+#~ msgid "Pixel ID"
+#~ msgstr "Pixel ID"
+
+#~ msgid ""
+#~ "&lt;br&gt;&lt;br&gt;Click <a href=\"https://wpmarketinglabs.com/pixelID\" "
+#~ "target=\"_blank\">here</a> to find your pixel ID"
+#~ msgstr ""
+#~ "&lt;br&gt;&lt;br&gt;Klicke <a href=“https://wpmarketinglabs.com/pixelID” "
+#~ "target=“_blank”>hier</a>, um Deine Pixel ID zu finden"
+
+#~ msgid "Site Tag ID"
+#~ msgstr "Site Tag ID"
+
+#~ msgid "UA-000000-2"
+#~ msgstr "UA-000000-2"
+
+#~ msgid "Tracking ID"
+#~ msgstr "Tracking ID"
+
+#~ msgid ""
+#~ "Enter your Google Analytics tracking id (UA-XXXXXXX-XX). This option "
+#~ "actually only supports the Global Site Tag (gtag.js) code. For older "
+#~ "versions please use the &apos;&apos;Between &apos;&apos;HEAD&apos;&apos; "
+#~ "Tag&apos;&apos; integration."
+#~ msgstr ""
+#~ "Bitte die Google Analytics Tracking ID (UA-XXXXXXXXXXXXX-XX) eingeben. "
+#~ "Diese Option unterstützt derzeit nur den Code Global Site Tag (gtag.js). "
+#~ "Für ältere Versionen bitte die Integration &apos;&apos;Zwischen &apos;"
+#~ "&apos;HEAD&apos;&apos; Tag einfügen&apos;&apos; verwenden."
+
+#~ msgid "Tag ID"
+#~ msgstr "Site Tag ID"
+
+#~ msgid ""
+#~ "Click <a href=\"https://wpmarketinglabs.com/pixelID\" "
+#~ "target=\"_blank\">here</a> to find your pixel ID"
+#~ msgstr ""
+#~ "Klicke <a href=“https://wpmarketinglabs.com/pixelID” "
+#~ "target=“_blank”>hier</a>, um Deine Pixel ID zu finden"
+
+#~ msgid "Anonymize IP"
+#~ msgstr "IP anonymisieren"
+
+#~ msgid ""
+#~ "Under the European Union’s General Data Protection Regulation (GDPR), an "
+#~ "IP address is considered personal data. Google Analytics tracks and "
+#~ "stores IP addresses of website users, in order to report on geolocation "
+#~ "data. If you activate this setting, Google’s internal JavaScript library "
+#~ "will anonymize the users IP address (e.g. 8.8.8.8 will turn into "
+#~ "8.8.8.0). <a href=\"https://support.google.com/analytics/answer/2763052\" "
+#~ "target=\"_blank\">Click here </a> for more details."
+#~ msgstr ""
+#~ "Nach der Allgemeinen Datenschutzverordnung der Europäischen Union (DSGVO) "
+#~ "gilt eine IP-Adresse als ein personenbezogener Datensatz. Google "
+#~ "Analytics speichert IP-Adressen von Website-Besuchern, um darüber "
+#~ "Berichte zur Herkunft zu erstellen. Wenn diese Einstellung aktiviert "
+#~ "wird, anonymisiert die Google interne JavaScript-Bibliothek die IP-"
+#~ "Adresse des Benutzers (aus 8.8.8.8 wird z. B. 8.8.8.0). <a href=\"https://"
+#~ "support.google.com/analytics/answer/2763052\" target=\"_blank\"> Hier "
+#~ "klicken </a> für weitere Details."
+
+#~ msgid "Activate ECommerce reports"
+#~ msgstr "E-Commerce-Berichte aktivieren"
+
+#~ msgid ""
+#~ "The e-commerce reports in Google Analytics allow you to analyze the "
+#~ "buying activity. To enable this, you must activate the Ecommerce feature "
+#~ "- please <a href=\"https://support.google.com/analytics/answer/1037249\" "
+#~ "target=\"_blank\"> click here </a> for more information."
+#~ msgstr ""
+#~ "Bitte die Google Analytics Tracking ID (UA-XXXXXXXXXXXXX-XX) eingeben. "
+#~ "Diese Option unterstützt derzeit nur den Code Global Site Tag (gtag.js). "
+#~ "Für ältere Versionen bitte die Integration \"Zwischen HEAD Tag einfügen\" "
+#~ "verwenden. <br> <br> Die E-Commerce-Berichte in Google Analytics "
+#~ "ermöglichen es, die Kaufaktivität zu analysieren. Dazu muss aber die E-"
+#~ "Commerce Funktion auf Google Analytics aktiviert sein - bitte <a "
+#~ "href=\"https://support.google.com/analytics/answer/1037249\" "
+#~ "target=\"_blank\"> hier klicken </a>für weitere Informationen."
+
+#~ msgid ""
+#~ "You can use the Ecommerce reports in Google Analytics to analyze purchase "
+#~ "activity and see product and transaction information, like average order "
+#~ "value, conversion rate, time to purchase, and other data. Make sure that "
+#~ "the \"Ecommerce\" feature is enabled in your Google Analytics reports! "
+#~ "<br><strong>Please <a href=\"https://support.google.com/analytics/"
+#~ "answer/1009612\" target=\"_blank\">click here</a> for details</strong>."
+#~ msgstr ""
+#~ "Mit E-Commerce-Berichte Ansicht in Google Analytics kann man die "
+#~ "Kaufaktivität analysieren sowie Produkt- und Transaktionsinformationen "
+#~ "wie den durchschnittlichen Bestellwert, die Conversion-Rate, die "
+#~ "Kaufdauer und andere Daten anzeigen lassen. Dafür muss die Funktion ‘E-"
+#~ "Commerce’ in den Google Analytics-Berichten aktiviert sein!"
+#~ "<br><strong>Bitte <a href=\"https://support.google.com/analytics/"
+#~ "answer/1009612\" target=\"_blank\">hier klicken</a> für Details.</strong>."
+
+#~ msgid "Code in HTML Body"
+#~ msgstr "Code im HTML Body"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Select Event(s)"
+#~ msgstr "Event(s) wählen"
+
+#~ msgid "ViewContent"
+#~ msgstr "ViewContent"
+
+#~ msgid "AddToCart"
+#~ msgstr "AddToCart"
+
+#~ msgid "InitiateCheckout"
+#~ msgstr "InitiateCheckout"
+
+#~ msgid "Purchase"
+#~ msgstr "Purchase"
+
+#~ msgid "Lead"
+#~ msgstr "Lead"
+
+#~ msgid "CompleteRegistration"
+#~ msgstr "CompleteRegistration"
+
+#~ msgid "Click here to setup additional parameters"
+#~ msgstr "Hier klicken, um Event Parameter zu verwenden"
+
+#~ msgid "Use this code globally"
+#~ msgstr "Code global verwenden"
+
+#~ msgid ""
+#~ "“Use code globally” determines whether this code should be used only for "
+#~ "all internal, all external, or both categories."
+#~ msgstr ""
+#~ "“Code global verwenden” legt fest, ob der erfasste Code nur für alle "
+#~ "internen, externen oder für beide Kategorien verwendet werden soll."
+
+#~ msgid "Internal & Internal Overlays"
+#~ msgstr "Interne Overlays"
+
+#~ msgid "External & External Overlays"
+#~ msgstr "Extern & Externe Overlays"
+
+#~ msgid "Everywhere"
+#~ msgstr "Überall"
+
+#~ msgid ""
+#~ "This site tag is enabled for Woo, we track all conversion and order "
+#~ "values."
+#~ msgstr ""
+#~ "Dieser Site-Tag ist für WooCommerce aktiviert. Alle Conversions und "
+#~ "Bestellwerte werden getrackt."
+
+#~ msgid "Where to appear"
+#~ msgstr "Code einfügen"
+
+#~ msgid "Select Page/Post or Category"
+#~ msgstr "Seite/Beitrag oder Kategorien wählen"
+
+#~ msgid "Conversion code will be placed on:"
+#~ msgstr "Conversion Tracking Code wird auf folgenden Seiten geladen:"
+
+#~ msgid "Posts:"
+#~ msgstr "Beitrag:"
+
+#~ msgid "Pages:"
+#~ msgstr "Seite:"
+
+#~ msgid "Categories:"
+#~ msgstr "Kategorien:"
+
+#~ msgid "Install and activate WooCommerce in order to use this feature."
+#~ msgstr ""
+#~ "WooCommerce muss installiert und aktiviert sein, um dieses Feature nutzen "
+#~ "zu können."
+
+#~ msgid ""
+#~ "If you activate this option, the global site tag will be added to "
+#~ "WooCommerce pages like product and cart page, checkout and thank you page."
+#~ "<br><br>Note: If you assign an event snippet, the snippet will be loaded "
+#~ "on the order confirmation page automatically. The total order amount will "
+#~ "be sent to Google as well."
+#~ msgstr ""
+#~ "Mit dieser Option wird der Site Tag auf WooCommerce spezifischen Seiten "
+#~ "wie Produkteseite, Warenkorb, Kasse sowie Dankesseite automatisch geladen."
+#~ "<br><br>Hinweis: Wird diesem Code ein Event zugeordnet, so wird der "
+#~ "Bestellwert automatisch an Google Ads gesendet."
+
+#~ msgid "WooCommerce integration"
+#~ msgstr "WooCommerce Integration"
+
+#~ msgid ""
+#~ "WooCommerce is already enabled for another pixel and can not be activated "
+#~ "twice"
+#~ msgstr ""
+#~ "WooCommerce ist bereits für einen anderen Pixel aktiviert und kann nicht "
+#~ "mehrfach aktiviert werden"
+
+#~ msgid ""
+#~ "Please note that if you don&apos;t select a category, the code will "
+#~ "always be loaded and cannot be enabled or disabled in the Cookie Notice "
+#~ "settings."
+#~ msgstr ""
+#~ "Wenn keine Kategorie ausgewählt wird, wird der Code immer geladen und "
+#~ "kann in den Cookie Hinweis-Einstellungen durch den Nutzer nicht manuell "
+#~ "aktiviert oder deaktiviert werden."
+
+#~ msgid "Please select Cookie-Category"
+#~ msgstr "Cookie Kategorie wählen"
+
+#~ msgid "Public Name"
+#~ msgstr "Öffentlicher Name"
+
+#~ msgid "Public Description"
+#~ msgstr "Öffentliche Beschreibung"
+
+#~ msgid "Loading Delay"
+#~ msgstr "Zeitverzögerung"
+
+#~ msgid "Enter the delay in seconds after which the code should be loaded."
+#~ msgstr ""
+#~ "Verzögerung in Sekunden angeben, nach der der Code geladen werden soll."
+
+#~ msgid "Enter the delay in seconds"
+#~ msgstr "Zeitverzögerung in Sekunden"
+
+#~ msgid "Delay for specific"
+#~ msgstr "Zeitverzögerung anwenden auf"
+
+#~ msgid "WP Post"
+#~ msgstr "Beitrag"
+
+#~ msgid "WP Page"
+#~ msgstr "Seite"
+
+#~ msgid "WordPress Category"
+#~ msgstr "Kategorie"
+
+#~ msgid "WordPress Post"
+#~ msgstr "Beitrag"
+
+#~ msgid "WordPress Page"
+#~ msgstr "Seite"
+
+#~ msgid "WP Category"
+#~ msgstr "Kategorie"
+
+#~ msgid ""
+#~ "Please note that if you don't select a category, the code will always be "
+#~ "loaded and cannot be enabled or disabled in the Cookie Notice settings."
+#~ msgstr ""
+#~ "Wenn keine Kategorie ausgewählt wird, wird der Code immer geladen und "
+#~ "kann in den Cookie Hinweis-Einstellungen nicht aktiviert oder deaktiviert "
+#~ "werden."
+
+#~ msgid ""
+#~ "The e-commerce reports in Google Analytics allow you to analyze the "
+#~ "buying activity. To enable this, you must activate the Ecommerce feature "
+#~ "- please <a href='https://support.google.com/analytics/answer/1037249' "
+#~ "target='_blank'> click here </a> for more information."
+#~ msgstr ""
+#~ "Bitte die Google Analytics Tracking ID (UA-XXXXXXXXXXXXX-XX) eingeben. "
+#~ "Diese Option unterstützt derzeit nur den Code Global Site Tag (gtag.js). "
+#~ "Für ältere Versionen bitte die Integration \"Zwischen 'HEAD' Tag "
+#~ "einfügen\" verwenden. <br> <br> Die E-Commerce-Berichte in Google "
+#~ "Analytics ermöglichen es, die Kaufaktivität zu analysieren. Dazu muss "
+#~ "aber die E-Commerce Funktion auf Google Analytics aktiviert sein - bitte "
+#~ "<a href='https://support.google.com/analytics/answer/1037249' "
+#~ "target='_blank'> hier klicken </a>für weitere Informationen."
+
+#~ msgid "Style"
+#~ msgstr "Design / Layout"
+
+#~ msgid "Enable Cookie Notice"
+#~ msgstr "Cookie-Hinweis aktivieren"
+
+#~ msgid "Internal Name"
+#~ msgstr "Interne Bezeichnung"
+
+#~ msgid "Cookie Internal Name"
+#~ msgstr "Cookie-Hinweis - interner Name eingeben"
+
+#~ msgid ""
+#~ "The internal name is not publicly visible and is used only in the "
+#~ "WordPress internal area. It allows to quickly assign different cookie "
+#~ "categories to the respective Cookie Notices."
+#~ msgstr ""
+#~ "Die interne Bezeichnung ist nicht öffentlich ersichtlich und wird nur im "
+#~ "WordPress-internen Bereich genutzt. Damit ist eine schnelle Zuordnung von "
+#~ "verschiedenen Cookie Kategorien zu den jeweiligen Cookie Hinweisen "
+#~ "einfach vorzunehmen."
+
+#~ msgid "Cookie Notice Internal Name"
+#~ msgstr "Cookie-Hinweis - interner Name eingeben"
+
+#~ msgid "Dialog Heading"
+#~ msgstr "Überschrift"
+
+#~ msgid "Dialog heading"
+#~ msgstr "Überschrift"
+
+#~ msgid "Dialog Body Text"
+#~ msgstr "Beschreibung"
+
+#~ msgid "General Cookie Declaration"
+#~ msgstr "Beschreibung allgemeine Cookie-Hinweise (“Über Cookies”)"
+
+#~ msgid "Activate One-Click Confirmation"
+#~ msgstr "Ein-Klick-Bestätigung aktivieren"
+
+#~ msgid "Accept Button"
+#~ msgstr "“Akzeptieren” Button"
+
+#~ msgid "Accept"
+#~ msgstr "Alle auswählen und zustimmen"
+
+#~ msgid ""
+#~ "The button text to accept the use of Cookies - once clicked, the Cookie "
+#~ "Notice disappears."
+#~ msgstr ""
+#~ "Button Text, um den Einsatz von Cookies zu akzeptieren bzw. die "
+#~ "Einstellungen zu speichern."
+
+#~ msgid "Cancel Button"
+#~ msgstr "“Ablehnen” Button"
+
+#~ msgid ""
+#~ "The button text to decline the use of Cookies - once clicked, the Cookie "
+#~ "Notice disappears."
+#~ msgstr ""
+#~ "Button Text, um den Einsatz von Cookies abzulehnen bzw. die Einstellungen "
+#~ "nicht zu speichern und damit den Cookie Hinweis auszublenden."
+
+#~ msgid "Cookie Management"
+#~ msgstr "Cookie Management"
+
+#~ msgid "Necessary Categories: loaded before Cookies are accepted/declined"
+#~ msgstr ""
+#~ "Erforderliche Kategorien: werden geladen, bevor Cookies akzeptiert/"
+#~ "abgelehnt werden"
+
+#~ msgid "Necessary Categories"
+#~ msgstr "Erforderliche Kategorien"
+
+#~ msgid ""
+#~ "These Cookie-Categories are pre-selected and being loaded as soon as the "
+#~ "user arrives on the site. They cannot be unchecked by the user and are in "
+#~ "effect until the user makes a choice about the use of cookies.&lt;br&gt;"
+#~ "&lt;br&gt;IMPORTANT: if you want any of these categories to keep being "
+#~ "active after the user has ‘Accepted’ or ‘Declined’ the use of cookies, "
+#~ "make sure to also add them in the corresponding fields below!"
+#~ msgstr ""
+#~ "Diese Cookie-Kategorien sind vorgewählt und werden geladen, sobald der "
+#~ "Benutzer die Seite geladen hat. Diese können vom Benutzer nicht "
+#~ "deaktiviert werden und sind wirksam, bis sich der Benutzer für die "
+#~ "Verwendung von Cookies entscheidet! &lt;br&gt;&lt;br&gt;WICHTIG: Wenn "
+#~ "eine dieser Kategorien weiterhin aktiv sein soll, nachdem der Benutzer "
+#~ "die Verwendung von Cookies akzeptiert oder abgelehnt hat, müssen diese "
+#~ "auch in die entsprechenden Felder unten eingefügt werden!"
+
+#~ msgid "Standard Categories: Categories displayed in Cookie Notice"
+#~ msgstr ""
+#~ "Standard Kategorien: Kategorien, die in Cookie-Hinweis angezeigt werden"
+
+#~ msgid "Standard Categories"
+#~ msgstr "Standard Kategorien"
+
+#~ msgid ""
+#~ "The selected categories are being displayed in the Cookie Notice, if "
+#~ "there is at least one code assigned to the respective Category. Empty "
+#~ "categories are not displayed. If a Code is assigned to a Category later "
+#~ "on, the Category and Code will automatically appear in the frontend. With "
+#~ "the Categories shown in the front end, the user can manually select which "
+#~ "should be loaded as soon as the use of Cookie Notice has been accepted. "
+#~ "If a Category is removed here, it must first be added again to be shown "
+#~ "in the frontend."
+#~ msgstr ""
+#~ "Die hier ausgewählten Kategorien werden im Cookie Hinweis angezeigt, "
+#~ "sofern mindestens ein Code in der jeweiligen Kategorie zugewiesen wurde. "
+#~ "Leere Kategorien werden nicht dargestellt. Wenn zu einem späteren "
+#~ "Zeitpunkt ein Code einer Kategorie zugewiesen wird, erscheinen diese dann "
+#~ "auch automatisch im Frontend. Bei den im Frontend dargestellten "
+#~ "Kategorien kann der Benutzer manuell selektieren, welche geladen werden "
+#~ "sollen, sobald die Verwendung von Cookies akzeptiert wurde. Wenn eine "
+#~ "Kategorie hier entfernt wird, muss sie zuerst wieder hinzugefügt werden, "
+#~ "um im Frontend zu erscheinen."
+
+#~ msgid "Decline Cookies: Mandatory Categories that are being loaded anyway"
+#~ msgstr ""
+#~ "Cookies abgelehnt: Obligatorische Kategorien, die trotzdem geladen "
+#~ "werden, falls die Nutzung von Cookies abgelehnt wurde"
+
+#~ msgid "Decline Cookies"
+#~ msgstr "Cookies ablehnen"
+
+#~ msgid ""
+#~ "These Categories are being loaded if a user declines the use of Cookies."
+#~ msgstr ""
+#~ "Diese Kategorien werden geladen, wenn ein Benutzer die Verwendung von "
+#~ "Cookies abgelehnt hat."
+
+#~ msgid "Force Cookie Reset for User"
+#~ msgstr "Cookie Benutzer Einstellungen zurücksetzen"
+
+#~ msgid ""
+#~ "If you&apos;ve made changes in the Cookie Categories and/or Codes and "
+#~ "want to force the user to accept the changes, set this switch to ON. This "
+#~ "will remove the current settings from the user&apos;s browser and ask for "
+#~ "consent."
+#~ msgstr ""
+#~ "Wenn Änderungen an den Cookie-Kategorien und / oder Codes vorgenommen "
+#~ "wurden, kann der Benutzer dazu aufgefordert werden, diese zu bestätigen. "
+#~ "Wird der Schalter auf “EIN” gestellt, werden die aktuellen Einstellungen "
+#~ "zurückgesetzt und der Benutzer wird zur Auswahl aufgefordert."
+
+#~ msgid ""
+#~ "Select any pages, posts or categories where you don't want to show the "
+#~ "cookie notice (e.g. landing pages, thank you pages, etc.). The users "
+#~ "regular cookie settings will apply for these as well. If the cookies have "
+#~ "been accepted before, they will be loaded here - if not, they won't be "
+#~ "loaded.<br><br>If you need a certain cookie to always load on a "
+#~ "particular page, you have two options: <br>1. You can select that page in "
+#~ "the Cookie settings (e.g. for a conversion code on a Thank You-page) and "
+#~ "not add it to any cookie category (to ensure it is always being), or "
+#~ "<br>2. you can create a Smart Link (external or external overlay) and "
+#~ "select the cookies you want to have loaded when someone visits."
+#~ msgstr ""
+#~ "Hier können Seiten, Beiträge oder Kategorien ausgewählt werden, auf denen "
+#~ "der Cookie-Hinweis nicht angezeigt werden soll (z. B. Landingpages, Danke-"
+#~ "Seite usw.). Die regulären Cookie-Einstellungen des Benutzers gelten aber "
+#~ "trotzdem: wenn die Cookies zuvor akzeptiert wurden, werden sie hier "
+#~ "geladen - und falls nicht, dann werden sie auch hier nicht direkt geladen."
+#~ "<br><br>\n"
+#~ "Wenn aber ein bestimmtes Cookie immer geladen werden soll auf einer "
+#~ "bestimmten Seite, dann gibt es zwei Möglichkeiten: <br>1. die Seite wird "
+#~ "in den Cookie-Einstellungen direkt ausgewählt (z. B. um einen Conversion-"
+#~ "Code auf einer Danke-Seite zu laden), ohne den Code einer Cookie-"
+#~ "Kategorie hinzuzufügen (damit er immer geladen wird), oder <br><br>2. "
+#~ "einen Smart Link (externes oder externes Overlay) erstellen und dort die "
+#~ "gewünschten Cookies auswählen, die beim Aufruf dieser URL geladen werden "
+#~ "sollen."
+
+#~ msgid "Hide Cookie Notice"
+#~ msgstr "Cookie Hinweis nicht anzeigen"
+
+#~ msgid ""
+#~ "Select any pages, posts or categories where you don&apos;t want to show "
+#~ "the cookie notice (e.g. landing pages, thank you pages, etc.). The users "
+#~ "regular cookie settings will apply for these as well. If the cookies have "
+#~ "been accepted before, they will be loaded here - if not, they won&apos;t "
+#~ "be loaded.&lt;br&gt;&lt;br&gt;If you need a certain cookie to always load "
+#~ "on a particular page, you have two options: &lt;br&gt;1. You can select "
+#~ "that page in the Cookie settings (e.g. for a conversion code on a Thank "
+#~ "You-page) and not add it to any cookie category (to ensure it is always "
+#~ "being), or &lt;br&gt;2. you can create a Smart Link (external or external "
+#~ "overlay) and select the cookies you want to have loaded when someone "
+#~ "visits."
+#~ msgstr ""
+#~ "Hier können Seiten, Beiträge oder Kategorien ausgewählt werden, auf denen "
+#~ "der Cookie-Hinweis nicht angezeigt werden soll (z. B. Landingpages, Danke-"
+#~ "Seite usw.). Die regulären Cookie-Einstellungen des Benutzers gelten aber "
+#~ "trotzdem: wenn die Cookies zuvor akzeptiert wurden, werden sie hier "
+#~ "geladen - und falls nicht, dann werden sie auch hier nicht direkt geladen."
+#~ "<br><br>\n"
+#~ "Wenn aber ein bestimmtes Cookie immer geladen werden soll auf einer "
+#~ "bestimmten Seite, dann gibt es zwei Möglichkeiten: <br>1. die Seite wird "
+#~ "in den Cookie-Einstellungen direkt ausgewählt (z. B. um einen Conversion-"
+#~ "Code auf einer Danke-Seite zu laden), ohne den Code einer Cookie-"
+#~ "Kategorie hinzuzufügen (damit er immer geladen wird), oder <br><br>2. "
+#~ "einen Smart Link (externes oder externes Overlay) erstellen und dort die "
+#~ "gewünschten Cookies auswählen, die beim Aufruf dieser URL geladen werden "
+#~ "sollen."
+
+#~ msgid "Cookie Notice will be hidden on:"
+#~ msgstr "Cookie Hinweis wird nicht geladen:"
+
+#~ msgid "Block third party Cookies using iFrames"
+#~ msgstr "Iframe basierte Cookies von Drittanbietern blockieren"
+
+#~ msgid ""
+#~ "If this option is selected, all iFrames are being blocked on the whole "
+#~ "site."
+#~ msgstr ""
+#~ "Blockiert Iframe basierte Cookies von YouTube, Vimeo und Google Maps."
+
+#~ msgid ""
+#~ "IMPORTANT: Manual shortcodes (see \"Shortcodes\" tab) will not work "
+#~ "together with this option."
+#~ msgstr ""
+#~ "WICHTIG: Manuell erfasste Shortcodes (siehe Tab “Shortcodes”) "
+#~ "funktionieren nicht zusammen mit dieser Option."
+
+#~ msgid "Save setting when user declines the use of Cookies"
+#~ msgstr ""
+#~ "Cookie-Hinweis Einstellungen speichern, wenn der Benutzer den Einsatz von "
+#~ "Cookies ablehnt"
+
+#~ msgid ""
+#~ "If checked, a Cookie is being stored on the user's computer to save the "
+#~ "setting. If not checked, the user has to \"Accept\" or \"Decline\" the "
+#~ "Cookie Notice for each visit."
+#~ msgstr ""
+#~ "Wenn diese Option aktiviert ist, wird ein Cookie auf dem Computer des "
+#~ "Benutzers gespeichert, um die Einstellung zu speichern. Wenn diese Option "
+#~ "nicht aktiviert ist, muss der Benutzer die Cookie-Benachrichtigung immer "
+#~ "wieder \"akzeptieren\" oder \"ablehnen\"."
+
+#~ msgid "Cookie Expiration"
+#~ msgstr "Cookie-Ablaufzeit"
+
+#~ msgid ""
+#~ "The number of days that the user's cookie settings should be stored for"
+#~ msgstr ""
+#~ "Anzahl Tage, wie lange die Einstellungen für den Benutzer gespeichert "
+#~ "werden sollen"
+
+#~ msgid "Powered by"
+#~ msgstr "Powered by"
+
+#~ msgid ""
+#~ "Like WPMarketingLabs? <a href=\"https://wpmarketinglabs.com/jv\" "
+#~ "target=\"_blank\"> Sign up</a> for the affiliate partner program and add "
+#~ "your own referral link here to earn a commission."
+#~ msgstr ""
+#~ "<a href=\"https://wpmarketinglabs.com/jv\" target=\"_blank\">Hier "
+#~ "klicken</a>&nbsp; und für das WPMarketingLabs-Partnerprogramm anmelden! "
+#~ "Dann einfach den Empfehlungslink hier eintragen und Provisionen verdienen."
+
+#~ msgid "URL to link Powered by"
+#~ msgstr "URL für “Powered by”-Link"
+
+#~ msgid "More Info"
+#~ msgstr "“Weitere Informationen” Button"
+
+#~ msgid ""
+#~ "Enable 'more info' button for further information (choose internal page "
+#~ "or specific URL)"
+#~ msgstr ""
+#~ "Die Schaltfläche \"Mehr Info\" aktivieren, um auf weitere Informationen "
+#~ "zu verweisen (interne Seite wählen oder URL eintragen)"
+
+#~ msgid "Button text for 'more info'"
+#~ msgstr "Text für den \"Mehr Info\" Button"
+
+#~ msgid "Custom URL"
+#~ msgstr "Benutzerdefinierte URL"
+
+#~ msgid "Internal Page"
+#~ msgstr "Interne Seite"
+
+#~ msgid "Select where to redirect user for more information about cookies"
+#~ msgstr ""
+#~ "Festlegen, wohin der Benutzer weitergeleitet wird, um weitere "
+#~ "Informationen zum Einsatz von Cookies zu erhalten"
+
+#~ msgid "Open in New Window"
+#~ msgstr "In neuem Fenster öffnen"
+
+#~ msgid "Enter URL"
+#~ msgstr "URL eingeben"
+
+#~ msgid "-- select page --"
+#~ msgstr "- Inhalt auswählen -"
+
+#~ msgid "Link Target"
+#~ msgstr "Linkziel"
+
+#~ msgid "New window"
+#~ msgstr "Neues Fenster"
+
+#~ msgid "Same window"
+#~ msgstr "Gleiches Fenster"
+
+#~ msgid "Select the link target for more info page"
+#~ msgstr "Linkziel für weitere Informationen wählen"
+
+#~ msgid "Footer URLs"
+#~ msgstr "Footer Links"
+
+#~ msgid "Select Template Style"
+#~ msgstr "Vorlage wählen"
+
+#~ msgid "Callout Modal Compact (Default)"
+#~ msgstr "Callout Modal Compact (Standard)"
+
+#~ msgid "Select"
+#~ msgstr "Wählen"
+
+#~ msgid "Active"
+#~ msgstr "Aktiviert"
+
+#~ msgid "Callout Modal"
+#~ msgstr "Callout Modal"
+
+#~ msgid "Sticky Bar"
+#~ msgstr "Sticky Bar"
+
+#~ msgid "Full Page Overlay"
+#~ msgstr "Full Page Overlay"
+
+#~ msgid "Template 3"
+#~ msgstr "Full Page Overlay"
+
+#~ msgid "Position"
+#~ msgstr "Position"
+
+#~ msgid "Top"
+#~ msgstr "Oben"
+
+#~ msgid "Middle"
+#~ msgstr "Mitte"
+
+#~ msgid "Bottom"
+#~ msgstr "Unten"
+
+#~ msgid "Alignment"
+#~ msgstr "Ausrichtung"
+
+#~ msgid "Left"
+#~ msgstr "Links"
+
+#~ msgid "Center"
+#~ msgstr "Mittig"
+
+#~ msgid "Right"
+#~ msgstr "Rechts"
+
+#~ msgid "Animation"
+#~ msgstr "Animation"
+
+#~ msgid "Fade In"
+#~ msgstr "Einblenden"
+
+#~ msgid "Padding"
+#~ msgstr "Abstand"
+
+#~ msgid "Button Animation"
+#~ msgstr "Button Animation"
+
+#~ msgid "Change Cookie Settings Icon"
+#~ msgstr "Icon für Cookie-Einstellungen"
+
+#~ msgid "Select Position"
+#~ msgstr "Position wählen"
+
+#~ msgid "Top Left"
+#~ msgstr "Oben links"
+
+#~ msgid "Top Right"
+#~ msgstr "Oben rechts"
+
+#~ msgid "Bottom Right"
+#~ msgstr "Unten rechts"
+
+#~ msgid "Bottom Left"
+#~ msgstr "Unten links"
+
+#~ msgid "Assign Template"
+#~ msgstr "Vorlage zuweisen"
+
+#~ msgid "Select Template"
+#~ msgstr "Vorlage auswählen"
+
+#~ msgid "Callout Modal (Default)"
+#~ msgstr "Callout Modal (Standard)"
+
+#~ msgid "Template 1"
+#~ msgstr "Vorlage 1"
+
+#~ msgid "Icon Design"
+#~ msgstr "Icon-Design"
+
+#~ msgid "Design 1"
+#~ msgstr "Design 1"
+
+#~ msgid "Design 2"
+#~ msgstr "Design 2"
+
+#~ msgid "Design 3"
+#~ msgstr "Design 3"
+
+#~ msgid "Design 4"
+#~ msgstr "Design 4"
+
+#~ msgid "Design 5"
+#~ msgstr "Design 5"
+
+#~ msgid "Icon Shadow"
+#~ msgstr "Schatten anzeigen"
+
+#~ msgid "General Style"
+#~ msgstr "Allgemeiner Stil"
+
+#~ msgid "Background Color"
+#~ msgstr "Hintergrundfarbe"
+
+#~ msgid "Text Color"
+#~ msgstr "Textfarbe"
+
+#~ msgid "Decline Button"
+#~ msgstr "“Ablehnen” Button"
+
+#~ msgid "Upload Logo"
+#~ msgstr "Logo hochladen"
+
+#~ msgid "Use image size 100 x 100 pixels for best result"
+#~ msgstr "Empfohlene Größe: 100 x 100 Pixel"
+
+#~ msgid "Upload Image"
+#~ msgstr "Bild hochladen"
+
+#~ msgid "Remove"
+#~ msgstr "Entfernen"
+
+#~ msgid "Code Management"
+#~ msgstr "Code Management"
+
+#~ msgid "Imprint"
+#~ msgstr "Impressum"
+
+#~ msgid "There is a problem saving the settings."
+#~ msgstr "Es gab einen Fehler beim Speichern."
+
+#~ msgid "Continue"
+#~ msgstr "Weiter"
+
+#~ msgid "Please add internal name of cookie notice"
+#~ msgstr "Cookie-Hinweis - interner Name eingeben"
+
+#~ msgid "Please select Cookie categories and settings"
+#~ msgstr "Bitte Cookie-Kategorien und Einstellungen festlegen"
+
+#~ msgid "Please select default categories"
+#~ msgstr "Bitte Standard-Kategorien wählen"
+
+#~ msgid "Please enter the text for the 'read more' button"
+#~ msgstr "Bitte Text für den \"Mehr Info\" Button eintragen"
+
+#~ msgid "Please enter custom Smart Link"
+#~ msgstr "Bitte Smart Link URL eingeben"
+
+#~ msgid "Please select a destination URL for the 'more info' button"
+#~ msgstr "Bitte eine Ziel-URL für den Button \"Mehr Info\" eintragen"
+
+#~ msgid "Please enter powered by link URL"
+#~ msgstr "Bitte die URL für \"Powered by\" eingeben"
+
+#~ msgid "Please enter link name and URL"
+#~ msgstr "Bitte Link Name und URL eingeben"
+
+#~ msgid "Cookie Settings Updated"
+#~ msgstr "Cookie-Einstellungen aktualisiert"
+
+#~ msgid "Cookie Notices"
+#~ msgstr "Cookie-Hinweise"
+
+#~ msgid "Cookie-Categories"
+#~ msgstr "Cookie-Kategorien"
+
+#~ msgid "Connected Smart Link(s)"
+#~ msgstr "Zugewiesene Smart Link(s)"
+
+#~ msgid "Shortcodes"
+#~ msgstr "Shortcodes"
+
+#~ msgid "Consent Logs"
+#~ msgstr "Einwilligungs-Log"
+
+#~ msgid "Category"
+#~ msgstr "Kategorie"
+
+#~ msgid "Used Codes "
+#~ msgstr "Zugeordnete Codes "
+
+#~ msgid "No category found"
+#~ msgstr "Keine Kategorie gefunden"
+
+#~ msgid "Add New Category"
+#~ msgstr "Neue Cookie-Kategorie hinzufügen"
+
+#~ msgid ""
+#~ "You can use any of the Shortcodes to block certain media types, like "
+#~ "YouTube or Vimeo videos, or Google Maps, images etc. Just wrap the "
+#~ "corresponding iframe URL with the Shortcode text, and change the title "
+#~ "text accordingly."
+#~ msgstr ""
+#~ "Es können Shortcodes verwendet werden, um bestimmte Medientypen wie "
+#~ "YouTube- oder Vimeo-Videos oder Google Maps, Bilder usw. zu blockieren. "
+#~ "Dazu einfach die entsprechende iframe-URL mit dem Shortcode-Text "
+#~ "umschließen und den Titeltext entsprechend ändern."
+
+#~ msgid "Shortcode to display \"Cookie Settings\" box for user"
+#~ msgstr "Shortcode, um den Link zu den Cookie-Einstellungen anzuzeigen"
+
+#~ msgid "Shortcode to block YouTube"
+#~ msgstr "Shortcode um YouTube Videos zu blockieren"
+
+#~ msgid "Shortcode to block Vimeo"
+#~ msgstr "Shortcode um Vimeo Videos zu blockieren"
+
+#~ msgid "Shortcode to block Google Maps"
+#~ msgstr "Shortcode um Google Maps zu blockieren"
+
+#~ msgid "Shortcode to block Image"
+#~ msgstr "Shortcode um Bilder zu blockieren"
+
+#~ msgid "Note: "
+#~ msgstr "Info: "
+
+#~ msgid ""
+#~ "The parameters \"title\" and \"type\" can be used to display a notice "
+#~ "when blocking iFrames with a shortcode (see examples above)."
+#~ msgstr ""
+#~ "Folgende Parameter können mit dem Shortcode verwendet werden: \"Title\" "
+#~ "und \"Type”, wie in den obigen Beispielen gezeigt."
+
+#~ msgid "No Cookie Notice Linked to Smart link."
+#~ msgstr "Keine Cookie Notice mit Smart Link verknüpft."
+
+#~ msgid "Consent User ID"
+#~ msgstr "Consent User ID"
+
+#~ msgid "Consent Date"
+#~ msgstr "Consent Date"
+
+#~ msgid "History"
+#~ msgstr "History"
+
+#~ msgid "Consent Details"
+#~ msgstr "Consent Details"
+
+#~ msgid "Add Category"
+#~ msgstr "Neue Cookie-Kategorie hinzufügen"
+
+#~ msgid "Internal Cookie-Category Name"
+#~ msgstr "Interne Bezeichnung Cookie-Kategorie"
+
+#~ msgid "Category Name"
+#~ msgstr "Kategorie Name"
+
+#~ msgid "Enter Cookie-Category"
+#~ msgstr "Cookie-Kategorie eingeben"
+
+#~ msgid "Enter Cookie-Category Internal Name"
+#~ msgstr "Interne Bezeichnung Cookie-Kategorie eingeben"
+
+#~ msgid "Description:"
+#~ msgstr "Beschreibung:"
+
+#~ msgid "Save Category"
+#~ msgstr "Kategorie speichern"
+
+#~ msgid "Load Content from "
+#~ msgstr "Inhalte laden von "
+
+#~ msgid ""
+#~ "To use Shortcodes, please disable the option 'Block third party cookies "
+#~ "using iFrames' in the general Cookie Notice settings!"
+#~ msgstr ""
+#~ "Bitte die Option \"Drittanbieter Cookies mit Iframe Einbindung "
+#~ "blockieren\" in den Cookie-Hinweis Einstellungen deaktivieren, um "
+#~ "Shortcodes nutzen zu können!"
+
+#~ msgid "Associated Code:"
+#~ msgstr "Zugewiesener Code:"
+
+#~ msgid ""
+#~ "The following codes are associated with this category. Please click the "
+#~ "links below to view and edit the corresponding details."
+#~ msgstr ""
+#~ "Die folgenden Codes sind dieser Kategorie zugeordnet. Bitte auf die unten "
+#~ "stehenden Links klicken, um die entsprechenden Details anzuzeigen und zu "
+#~ "bearbeiten."
+
+#~ msgid "Neccessary"
+#~ msgstr "Notwendig"
+
+#~ msgid "Administration"
+#~ msgstr "Administration"
+
+#~ msgid "Preferences"
+#~ msgstr "Einstellungen"
+
+#~ msgid "Statistics"
+#~ msgstr "Statistiken"
+
+#~ msgid "Marketing"
+#~ msgstr "Marketing"
+
+#~ msgid "Unclassified"
+#~ msgstr "Nicht klassifiziert"
+
+#~ msgid "Cookie notice status changed"
+#~ msgstr "Status Cookie Hinweis geändert"
+
+#~ msgid "Accepted"
+#~ msgstr "Akzeptiert"
+
+#~ msgid "Rejected"
+#~ msgstr "Abgelehnt"
+
+#~ msgid "Show Details"
+#~ msgstr "Zeige Details"
+
+#~ msgid "Hide Details"
+#~ msgstr "Details ausblenden"
+
+#~ msgid "Cookie Declaration"
+#~ msgstr "Cookie-Erklärung"
+
+#~ msgid "About Cookies"
+#~ msgstr "Über Cookies"
+
+#~ msgid "Cookie Preferences"
+#~ msgstr "Cookie Präferenzen"
+
+#~ msgid "Stores the user's cookie consent state for the current domain"
+#~ msgstr ""
+#~ "Speichert den Einwilligungsstatus des Benutzers für Cookies auf der "
+#~ "aktuellen Domain"
+
+#~ msgid "Language changed successfully."
+#~ msgstr "Status erfolgreich geändert."
+
+#~ msgid ""
+#~ "Warning! You are changing the default language of the plugin. Your "
+#~ "general plugin settings will be preserved, but all the cookie notice text "
+#~ "elements will be reseted to the default setting."
+#~ msgstr ""
+#~ "ACHTUNG! Damit wird die Standardsprache des Plugins geändert. Die Plugin-"
+#~ "Einstellungen bleiben bestehen, die Texte im Cookie-Hinweis etc. werden "
+#~ "jedoch auf die gewählte Standardsprache zurückgesetzt."
+
+#~ msgid "This is already your default language."
+#~ msgstr "Dies ist bereits die Standardsprache."
+
+#~ msgid "Condition"
+#~ msgstr "Zustand"
+
+#~ msgid "New"
+#~ msgstr "Neu"
+
+#~ msgid "Refurbished"
+#~ msgstr "Erneuert"
+
+#~ msgid "Used"
+#~ msgstr "Gebraucht"
+
+#~ msgid "Google Product Category"
+#~ msgstr "Google Produkt Kategorie"
+
+#~ msgid "GTIN"
+#~ msgstr "GTIN"
+
+#~ msgid "Brand"
+#~ msgstr "Marke"
+
+#~ msgid "MPN"
+#~ msgstr "MPN"
+
+#~ msgid "Price"
+#~ msgstr "Preis"
+
+#~ msgid "Sale Price"
+#~ msgstr "Aktionspreis"
+
+#~ msgid "FB Conversion Event"
+#~ msgstr "FB Conversion Event"
+
+#~ msgid "No Event Selected"
+#~ msgstr "Kein Event ausgewählt"
+
+#~ msgid "Key page view"
+#~ msgstr "Inhalte aufrufen"
+
+#~ msgid "Initiate checkout"
+#~ msgstr "Kaufbestätigung initiieren"
+
+#~ msgid "Make purchase"
+#~ msgstr "Kauf abschließen"
+
+#~ msgid "Complete registration"
+#~ msgstr "Abschließen der Anmeldung"
+
+#~ msgid "No Content Type Selected"
+#~ msgstr "Kein Content Typ ausgewählt"
+
+#~ msgid "Product"
+#~ msgstr "Produkt"
+
+#~ msgid "Product Group"
+#~ msgstr "Produkt Gruppe"
+
+#~ msgid "Content Category"
+#~ msgstr "Content Kategorie"
+
+#~ msgid "Num Items"
+#~ msgstr "Anzahl Objekte"
+
+#~ msgid ""
+#~ "The Type <b>&apos;External&apos;</b> allows you to choose any destination "
+#~ "URL and create a branded Smart Link. Before the visitor lands on the "
+#~ "destination page, the desired codes and / or a redirect bridge page with "
+#~ "a cookie notice can be inserted.<br><br>With the type <b>&apos;External "
+#~ "Overlay&apos;</b> there are even more possibilities, as the landing page "
+#~ "is a branded smart link, which frames the destination URL under. If "
+#~ "desired, one or more overlays (e.g. Cookie Notice, Call-to-Action, Chat "
+#~ "Box, ...) can be added.<br><br>If the type <b>&apos;Internal Overlay&apos;"
+#~ "</b> is selected, such overlays can also be displayed with internal "
+#~ "WordPress content (e.g. pages, posts, categories). For example, a Call-to-"
+#~ "Action with a lead magnet can be displayed, or different overlays for "
+#~ "different blog categories can be used.<br><br>Codes that are used for "
+#~ "internal WordPress content can be managed <a href=\"?page=wpml-code-"
+#~ "manager\" target=\"_blank\">here</a> in the <b>&apos;Codes&apos;</b> "
+#~ "section."
+#~ msgstr ""
+#~ "Der Typ <b>\"Extern\"</b> erlaubt es, eine beliebige Ziel-URL zu wählen "
+#~ "und daraus einen einen gebrandeten Smart Link zu erstellen. Bevor der "
+#~ "Nutzer auf der Zielseite landet, können die gewünschten Codes und/oder "
+#~ "eine Zwischenseite mit einem Cookie Hinweis eingefügt werden. <br><br>Bei "
+#~ "dem Typ <b>\"Externes Overlay\"</b> gibt es noch mehr Möglichkeiten, "
+#~ "indem die Zielseite direkt als gebrandeter Smart Link eingeframt wird, "
+#~ "und wenn gewünscht dann mit einem oder mehreren Overlays ausgestattet "
+#~ "werden kann (bspw. Cookie Hinweis, Call-to-Action, Chat Box, …). "
+#~ "<br><br>Bei Auswahl des Typs <b>\"Internes Overlay\"</b> können solche "
+#~ "Overlays auch auf internen WordPress Inhalten dargestellt werden (bspw. "
+#~ "Seiten, Beiträge, Kategorien). Damit kann bspw. ein Call-to-Action mit "
+#~ "einem Lead Magneten eingefügt werden, oder unterschiedliche Overlays für "
+#~ "verschiedene Blog-Kategorien genutzt werden. <br><br> Codes, die "
+#~ "übergreifend für interne WordPress Inhalte genutzt werden sollen, können "
+#~ "<a href=\"?page=wpml-code-manager\" target=\"_blank\">hier</a> in der "
+#~ "Sektion <b>\"Codes”</b> verwaltet werden."
+
+#~ msgid "Select Campaign Type"
+#~ msgstr "Kampagnen-Typ wählen"
+
+#~ msgid "Internal Overlays"
+#~ msgstr "Internes Overlay"
+
+#~ msgid "External Overlays"
+#~ msgstr "Externes Overlay"
+
+#~ msgid "External URL"
+#~ msgstr "Externe Weiterleitung"
+
+#~ msgid "Check iframe compatibility"
+#~ msgstr "Iframe testen"
+
+#~ msgid "Custom Smart Link"
+#~ msgstr "Benutzerdefinierte URL"
+
+#~ msgid "Enter your custom Smart Link"
+#~ msgstr "Smart Link eingeben"
+
+#~ msgid "Copy Smart Link"
+#~ msgstr "Kopieren"
+
+#~ msgid "Open"
+#~ msgstr "Öffnen"
+
+#~ msgid "Show Overlay"
+#~ msgstr "Overlay anzeigen"
+
+#~ msgid "Smart Link will be placed on:"
+#~ msgstr "Smart Link wird auf folgenden Seiten geladen:"
+
+#~ msgid "Allow URL Parameter"
+#~ msgstr "URL Parameter zulassen"
+
+#~ msgid ""
+#~ "If this setting is OFF, any UTM-parameters that might have been added to "
+#~ "the Smart Link are being passed through. If it is set to ON, the defined "
+#~ "UTM-parameters are being added to the Smart Link URL in addition to any "
+#~ "parameters that are already being passed through."
+#~ msgstr ""
+#~ "Wenn diese Einstellung deaktiviert ist, werden allfällige UTM-Parameter "
+#~ "des Smart Link auch an die Ziel-URL weitergereicht. Wenn die Einstellung "
+#~ "auf EIN gesetzt ist, werden die hier definierten UTM-Parameter zusätzlich "
+#~ "zu allen durchgereichten Parametern angefügt."
+
+#~ msgid "URL Parameter"
+#~ msgstr "URL Parameter"
+
+#~ msgid "Facebook Photo Link Ad Smart Link"
+#~ msgstr "Facebook Foto Link Ad Smart Link"
+
+#~ msgid "Cookie Notice Approval"
+#~ msgstr "Cookie-Zustimmung erforderlich"
+
+#~ msgid ""
+#~ "Selected codes are being loaded in any case - regardless of whether a "
+#~ "cookie notice is active and/or if it has been accepted by the user."
+#~ msgstr ""
+#~ "Hier Codes auswählen, die in jedem Fall geladen werden sollen - "
+#~ "unabhängig davon, ob ein Cookie Hinweis aktiv ist, und oder ob dieser vom "
+#~ "Nutzer akzeptiert wurde."
+
+#~ msgid "Select Cookie Notice"
+#~ msgstr "Cookie-Hinweis auswählen"
+
+#~ msgid "Edit Selected Cookie Notice"
+#~ msgstr "Cookie-Hinweis editieren"
+
+#~ msgid ""
+#~ "To use this feature, please be sure that you have enabled <a href=\"?"
+#~ "page=wpml-cookie-manager\" target=\"_blank\">cookie notice</a> settings."
+#~ msgstr ""
+#~ "Um diese Funktion verwenden zu können, muss der <a href=\"?page=wpml-"
+#~ "cookie-manager\" target=\"_blank\">Cookie-Hinweis</a> aktiviert sein."
+
+#~ msgid "Show Cookie Notice BEFORE redirect"
+#~ msgstr "Cookie-Hinweis VOR der Weiterleitung anzeigen"
+
+#~ msgid "Require Cookie consent BEFORE redirect"
+#~ msgstr "Cookie-Zustimmung VOR der Weiterleitung abfragen"
+
+#~ msgid ""
+#~ "If this option is activated, the user will only be redirected to the "
+#~ "target URL after a selection for the &apos;Cookie Notice&apos; has been "
+#~ "made. The Default Internal Cookie Notice will be used!<br><br>Use this to "
+#~ "pixel a visitor before you send them off to a 3rd party site (use &apos;"
+#~ "External&apos;) or before you show them an overlay on your branded Smart "
+#~ "Link (&apos;External Overlays&apos;).<br><br>If you want to show "
+#~ "additional content, use the settings in the tab &apos;Redirect "
+#~ "Notice&apos;."
+#~ msgstr ""
+#~ "Wenn diese Option aktiviert ist, wird der Benutzer erst zur Ziel-URL "
+#~ "weitergeleitet, nachdem er eine Auswahl zum Einsatz von Cookies getroffen "
+#~ "hat. Dabei wird der interne Standard \"Cookie-Hinweis\" verwendet."
+#~ "<br><br>Diese Option am besten nutzen, um Besucher zu pixeln, bevor diese "
+#~ "auf eine andere Website weitergeleitet werden (Option \"Extern\" wählen), "
+#~ "oder bevor ein Overlay auf einem Smart Link angezeigt wird (Option "
+#~ "\"Externe Overlays\" wählen).<br><br>Wenn auf der Zwischenseite "
+#~ "zusätzliche Inhalte angezeigt werden sollen, dann bitte die Einstellungen "
+#~ "unter \"Redirect Hinweis\" anpassen."
+
+#~ msgid "Select Codes"
+#~ msgstr "Code(s) wählen"
+
+#~ msgid "Add New Tag"
+#~ msgstr "Tag hinzufügen"
+
+#~ msgid "Custom Time Delay"
+#~ msgstr "Zeitverzögerung"
+
+#~ msgid ""
+#~ "This tab allows you to add internal notes to this smart links (only you "
+#~ "can see this). This can be helpful to have quick access to all the "
+#~ "associated codes (e.g. ads, analytics, conversion tracking, "
+#~ "management, ...), or to collect the relevant details/change history in "
+#~ "one place."
+#~ msgstr ""
+#~ "Auf dieser Registerkarte können dem Code interne Notizen hinzugefügt "
+#~ "werden (nicht öffentlich, kann nur in dieser Ansicht gesehen werden). "
+#~ "Dies kann hilfreich sein, um zugehörige URLs (z. B. Anzeigen, "
+#~ "Statistiken, Conversion-Tracking, Verwaltung usw.) zu hinterlegen oder "
+#~ "die relevanten Details / Änderungsprotokoll zentral zu verwalten."
+
+#~ msgid "Select Overlay Design(s)"
+#~ msgstr "Overlay-Design(s) auswählen"
+
+#~ msgid ""
+#~ "Multiple overlay designs can be used with a Smart Link, e.g. to show the "
+#~ "&apos;Cookie Notice&apos;, a &apos;Social Proof Bubble&apos; and a &apos;"
+#~ "Chat Box&apos;. Click here to select the desired overlay designs, and "
+#~ "then adjust the settings for each design via the dropdown menu below."
+#~ msgstr ""
+#~ "Bei einem Smart Link können mehrere Arten von Overlays gleichzeitig "
+#~ "verwendet werden, um bspw. die &apos;Cookie Notice&apos;, eine &apos;"
+#~ "Social Proof Bubble&apos; und eine &apos;Chat Box&apos; anzuzeigen. Bitte "
+#~ "hier die gewünschten Overlay Designs auswählen, und dann die "
+#~ "Einstellungen der gewählten Designs über das untenstehende Dropdown Menu "
+#~ "anpassen."
+
+#~ msgid "Overlay Design"
+#~ msgstr "Overlay Design"
+
+#~ msgid ""
+#~ "Add a Call-to-action overlay notification to the Smart Link. If the "
+#~ "visitor clicks on the button or text link, he will be redirected to the "
+#~ "target URL. This can be used to recommend relevant articles on third "
+#~ "party sites. Such content can be found via Google News or Buzzsumo.com."
+#~ "<br><br>In order to then convert the visitor into a lead and add it to "
+#~ "your own contact list, the overlay can be used to forward to a newsletter "
+#~ "subscription, a social media profile, a lead magnet, a contact form, etc."
+#~ msgstr ""
+#~ "Diese Option fügt dem Smart Link ein Overlay mit einer frei definierbaren "
+#~ "Handlungsaufforderung (\"Call-to-Action\") hinzu. Wenn der Besucher dann "
+#~ "auf den Button oder den Textlink klickt, wird er zur hinterlegten "
+#~ "Zielseite weitergeleitet.<br><br>Ein idealer Einsatz dieser Option ist "
+#~ "bspw. die Empfehlung von relevanten, hochwertigen Artikeln auf "
+#~ "Drittseiten. Solche Inhalte können via Google News oder Buzzsumo.com "
+#~ "gefunden werden.<br><br>Um den Interessenten dann zu einem Lead zu "
+#~ "konvertieren und in die eigene Kontaktliste zu bringen, kann mit dem "
+#~ "Overlay auf eine Newsletter-Anmeldung, einen Social Media Auftritt, einen "
+#~ "Lead Magneten, ein Kontakt-Formular etc. weitergeleitet werden."
+
+#~ msgid "Load Default Template"
+#~ msgstr "Standard Vorlage laden"
+
+#~ msgid "Message"
+#~ msgstr "Nachricht"
+
+#~ msgid "Personalize your message"
+#~ msgstr "Nachricht personalisieren"
+
+#~ msgid "Insert call-to-action"
+#~ msgstr "Call-to-Action einfügen"
+
+#~ msgid "Where should the button link to?"
+#~ msgstr "Wohin soll der Button verlinken?"
+
+#~ msgid "Button"
+#~ msgstr "Button"
+
+#~ msgid "Text Link"
+#~ msgstr "Inhalt"
+
+#~ msgid "Customization"
+#~ msgstr "Design"
+
+#~ msgid "Theme"
+#~ msgstr "Design / Style"
+
+#~ msgid "Social"
+#~ msgstr "Sozial"
+
+#~ msgid "Full width"
+#~ msgstr "Gesamtbreite"
+
+#~ msgid "Rectangle"
+#~ msgstr "Rechteck"
+
+#~ msgid "Rounded corners"
+#~ msgstr "Abgerundete Ecken"
+
+#~ msgid "Logo"
+#~ msgstr "Logo"
+
+#~ msgid "Show Logo"
+#~ msgstr "Logo anzeigen"
+
+#~ msgid "Hide Logo"
+#~ msgstr "Logo ausblenden"
+
+#~ msgid "Site Name"
+#~ msgstr "Zeige Seitentitel"
+
+#~ msgid "Hide"
+#~ msgstr "Verstecken"
+
+#~ msgid "Show"
+#~ msgstr "Anzeigen"
+
+#~ msgid "Shadow"
+#~ msgstr "Schatten"
+
+#~ msgid "Button Color"
+#~ msgstr "Button Hintergrund"
+
+#~ msgid "Call-to-Action Text Color"
+#~ msgstr "Button Textfarbe"
+
+#~ msgid "Use image size 100px*100px for best result"
+#~ msgstr "Empfohlen: 100 x 100 Pixel"
+
+#~ msgid ""
+#~ "The content box inserts an overlay with any content on the page. Just "
+#~ "select the desired button style, the background color and position, and "
+#~ "whether to display a shadow or not. Then add any text, html, or "
+#~ "JavaScript content.<br><br>This can be, for example, a simple link that "
+#~ "opens an e-mail (mailto: test@test.com), or a link to a contact form, the "
+#~ "support helpdesk system, frequently asked questions (FAQ), ... etc."
+#~ "<br><br>The Content Box is also ideal for embedding a YouTube video / "
+#~ "playlist, picture or other multimedia content (<a href=\"https://getemoji."
+#~ "com/\" target=\"_blank\">emojis</a> can also be used).<br><br>Note: If "
+#~ "you just want to load a script without the Content Box design, or if you "
+#~ "want to load a particular code in the header or Body Start / Close "
+#~ "section, please use the overlay design option 'Add My Own Script'."
+#~ msgstr ""
+#~ "Die Content Box fügt ein Overlay mit einem beliebigen Inhalt auf der "
+#~ "Seite ein. Es wird der gewünschte Button-Stil ausgewählt, die "
+#~ "Hintergrundfarbe und die Position festgelegt, und ob ein Schatten "
+#~ "angezeigt werden soll oder nicht. Dann wird ein beliebiger Text-, html- "
+#~ "oder JavaScript-Inhalt eingefügt. <br><br>Das kann zum Beispiel ein "
+#~ "simpler Hyperlink sein, der eine E-Mail öffnet (mailto:test@test.com), "
+#~ "oder eine Verlinkung auf ein Kontaktformular, das Support-Helpdesk "
+#~ "System, auf häufig gestellten Fragen (FAQ), ... etc. <br><br>Die Content "
+#~ "Box ist zudem ideal dafür geeignet, um ein YouTube Video / Playlist, ein "
+#~ "Bild oder andere multimediale Inhalte einzubetten (<a href=\"https://"
+#~ "getemoji.com/\" target=\"_blank\">Emojis</a> können auch genutzt werden)."
+#~ "<br><br>Hinweis: Wenn ein Script ohne Content Box Design geladen werden "
+#~ "soll, oder der Code im Header oder Body Start / Close geladen werden "
+#~ "soll, nutze bitte die Overlay Design Option \"Eigenes Script\"."
+
+#~ msgid "Square"
+#~ msgstr "Quadratisch"
+
+#~ msgid "Circle"
+#~ msgstr "Rund"
+
+#~ msgid "Show Shadow"
+#~ msgstr "Schatten anzeigen"
+
+#~ msgid "Content"
+#~ msgstr "Inhalt"
+
+#~ msgid ""
+#~ "This option adds a fully customizable Social Proof element to the page. "
+#~ "This will display predefined lead and sales notifications for visitors, "
+#~ "thus increasing conversion on the page.<br><br>Especially on pages where "
+#~ "it is crucial to convert a visitor, this social proof notification is "
+#~ "ideal (for example, to generate a lead or to achieve a sale).<br><br>The "
+#~ "displayed notifications can be easily imported from other systems and "
+#~ "then adapted to the format used here (see bulk import template <a "
+#~ "href=\"https://wpmarketinglabs.com/template-social-proof\" "
+#~ "target=\"_blank\">here</a>)."
+#~ msgstr ""
+#~ "Diese Option fügt ein komplett anpassbares Social-Proof-Element auf der "
+#~ "Seite ein. Damit werden vordefinierte Lead- und Sales-Benachrichtigungen "
+#~ "für die Besucher anzeigt, was die Konversion auf der Seite steigert."
+#~ "<br><br>Gerade auf Seiten, wo es darum geht, den Interessenten zu "
+#~ "konvertieren, ist diese Social Proof Benachrichtigung ideal (bspw. um "
+#~ "einen Lead zu generieren oder einen Verkauf zu erreichen).<br><br>Die "
+#~ "angezeigten Notifikationen können einfach aus anderen Systemen importiert "
+#~ "und dann auf das hier verwendete Format hin angepasst werden (siehe "
+#~ "Vorlage für Massenimport <a href=\"https://wpmarketinglabs.com/template-"
+#~ "social-proof\" target=\"_blank\">hier</a>)."
+
+#~ msgid "Entries"
+#~ msgstr "Einträge"
+
+#~ msgid ""
+#~ "A chat box is the perfect way to give visitors an opportunity to quickly "
+#~ "and easily engage in conversation, without having to fill out a form "
+#~ "first.<br><br>The setup is simple: select the text color for the title, "
+#~ "the background color of the header, the location of the chat, and the "
+#~ "message to display. Then you just have to add a URL, which opens on click "
+#~ "(e.g. to the <a href=\"https://wpmarketinglabs.com/help-fb-messenger\" "
+#~ "target=\"_blank\">Facebook™ Messenger</a>: <a href=\"https://m.me/"
+#~ "fbpagename\" target=\"_blank\">https://m.me/fbpagename</a>)."
+#~ msgstr ""
+#~ "Eine Chat Box ist die perfekte Möglichkeit, um den Besuchern der Seite "
+#~ "eine Möglichkeit anzubieten, schnell und einfach in einen Dialog zu "
+#~ "treten, ohne zuerst ein Formular ausfüllen zu müssen.<br><br>Der Setup "
+#~ "ist simpel: die Textfarbe für den Titel, die Hintergrundfarbe des "
+#~ "Headers, die Position des Chats und die anzuzeigende Nachricht wählen. "
+#~ "Dann muss nur noch eine URL hinzugefügt werden, die bei Klick geöffnet "
+#~ "werden soll (bspw. eine URL zum <a href=\"https://wpmarketinglabs.com/"
+#~ "help-fb-messenger\" target=\"_blank\">Facebook™ Messenger</a>, nach dem "
+#~ "Schema <a href=\"https://m.me/fbpagename\" target=\"_blank\">https://m.me/"
+#~ "fbseitenname</a>)."
+
+#~ msgid "Chatbox title"
+#~ msgstr "Chat Box Titel"
+
+#~ msgid "Chatbox title text color"
+#~ msgstr "Chat Box-Header Titelfarbe"
+
+#~ msgid "Chatbox header background color"
+#~ msgstr "Chat Box-Header Hintergrundfarbe"
+
+#~ msgid ""
+#~ "URL (for Facebook™ Messenger URL, <u><a href=\"https://wpmarketinglabs."
+#~ "com/r/help-fb-messenger/\" target=\"_blank\">click here</a></u>)"
+#~ msgstr ""
+#~ "URL (für Facebook™ Messenger URL, <u><a href=\"https://wpmarketinglabs."
+#~ "com/help-fb-messenger\" target=\"_blank\">hier klicken</a></u>)"
+
+#~ msgid "Button text"
+#~ msgstr "Button Text"
+
+#~ msgid ""
+#~ "Add any <a href=\"https://www.hotscripts.com\" "
+#~ "target=\"_blank\">JavaScript</a> that you want to load on the site, e.g. "
+#~ "to add services from 3rd parties (like an email opt-in form, <a "
+#~ "href=\"https://www.wpretarget.net/manychat\" target=\"_blank\">ManyChat."
+#~ "com</a>, <a href=\"https://www.tawk.to/\" target=\"_blank\">Tawk.to</a>, "
+#~ "<a href=\"https://www.mylivechat.com/\" target=\"_blank\">Mylivechat.com</"
+#~ "a>, <a href=\"https://www.reamaze.com/\" target=\"_blank\">Reamaze.com</"
+#~ "a>, <a href=\"https://www.zotabox.com/\" target=\"_blank\">Zotabox.com</"
+#~ "a>, ...). Select the position, and if you want to use a shadow for that "
+#~ "element (if applicable)."
+#~ msgstr ""
+#~ "Fügt ein beliebiges JavaScript hinzu, das auf der Website geladen werden "
+#~ "soll, bspw. um Services von Dritten einzubinden (wie ein E-Mail Optin "
+#~ "Formular, <a href=\"https://www.wpretarget.net/manychat\" "
+#~ "target=\"_blank\">ManyChat.com</a>, <a href=\"https://www.tawk.to/\" "
+#~ "target=\"_blank\">Tawk.to</a>, <a href=\"https://www.mylivechat.com/\" "
+#~ "target=\"_blank\">Mylivechat.com</a>, <a href=\"https://www.reamaze.com/"
+#~ "\" target=\"_blank\">Reamaze.com</a>, <a href=\"https://www.zotabox.com/"
+#~ "\" target=\"_blank\">Zotabox.com</a>, ...). Die Position kann frei "
+#~ "gewählt werden, und auch ob ein Schatten für dieses Element genutzt "
+#~ "werden soll."
+
+#~ msgid "Insert at"
+#~ msgstr "Einfügen im Bereich"
+
+#~ msgid "Head"
+#~ msgstr "Head"
+
+#~ msgid "Body Start"
+#~ msgstr "Body Start"
+
+#~ msgid "Before Body Close"
+#~ msgstr "Vor Body Close"
+
+#~ msgid "Script Code"
+#~ msgstr "Skript-Code"
+
+#~ msgid "Show Site Name"
+#~ msgstr "Seitentitel anzeigen"
+
+#~ msgid "Seconds"
+#~ msgstr "Sekunden"
+
+#~ msgid "Load Default Message"
+#~ msgstr "Standard Vorlage laden"
+
+#~ msgid "Custom Redirect Message"
+#~ msgstr "Redirect Hinweis"
+
+#~ msgid "Load Social Settings"
+#~ msgstr "Social Einstellungen laden"
+
+#~ msgid "Social Title"
+#~ msgstr "Social Titel"
+
+#~ msgid "Meta Robots noindex, nofollow?"
+#~ msgstr "Meta Robots noindex, nofollow?"
+
+#~ msgid ""
+#~ "Meta tags provide crawlers with instructions for how to index a URL. The "
+#~ "“noindex” tag tells a search engine not to index a page, and the "
+#~ "“nofollow” tag tells it not to follow any links and not to pass along any "
+#~ "link equity. The default setting is “Off”."
+#~ msgstr ""
+#~ "Meta-Tags geben Robot-Crawlern Anweisungen, ob und wie eine URL indexiert "
+#~ "werden soll. Das &apos;noindex&apos;-Tag weist eine Suchmaschine an, eine "
+#~ "Seite nicht zu indizieren, und das &apos;nofollow&apos;-Tag gibt vor, dem "
+#~ "Link nicht zu folgen und keine Link-Power weiterzugeben. Die "
+#~ "Standardeinstellung ist &apos;Aus&apos;."
+
+#~ msgid "here"
+#~ msgstr "hier"
+
+#~ msgid "Sharing Image - Smart Link"
+#~ msgstr "Sharing Bild - Smart Link"
+
+#~ msgid ""
+#~ "Size should be 1200 x 630 pixels for best results. Keep the image aspect "
+#~ "ratio to 1.91:1. Click <a id=\"facebook-sharing-image\" style=\"color:red;"
+#~ "font-weight:bold;\">here</a> to update the Smart Link settings on "
+#~ "Facebook."
+#~ msgstr ""
+#~ "Die Größe sollte 1200 x 630 Pixel betragen, um optimale Ergebnisse zu "
+#~ "erzielen. Das Größenverhältnis sollte 1,91: 1 sein. Klicke <a "
+#~ "id=“facebook-sharing-image” style=“color:red;font-weight:bold;”>hier</a> "
+#~ "um die Smart Link Einstellungen auf Facebook zu aktualisieren."
+
+#~ msgid "Alternative Smart Link (optional)"
+#~ msgstr "Alternative Smart Link (optional)"
+
+#~ msgid ""
+#~ "The \"Social & SEO\" settings allow you to specify how the Smart Link "
+#~ "should be displayed on social media and in the search engines."
+#~ msgstr ""
+#~ "Mit den \"Social & SEO\" Einstellungen kann spezifisch festgelegt werden, "
+#~ "wie der Smart Link auf sozialen Medien und in den Suchmaschinen "
+#~ "dargestellt werden soll."
+
+#~ msgid "This Photo Smart Link already exists"
+#~ msgstr ""
+#~ "Dieser Foto-Smart Link wird bereits verwendet, bitte anderen Namen "
+#~ "eingeben"
+
+#~ msgid "Enter your custom Photo Ad Smart Link"
+#~ msgstr "Foto Ad Smart Link eingeben"
+
+#, php-format
+#~ msgid ""
+#~ "Please note: this is ideal for publishing the Smart Link via a personal "
+#~ "Facebook profile / post in a Facebook group. When published on a Facebook "
+#~ "page, the preview image is automatically cropped rectangular. Size should "
+#~ "be 1200 x 1200 pixels for best results. Click <a id=\"%1$s\" "
+#~ "target=\"%6$s\">here</a> to update the Smart Link settings on Facebook. "
+#~ "If you want to use an animated image, upload your GIF-file directly to <a "
+#~ "href=\"%2$s\" target=\"%6$s\">Giphy.com</a> or search for a suitable "
+#~ "image, and then paste the Giphy URL here. To have a seamless integration, "
+#~ "<a href=\"%3$s\" target=\"%6$s\">create an account</a>, then request an "
+#~ "<a href=\"%4$s\" target=\"%6$s\">API key</a> and <a href=\"%5$s\" "
+#~ "target=\"%6$s\">add it here</a>."
+#~ msgstr ""
+#~ "Hinweis: Ideal für Publikation des Smart Links über ein persönliches "
+#~ "Facebook Profil / Beitrag in einer Facebook Gruppe. Bei der "
+#~ "Veröffentlichung über eine Facebook Seite wird das Vorschaubild "
+#~ "automatisch rechteckig zugeschnitten. Die Größe sollte 1200 x 1200 Pixel "
+#~ "betragen, um optimale Ergebnisse zu erzielen. <a id=\"%1$s\" "
+#~ "href=\"javascript:void(0);\" target=\"%6$s\">Hier klicken</a>, um die "
+#~ "Smart Link Einstellungen auf Facebook zu aktualisieren. Wenn ein "
+#~ "animiertes Bild genutzt werden soll, bitte zuerst die GIF-Datei direkt "
+#~ "bei <a href=\"%2$s\" target=\"%6$s\">Giphy.com</a> hochladen oder dort "
+#~ "ein passendes Bild suchen, und dann die Giphy-URL einfügen. Um eine "
+#~ "direkte Integration zu haben, <a href=\"%3$s\" target=\"%6$s\">muss ein "
+#~ "Account eingerichtet werden</a>, dann ein <a href=\"%4$s\" "
+#~ "target=\"%6$s\">API-Schlüssel</a> angefordert und <a href=\"%5$s\" "
+#~ "target=\"%6$s\">hier eingetragen</a> werden."
+
+#~ msgid "Sharing Image - Alternative Smart Link"
+#~ msgstr "Sharing Bild - Alternative Smart Link"
+
+#~ msgid "Sharing Images - Giphy Integration"
+#~ msgstr "Sharing Bilder - Giphy Integration"
+
+#~ msgid "Select animated GIF-file"
+#~ msgstr "Bitte GIF-Datei auswählen"
+
+#~ msgid "No Selection"
+#~ msgstr "Keine Auswahl"
+
+#~ msgid "Search on Giphy.com"
+#~ msgstr "Auf Giphy.com suchen"
+
+#~ msgid "Trending GIFs"
+#~ msgstr "Trending GIFs"
+
+#~ msgid "Convert MP4 Video to GIF"
+#~ msgstr "MP4-Video zu GIF konvertieren"
+
+#~ msgid "My Giphy.com Uploads"
+#~ msgstr "Meine Giphy.com Uploads"
+
+#~ msgid "Search"
+#~ msgstr "Suchen"
+
+#~ msgid "Rating"
+#~ msgstr "Bewertung"
+
+#~ msgid "Cartoons"
+#~ msgstr "Cartoons"
+
+#~ msgid "General Audiences"
+#~ msgstr "Allgemeines Publikum"
+
+#~ msgid "Parental Guidance Suggested"
+#~ msgstr "Elterliche Aufsicht empfohlen"
+
+#~ msgid "Parents Strongly Cautioned"
+#~ msgstr "Für Kinder nicht geeignet"
+
+#~ msgid "Restricted"
+#~ msgstr "Eingeschränkt"
+
+#~ msgid "MP4 Video"
+#~ msgstr "MP4-Video"
+
+#~ msgid "Select MP4"
+#~ msgstr "MP4-Datei wählen"
+
+#~ msgid "Upload to Giphy"
+#~ msgstr "Zu Giphy hochladen"
+
+#~ msgid "Channel Link"
+#~ msgstr "Link zum Kanal"
+
+#~ msgid "No result found"
+#~ msgstr "Kein Ergebnis gefunden"
+
+#~ msgid "Facebook Sharing Image - Custom Smart Link"
+#~ msgstr "Facebook Sharing Bild - Smart Link"
+
+#~ msgid "Facebook Photo Link Ad Image"
+#~ msgstr "Facebook Foto Link Ad Bild"
+
+#~ msgid "Tags:"
+#~ msgstr "Tags:"
+
+#~ msgid "Double click GIF to view it large"
+#~ msgstr "Doppelklick für die Grossansicht"
+
+#~ msgid "Here is your uploaded GIF"
+#~ msgstr "Hier ist die hochgeladene GIF-Datei"
+
+#~ msgid "MP4 file size should not be greater than 100MB."
+#~ msgstr "Die MP4-Datei darf nicht grösser als 100 MB sein."
+
+#~ msgid "There is some error in upload"
+#~ msgstr "Fehler beim Hochladen"
+
+#, php-format
+#~ msgid "Hits number for item with ID %d successfully reseted"
+#~ msgstr "Statistiken für Objekt mit ID %d erfolgreich zurückgesetzt"
+
+#, php-format
+#~ msgid "Status enabled: %d"
+#~ msgstr "Status aktiviert: %d Element(e)"
+
+#, php-format
+#~ msgid "Status disabled: %d"
+#~ msgstr "Status deaktiviert: %d Element(e)"
+
+#, php-format
+#~ msgid "Top bar enabled: %d"
+#~ msgstr "Top bar aktiviert: %d"
+
+#, php-format
+#~ msgid "Top bar disabled: %d"
+#~ msgstr "Top bar deaktiviert: %d"
+
+#~ msgid "Smart Links and Overlays"
+#~ msgstr "Smart Links & Overlays aktualisieren"
+
+#~ msgid "Export"
+#~ msgstr "Export"
+
+#~ msgid "Import"
+#~ msgstr "Import"
+
+#~ msgid "Smart Links"
+#~ msgstr "Smart Links"
+
+#~ msgid "Connected Codes"
+#~ msgstr "Übersicht verwendeter Codes"
+
+#~ msgid "Connected Smart Links"
+#~ msgstr "Übersicht verwendeter Smart Links"
+
+#~ msgid "These Smart Link's already exists."
+#~ msgstr "Diese Smart Links sind bereits vorhanden."
+
+#~ msgid "Global"
+#~ msgstr "Global"
+
+#~ msgid "Linked to"
+#~ msgstr "Verlinkt zu"
+
+#~ msgid "Slug"
+#~ msgstr "Slug"
+
+#~ msgid "Count"
+#~ msgstr "Anzahl"
+
+#~ msgid "SmartLinks"
+#~ msgstr "SmartLinks"
+
+#~ msgid "Campaign type"
+#~ msgstr "Kampagnen-Typ"
+
+#~ msgid "Select campaign type"
+#~ msgstr "Typ wählen"
+
+#~ msgid "External & External Overlay"
+#~ msgstr "Externe URLs & Externe Overlays"
+
+#~ msgid "Select File"
+#~ msgstr "Datei wählen"
+
+#~ msgid "Update Smart Links and Overlays"
+#~ msgstr "Smart Links & Overlays aktualisieren"
+
+#~ msgid "Add New Smart Links and Overlays"
+#~ msgstr "Neue Smart Links oder Overlays hinzufügen"
+
+#~ msgid "FB Link AD Photo URL already exists."
+#~ msgstr "FB Link Ad Foto URL."
+
+#~ msgid "Name is required"
+#~ msgstr "Name wird benötigt"
+
+#~ msgid "Iframe is allowed"
+#~ msgstr "Iframe ist erlaubt"
+
+#~ msgid "There is an error to change status"
+#~ msgstr "Fehler beim Importieren der Smart Links"
+
+#~ msgid "Status changed successfully"
+#~ msgstr "Status erfolgreich geändert"
+
+#~ msgid "Between \"HEAD\" Tag"
+#~ msgstr "Zwischen \"HEAD\" Tag"
+
+#~ msgid "After \"BODY\" Tag"
+#~ msgstr "Nach \"BODY\" Tag"
+
+#~ msgid "Before \"/BODY\" Tag"
+#~ msgstr "Vor \"/BODY\" Tag"
+
+#~ msgctxt "Post type general name"
+#~ msgid "Smart Links"
+#~ msgstr "Smart Links"
+
+#~ msgctxt "Post type singular name"
+#~ msgid "Smart Link"
+#~ msgstr "Smart Link"
+
+#~ msgctxt "Admin Menu text"
+#~ msgid "Smart Links"
+#~ msgstr "Smart Links"
+
+#~ msgctxt "Add New on Toolbar"
+#~ msgid "Smart Link"
+#~ msgstr "Smart Link"
+
+#~ msgid "Add New Smart Link"
+#~ msgstr "Neuer Smart Link"
+
+#~ msgid "New Smart Link"
+#~ msgstr "Smart Link"
+
+#~ msgid "Edit Smart Link"
+#~ msgstr "URL eingeben"
+
+#~ msgid "View Smart Link"
+#~ msgstr "Smart Link"
+
+#~ msgid "Search Smart Link"
+#~ msgstr "URL eingeben"
+
+#~ msgid "Parent Smart Link:"
+#~ msgstr "URL eingeben:"
+
+#~ msgid "No Smart Link found."
+#~ msgstr "Es wurde kein Smart Link gefunden."
+
+#~ msgid "No Smart Links found in Trash."
+#~ msgstr "Keine Smart Links in Papierkorb gefunden."
+
+#~ msgctxt ""
+#~ "Overrides the “Featured Image” phrase for this post type. Added in 4.3"
+#~ msgid "Smart Link Cover Image"
+#~ msgstr "Smart Link kopiert"
+
+#~ msgctxt ""
+#~ "Overrides the “Set featured image” phrase for this post type. Added in 4.3"
+#~ msgid "Set cover image"
+#~ msgstr "GIF-Datei auswählen"
+
+#~ msgctxt ""
+#~ "The post type archive label used in nav menus. Default “Post Archives”. "
+#~ "Added in 4.4"
+#~ msgid "Smart Link archives"
+#~ msgstr "Smart Link kopiert"
+
+#~ msgctxt ""
+#~ "Overrides the “Insert into post”/”Insert into page” phrase (used when "
+#~ "inserting media into a post). Added in 4.4"
+#~ msgid "Insert into Smart Link"
+#~ msgstr "Externer Smart Link"
+
+#~ msgctxt ""
+#~ "Overrides the “Uploaded to this post”/”Uploaded to this page” phrase "
+#~ "(used when viewing media attached to a post). Added in 4.4"
+#~ msgid "Uploaded to this Smart Link"
+#~ msgstr "Neuer Smart Link"
+
+#~ msgctxt ""
+#~ "Screen reader text for the filter links heading on the post type listing "
+#~ "screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4"
+#~ msgid "Filter Smart Links list"
+#~ msgstr "URL eingeben"
+
+#~ msgctxt ""
+#~ "Screen reader text for the pagination heading on the post type listing "
+#~ "screen. Default “Posts list navigation”/”Pages list navigation”. Added in "
+#~ "4.4"
+#~ msgid "Smart Links list navigation"
+#~ msgstr "Smart Link Einstellungen"
+
+#~ msgctxt ""
+#~ "Screen reader text for the items list heading on the post type listing "
+#~ "screen. Default “Posts list”/”Pages list”. Added in 4.4"
+#~ msgid "Smart Links"
+#~ msgstr "Smart Links"
+
+#~ msgid "Bulk Edit"
+#~ msgstr "Massenaktionen"
+
+#~ msgid "Bulk Add"
+#~ msgstr "Allen hinzufügen"
+
+#~ msgid "Bulk Remove"
+#~ msgstr "Allen entfernen"
+
+#~ msgid "Top Bar status updated successfully."
+#~ msgstr "Status der Top Bar erfolgreich aktualisiert."
+
+#~ msgid "Smart Link Settings"
+#~ msgstr "Smart Link Einstellungen"
+
+#~ msgid "Redirect Notice"
+#~ msgstr "Redirect Hinweis"
+
+#~ msgid "Social & SEO"
+#~ msgstr "Soziales & SEO"
+
+#~ msgid "FB Pixel Events"
+#~ msgstr "FB Pixel Events"
+
+#~ msgid "FB Dynamic Ads"
+#~ msgstr "FB Dynamic Ads"
+
+#~ msgid ""
+#~ "<b><i>Check this out!</i></b> <br>We have something very special for "
+#~ "you..."
+#~ msgstr ""
+#~ "<b><i>Wir haben etwas ganz Besonderes für Dich…</i></b> <br>Schaue es Dir "
+#~ "an..."
+
+#~ msgid "Click here →"
+#~ msgstr "Hier klicken →"
+
+#~ msgid "<a href=\"javascript:void(0);\" style=\"color:#000;\">?</a>"
+#~ msgstr "<a href=\"javascript:void(0);\" style=\"color:#000;\">?</a>"
+
+#~ msgid "Chat with us!"
+#~ msgstr "Chatte mit uns!"
+
+#~ msgid "Start Chat"
+#~ msgstr "Chat starten"
+
+#~ msgid "Hi there, please get in touch if you have any questions."
+#~ msgstr "Hallo! Gerne stehen wir bei Fragen zur Verfügung."
+
+#~ msgid "Invalid security token"
+#~ msgstr "Ungültiger Security-Token"
+
+#~ msgid ""
+#~ "Please make sure you have entered corresponding data to selected overlay "
+#~ "script type"
+#~ msgstr ""
+#~ "Bitte stelle sicher, dass die entsprechenden Daten für den ausgewählten "
+#~ "Overlay-Skripttyp eingegeben wurden"
+
+#~ msgid "Please enter URL Parameter"
+#~ msgstr "Bitte URL Parameter eingeben"
+
+#~ msgid "Add Tag"
+#~ msgstr "Tag hinzufügen"
+
+#~ msgid "Tag Name"
+#~ msgstr "Tag Name"
+
+#~ msgid "Enter Tag Name"
+#~ msgstr "Tag-Name eingeben"
+
+#~ msgid "Tag Slug Name"
+#~ msgstr "Tag Slug Name"
+
+#~ msgid "Enter Slug Name"
+#~ msgstr "Slug-Name eingeben"
+
+#~ msgid "Save Tag"
+#~ msgstr "Speichern Tag"
+
+#~ msgid "Records per page"
+#~ msgstr "Datensätze pro Seite"
+
+#~ msgid "FB Content ID"
+#~ msgstr "FB Content ID"
+
+#~ msgid "Title"
+#~ msgstr "Titel"
+
+#~ msgid "Your Feed-Link"
+#~ msgstr "Feed-Link"
+
+#~ msgid "Condition Bulk"
+#~ msgstr "Zustand für alle Einträge"
+
+#~ msgid "Nothing Selected"
+#~ msgstr "Keine Selektion"
+
+#~ msgid "Bulk for all"
+#~ msgstr "Alle anpassen"
+
+#~ msgid "Brand Bulk"
+#~ msgstr "Marke für alle Einträge"
+
+#~ msgid "Save bulk settings"
+#~ msgstr "Einstellungen speichern"
+
+#~ msgid "Save changes"
+#~ msgstr "Änderungen speichern"
+
+#~ msgid "Product ID"
+#~ msgstr "Produkt ID"
+
+#~ msgid "Sales Price"
+#~ msgstr "Aktionspreis"
+
+#~ msgid "Woo Feed"
+#~ msgstr "Woo Feed"
+
+#~ msgid ""
+#~ "In order to use this function, install and activate the WooCommerce "
+#~ "Plugin. After that you can use all features of Woo Feed."
+#~ msgstr ""
+#~ "Um die Funktion nutzen zu können, muss zuerst WooCommerce installiert und "
+#~ "aktiviert werden. Danach kann Woo Feed in vollem Umfang genutzt werden."
+
+#~ msgid "Google Product Category Bulk"
+#~ msgstr "Google Produkt Kategorie alle Einträge"
+
+#~ msgid "Unique product labels (GTIN) available?"
+#~ msgstr "Eindeutige Produktkennzeichnungen (GTIN) vorhanden?"
+
+#~ msgid "WPMarketingLabs"
+#~ msgstr "WPMarketing<i>Labs</i>"
+
+#~ msgid "Help"
+#~ msgstr "Hilfe"
+
+#~ msgid "Add new code"
+#~ msgstr "Neuen Code hinzufügen"
+
+#~ msgid "Quick Start"
+#~ msgstr "Schnellstart"
+
+#~ msgid "WPML Rest API"
+#~ msgstr "Rest API"
+
+#~ msgid "Is used by Facebook for ad targeting, measurement and remarketing."
+#~ msgstr ""
+#~ "Wird von Facebook für Anzeigen-Targeting, Messung sowie Remarketing "
+#~ "verwendet."
+
+#~ msgid "Is used by Google for ad targeting, measurement and remarketing."
+#~ msgstr ""
+#~ "Wird von Google für Anzeigen-Targeting, Messung sowie Remarketing "
+#~ "verwendet."
+
+#~ msgid ""
+#~ "Is used by Google for website analysis. Generates statistics about "
+#~ "visitor behavior on the site."
+#~ msgstr ""
+#~ "Wird von Google für Website-Analysen genutzt. Erzeugt statistische Daten "
+#~ "über das Besucherverhalten auf der Website."
+
+#~ msgid ""
+#~ "Is used by Google to control the advanced scripting and event handling."
+#~ msgstr ""
+#~ "Wird von Google zur Steuerung der erweiterten Skript- und "
+#~ "Ereignisbehandlung genutzt."
+
+#~ msgid "Is used by options for ad targeting, measurement and remarketing."
+#~ msgstr ""
+#~ "Wird von Pinterest für Anzeigen-Targeting, Messung sowie Remarketing "
+#~ "verwendet."
+
+#~ msgid "Is used by LinkedIn for ad targeting, measurement and remarketing."
+#~ msgstr ""
+#~ "Wird von LinkedIn für Anzeigen-Targeting, Messung sowie Remarketing "
+#~ "verwendet."
+
+#~ msgid "Is used by Quora for ad targeting, measurement and remarketing."
+#~ msgstr ""
+#~ "Wird von Quora für Anzeigen-Targeting, Messung sowie Remarketing "
+#~ "verwendet."
+
+#~ msgid "Is used by Snapchat for ad targeting, measurement and remarketing."
+#~ msgstr ""
+#~ "Wird von Snapchat für Anzeigen-Targeting, Messung sowie Remarketing "
+#~ "verwendet."
+
+#~ msgid ""
+#~ "Is used by PerfectAudience for ad targeting, measurement and remarketing."
+#~ msgstr ""
+#~ "Wird von PerfectAudience für Anzeigen-Targeting, Messung sowie "
+#~ "Remarketing verwendet."
+
+#~ msgid "Is used by AdRoll for ad targeting, measurement and remarketing."
+#~ msgstr ""
+#~ "Wird von AdRoll für Anzeigen-Targeting, Messung sowie Remarketing "
+#~ "verwendet."
+
+#~ msgid "Is used by Site Scout for ad targeting, measurement and remarketing."
+#~ msgstr ""
+#~ "Wird von Sitescout für Anzeigen-Targeting, Messung sowie Remarketing "
+#~ "verwendet."
+
+#~ msgid "Is used by Taboola for ad targeting, measurement and remarketing."
+#~ msgstr ""
+#~ "Wird von Taboola für Anzeigen-Targeting, Messung sowie Remarketing "
+#~ "verwendet."
+
+#~ msgid "Is used by ReTargeter for ad targeting, measurement and remarketing."
+#~ msgstr ""
+#~ "Wird von Retargeter für Anzeigen-Targeting, Messung sowie Remarketing "
+#~ "verwendet."
+
+#~ msgid "Is required to display Twitter content."
+#~ msgstr "Wird zur Darstellung von Twitter-Inhalten benötigt."
+
+#~ msgid "Woo Feed updated successfully."
+#~ msgstr "Woo Feed erfolgreich aktualisiert."
+
+#~ msgid "There is an error to update Woo Feed."
+#~ msgstr "Es gibt einen Fehler beim Aktualisieren des Woo Feed."
+
+#~ msgid "Good Job!"
+#~ msgstr "Das hat geklappt!"
+
+#~ msgid "Please select file"
+#~ msgstr "Datei auswählen"
+
+#~ msgid "Smart Link's Import"
+#~ msgstr "Import von Smart Links"
+
+#~ msgid "Smart Link's imported successfully"
+#~ msgstr "Smart Links erfolgreich importiert"
+
+#~ msgid "There is an error to import Smart's"
+#~ msgstr "Fehler beim Importieren der Smart Links"
+
+#~ msgid "Few of the Smart Link's already exists."
+#~ msgstr "Einige der Smart Links existieren bereits."
+
+#~ msgid "Wrong File Type"
+#~ msgstr "Datei Typ wird nicht unterstützt"
+
+#~ msgid ""
+#~ "Please enter correct URL in Facebook Sharing Image - Custom Smart Link"
+#~ msgstr "Facebook Sharing Bild - Smart Link"
+
+#~ msgid "Please enter correct URL in Facebook Photo Link Ad Image"
+#~ msgstr "Korrekte Facebook™ Pixel ID eintragen"
+
+#~ msgid "Apply selection and agree"
+#~ msgstr "Auswahl speichern und zustimmen"
+
+#~ msgid "Select all and agree"
+#~ msgstr "Alle auswählen und zustimmen"
+
+#~ msgid "Deny"
+#~ msgstr "Ablehnen"
+
+#~ msgid "Enter External Smart Link to get Social Settings"
+#~ msgstr ""
+#~ "Bitte die externe URL eingeben, um die Social Einstellungen zu laden"
+
+#~ msgid "Enter Campaign Name"
+#~ msgstr "Kampagnen-Name eingeben"
+
+#~ msgid "Enter External Smart URL"
+#~ msgstr "Externen Smart Link eingeben"
+
+#~ msgid "Enter Custom Smart Link"
+#~ msgstr "Smart Link eingeben"
+
+#~ msgid "Setup Giphy API key in Settings Page"
+#~ msgstr "Giphy API Schlüssel in den Einstellungen hinterlegen"
+
+#~ msgid "Select an MP4 video to convert into a GIF file"
+#~ msgstr "MP4-Video auswählen, um es in eine GIF-Datei zu konvertieren"
+
+#~ msgid "Wrong file format. Select only mp4 file type."
+#~ msgstr "Falsches Dateiformat - bitte eine MP4 Datei auswählen."
+
+#~ msgid "Select GIF image"
+#~ msgstr "GIF-Datei auswählen"
+
+#~ msgid "Enter phrase to search GIF"
+#~ msgstr "Suchbegriff für GIFs eingeben"
+
+#~ msgid "Facebook Sharing Image - Custom Smart Link is set."
+#~ msgstr "Facebook Sharing Bild - Custom Smart Link ist festgelegt."
+
+#~ msgid "Facebook Photo Link Ad Image is set."
+#~ msgstr "Facebook Foto Link Ad Image ist gesetzt."
+
+#~ msgid "Setup overlay design"
+#~ msgstr "Setup Overlay Design"
+
+#~ msgid "Message should not exceed 80 characters"
+#~ msgstr "Der Text darf nicht mehr als 80 Zeichen enthalten"
+
+#~ msgid "Call-to-Action text should not exceed 50 characters"
+#~ msgstr "Der Button Text darf nicht mehr als 50 Zeichen enthalten"
+
+#~ msgid "Default and Unclassified category can not be deleted."
+#~ msgstr "Die Standard-Kategorien können nicht gelöscht werden."
+
+#~ msgid "Are you sure to delete category?"
+#~ msgstr "Soll diese Kategorie wirklich gelöscht werden?"
+
+#~ msgid "Cookie Category deleted successfully"
+#~ msgstr "Cookie-Kategorie wurde erfolgreich gelöscht"
+
+#~ msgid "There is an error to delete cookie category"
+#~ msgstr "Fehler beim Löschen der Kategorie"
+
+#~ msgid "Edit Category"
+#~ msgstr "Cookie-Kategorie editieren"
+
+#~ msgid "Category Saved Successfully"
+#~ msgstr "Cookie-Kategorie erfolgreich gespeichert"
+
+#~ msgid "Category Updated Successfully"
+#~ msgstr "Cookie-Kategorie erfolgreich aktualisiert"
+
+#~ msgid "Used Codes"
+#~ msgstr "Zugeordnete Codes"
+
+#~ msgid "Category name required"
+#~ msgstr "Name der Kategorie erforderlich"
+
+#~ msgid "Category internal name required"
+#~ msgstr "Kategorie interner Name erforderlich"
+
+#~ msgid "Category description required"
+#~ msgstr "Beschreibung für Kategorie erforderlich"
+
+#~ msgid "Code in HTML Head"
+#~ msgstr "Code im HTML Head"
+
+#~ msgid "Site Verification Code"
+#~ msgstr "Code Site Verifizierung"
+
+#~ msgid "Wrong file extension"
+#~ msgstr "Falsche Dateiendung"
+
+#~ msgid "License was successfully activated!"
+#~ msgstr "Lizenzschlüssel wurde erfolgreich aktiviert!"
+
+#~ msgid "Yes, Deactivate it!"
+#~ msgstr "Lizenz deaktivieren!"
+
+#~ msgid "Deactivate License!"
+#~ msgstr "Lizenzschlüssel deaktivieren!"
+
+#~ msgid "Deactivation Process Done!"
+#~ msgstr "Lizenz deaktivieren!"
+
+#~ msgid "Are you sure?"
+#~ msgstr "Bist Du sicher?"
+
+#~ msgid "Change Plugin Language"
+#~ msgstr "Sprache des Plugins ändern"
+
+#~ msgid "Settings saved"
+#~ msgstr "Einstellungen gespeichert"
+
+#~ msgid "Settings can not be saved"
+#~ msgstr "Einstellungen können nicht gespeichert werden"
+
+#~ msgid "Please enter Giphy API Key"
+#~ msgstr "Bitte GIP API Key eingeben"
+
+#~ msgid "Iframe Settings"
+#~ msgstr "Iframe-Einstellungen"
+
+#~ msgid "Delete Category"
+#~ msgstr "Kategorie löschen"
+
+#~ msgid "Smart Link Status"
+#~ msgstr "Smart Link Status"
+
+#~ msgid "Please select Cookie Notice to edit."
+#~ msgstr "Cookie Hinweis wählen."
+
+#~ msgid "Select Color"
+#~ msgstr "Farbe wählen"
+
+#~ msgid "Check here for Cookie Notice"
+#~ msgstr "Zum Cookie Hinweis"
+
+#~ msgid "CONSENT LOG"
+#~ msgstr "Consent Log"
+
+#~ msgid "Log successfully deleted."
+#~ msgstr "Protokoll erfolgreich gelöscht."
+
+#~ msgid "There is an error to delete log."
+#~ msgstr "Es gab einen Fehler beim Löschen des Protokolls."
+
+#~ msgid "Smart Link copied"
+#~ msgstr "Smart Link kopiert"
+
+#~ msgid "Tag saved successfully."
+#~ msgstr "Tag erfolgreich gespeichert."
+
+#~ msgid "Tag deleted successfully."
+#~ msgstr "Tag erfolgreich gelöscht."
+
+#~ msgid "There is an error to delete tag."
+#~ msgstr "Es liegt ein Fehler beim Löschen des Tags vor."
+
+#~ msgid "There is an error to save tag."
+#~ msgstr "Es liegt ein Fehler beim Speichern des Tags vor."
+
+#~ msgid "Tag name required."
+#~ msgstr "Tag-Name erforderlich."
+
+#~ msgid "Are you sure to delete the tag?"
+#~ msgstr "Sind Sie sicher, dass Sie das Tag löschen wollen?"
+
+#~ msgid "Only alphanumeric value"
+#~ msgstr "Nur alphanumerische Werte"
+
+#~ msgid "Select multiple items if you want to add more than one code"
+#~ msgstr ""
+#~ "Mehrere Elemente auswählen, wenn mehr als ein Code hinzugefügt werden soll"
+
+#~ msgid "Potentially problematic plugins are installed:"
+#~ msgstr ""
+#~ "Es sind Plugins installiert, die möglicherweise Probleme verursachen:"
+
+#~ msgid "Please follow these instructions if you encounter problems."
+#~ msgstr "Bei Problemen bitte diesen Anweisungen folgen."
+
+#~ msgid "Conversion Tracking Pixel"
+#~ msgstr "Conversion Tracking Codes"
+
+#~ msgid "In &lt;HEAD&gt; Tag"
+#~ msgstr "Zwischen &lt;HEAD&gt; Tag"
+
+#~ msgid "After &lt;BODY&gt; Open Tag"
+#~ msgstr "Nach dem &lt;BODY&gt; Tag"
+
+#~ msgid "Before &lt;/BODY&gt; Close Tag"
+#~ msgstr "Vor dem &lt;/BODY&gt; Tag"
+
+#~ msgid "WPretarget"
+#~ msgstr "WPretarget"
+
+#~ msgid "Pixel"
+#~ msgstr "Pixel"
+
+#~ msgid "No Pixel Selected"
+#~ msgstr "Kein Tag ausgewählt"
+
+#~ msgid "Time Delay in Seconds"
+#~ msgstr "Zeitverzögerung in Sekunden"
+
+#~ msgid "No Time Delay"
+#~ msgstr "Keine Zeitverzögerung"
+
+#~ msgid ""
+#~ "Enter the delay in seconds in which your pixel should be loaded. If there "
+#~ "is no pixel selected in \"FB Pixel Events\", the globally defined pixel "
+#~ "will be loaded delayed automatically."
+#~ msgstr ""
+#~ "Verzögerung in Sekunden eintragen, nach der der Pixel geladen werden "
+#~ "soll. Wenn unter \"FB Pixel Events\" kein Pixel ausgewählt ist, wird der "
+#~ "global definierte Pixel automatisch verzögert geladen."
+
+#~ msgid "FB Conversion Tracking"
+#~ msgstr "FB Conversion Tracking"
+
+#~ msgid "Global Codes"
+#~ msgstr "Globale Codes"
+
+#~ msgid "Save"
+#~ msgstr "Speichern"
+
+#~ msgid ""
+#~ "IMPORTANT: To use the 'Cookie Notice' feature, you must first manage the "
+#~ "categories under WPMarketingLabs -> Cookie Notice -> Categories. After "
+#~ "that, the codes can be assigned to the respective categories. The user "
+#~ "sees in the 'Cookie Notice' what type of cookies are being used and can "
+#~ "accept or reject them for each category. To be compliant with the GDPR "
+#~ "requirements, it is recommended to assign only 1 code per category. This "
+#~ "gives the user full flexibility to accept or reject individual cookies."
+#~ msgstr ""
+#~ "WICHTIG: Um die Funktion \"Cookie Hinweis\" verwenden zu können, müssen "
+#~ "zuerst die Kategorien unter Cookie-Hinweis -> Cookie-Kategorien verwaltet "
+#~ "werden. Danach können die Codes den jeweiligen Kategorien zugeordnet "
+#~ "werden. Der Benutzer sieht im Cookie-Hinweis, welche Art von Cookies "
+#~ "verwendet werden, und kann diese dann für jede Kategorie akzeptieren oder "
+#~ "ablehnen. Um den Anforderungen der DSGVO Rechnung zu tragen, empfiehlt es "
+#~ "sich, pro Kategorie nur 1 Code zuzuweisen. Damit hat der Nutzer die volle "
+#~ "Flexibilität, einzelne Cookies zu akzeptieren oder abzulehnen."
+
+#~ msgid "Thanks for accepting terms and condition!"
+#~ msgstr ""
+#~ "Besten Dank für die Bestätigung der Allgemeinen Geschäftsbedingungen!"
+
+#~ msgid ""
+#~ "WPMarketingLabs: We have updated our general <a href='https://"
+#~ "wpmarketinglabs.com/agb' target='_blank'>terms & conditions</a>. Please "
+#~ "<a id='wprt_tandc' href='javascript:void(0);'>click here</a> to accept."
+#~ msgstr ""
+#~ "WPMarketingLabs: Wir haben unsere <a href='https://wpmarketinglabs.com/"
+#~ "agb' target='_blank'>Allgemeinen Geschäftsbedingungen</a> aktualisiert. "
+#~ "Bitte <a id='wprt_tandc'href='javascript:void(0);'> hier klicken</a>, um "
+#~ "diese zu akzeptieren."
+
+#~ msgid ""
+#~ "Important notice: We changed the way how conversion/tracking and "
+#~ "Facebook™ events are integrated. Please watch this short video: "
+#~ msgstr ""
+#~ "WPMarketingLabs - Wichtiger Hinweis: Wir haben die Integration von "
+#~ "Conversion Tracking und Facebook™-Events optimiert. Bitte schaue dieses "
+#~ "kurze Video an: "
+
+#~ msgid "Watch now"
+#~ msgstr "Jetzt ansehen"
+
+#~ msgid ""
+#~ "WPMarketingLabs - Important Notice: The codes for Facebook, Google Ads "
+#~ "and Google Analytics need to be updated! Please enter only the pixel IDs "
+#~ "in the \"<a href=\"admin.php?page=wpml-code-manager\">Codes</a>\" section "
+#~ "instead of the entire JavaScript code snippet."
+#~ msgstr ""
+#~ "WPMarketingLabs - Wichtiger Hinweis: Die Codes für Facebook, Google Ads "
+#~ "und Google Analytics müssen aktualisiert werden! Bitte anstatt des "
+#~ "gesamten Javascript-Code-Snippets nur noch die Pixel-IDs in der Rubrik "
+#~ "\"<a href=\"admin.php?page=wpml-code-manager\">Codes</a>\" eingeben."
+
+#~ msgid ""
+#~ "Please disable and uninstall the DSGVO plugin - the features are already "
+#~ "available in WPMarketingLabs!"
+#~ msgstr ""
+#~ "Bitte das DSGVO-Plugin deaktivieren und deinstallieren - diese Funktionen "
+#~ "sind bereits in WPMarketingLabs verfügbar!"
+
+#~ msgid "Thank you for choosing WPMarketing<i>Labs</i>!"
+#~ msgstr ""
+#~ "Vielen Dank, dass Du Dich für WPMarketing<i>Labs</i> entschieden hast!"
+
+#~ msgid ""
+#~ "You can use all the features. The only limitation in the BASIC version is "
+#~ "a maximum of 3 Smart Links and 3 Codes."
+#~ msgstr ""
+#~ "Du kannst alle Funktionen vollumfänglich nutzen. Beachte dabei, dass die "
+#~ "kostenlose BASIC Version auf 3 Smart Links sowie 3 Codes beschränkt ist."
+
+#~ msgid ""
+#~ "Please upgrade to unlock unlimited Codes, Smart Links and access to our "
+#~ "PRO Trainings and Mastermind Group."
+#~ msgstr ""
+#~ "Führe ein Upgrade auf die PRO Version durch, um unbegrenzte Codes und "
+#~ "Smart Links freizuschalten, und Zugriff auf unsere PRO Trainings und "
+#~ "unsere Mastermind Gruppe zu erhalten."
+
+#~ msgid ""
+#~ "WPMarketingLabs Please check you have active license key in terms of "
+#~ "proper working of plugin during upgrade."
+#~ msgstr ""
+#~ "WPMarketingLabs: Bitte überprüfen, ob ein aktiver Lizenzschlüssel "
+#~ "vorhanden ist, damit das Plugin während des Upgrades ordnungsgemäß "
+#~ "funktioniert."
+
+#~ msgid "Error: Please accept Terms & Conditions to activate the plugin"
+#~ msgstr ""
+#~ "Fehler: Bitte die Allgemeinen Geschäftsbedingungen akzeptieren, um das "
+#~ "Plugin zu aktivieren"
+
+#~ msgid "Error..."
+#~ msgstr "Oops... das hat nicht geklappt."
+
+#~ msgid "Backup Restored Successfully"
+#~ msgstr "Backup erfolgreich wiederhergestellt"
+
+#~ msgid "Wrong file type or empty sql file"
+#~ msgstr "Falscher Dateityp oder leere SQL-Datei"
+
+#~ msgid "No valid license found."
+#~ msgstr "Keine gültige Lizenz gefunden."
+
+#~ msgid "Please enter your license details below."
+#~ msgstr "Bitte Lizenzschlüssel eintragen."
+
+#~ msgid "Save license information"
+#~ msgstr "Lizenzinformationen speichern"
+
+#~ msgid "Deactivate License?"
+#~ msgstr "Lizenzschlüssel deaktivieren?"
+
+#~ msgid "Deactivate license"
+#~ msgstr "Lizenz deaktivieren"
+
+#~ msgid "Change plugin language"
+#~ msgstr "Plugin Sprache ändern"
+
+#~ msgid ""
+#~ "The Software is enabled by default in the language of the WordPress "
+#~ "installation. However, if you would like to use the plugin user interface "
+#~ "and the standard texts in German instead, then click on \"Change "
+#~ "language\"."
+#~ msgstr ""
+#~ "Die Software wird standardmässig in der Sprache der WordPress-"
+#~ "Installation aktiviert. Wenn die Plugin Benutzeroberfläche und die "
+#~ "Standardtexte jedoch stattdessen in Englisch genutzt werden sollen, dann "
+#~ "bitte auf \"Sprache des Plugins ändern\" klicken."
+
+#~ msgid "Default Language"
+#~ msgstr "Standardsprache"
+
+#~ msgid "Backup and Restore"
+#~ msgstr "Backup & Wiederherstellung"
+
+#~ msgid ""
+#~ "To create a backup of the complete data, please click on \"Create "
+#~ "backup\". This will create a file with all codes, Smart Links / overlays, "
+#~ "cookie notice, FB and WooFeed settings. The backup can NOT be used on an "
+#~ "different domain!"
+#~ msgstr ""
+#~ "Um ein Backup der kompletten Daten zu erstellen, bitte auf \"Backup "
+#~ "erstellen\" klicken. Damit wird eine Datei mit allen Codes, Smart Links/"
+#~ "Overlays, Cookie Hinweisen - sowie FB- und WooFeed Einstellungen "
+#~ "erstellt. Das Backup kann nur auf dieser Domain wiedehergestellt werden!"
+
+#~ msgid "Do not delete database/settings when plugin is removed"
+#~ msgstr "Datenbank Einstellungen nicht entfernen bei Plugin Deinstallation"
+
+#~ msgid "Backup"
+#~ msgstr "Backup erstellen"
+
+#~ msgid "Restore"
+#~ msgstr "Wiederherstellen"
+
+#, php-format
+#~ msgid ""
+#~ "<a href=\"%s\" target=\"%s\">Giphy.com</a> Integration for Social Settings"
+#~ msgstr ""
+#~ "<a href=\"%s\" target=\"%s\">Giphy.com</a> Integration für Social "
+#~ "Einstellungen"
+
+#, php-format
+#~ msgid ""
+#~ "Smart Links shared on Facebook can use an animated image. For a seamless "
+#~ "integration with the platform <a href=\"%s\" target=\"_blank\">Giphy.com</"
+#~ "a>, an account with API key is necessary. This allows you to manage GIFs "
+#~ "directly from the URL-settings in the dashboard."
+#~ msgstr ""
+#~ "Auf Facebook geteilte Smart Links können mit einem animierten Bild "
+#~ "ausgestattet werden. Für eine direkte Integration mit der Plattform <a "
+#~ "href=\"%s\" target=\"_blank\">Giphy.com</a> ist ein Account mit API-"
+#~ "Schlüssel notwendig. Damit können GIFs direkt aus den URL-Einstellungen "
+#~ "heraus verwaltet werden."
+
+#, php-format
+#~ msgid "<a href=\"%s\" target=\"%s\">API-Key</a>"
+#~ msgstr "<a href=\"%s\" target=\"%s\">API-Schlüssel</a>"
+
+#~ msgid "Results Per Page"
+#~ msgstr "Resultate pro Seite"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "License"
+#~ msgstr "Lizenzschlüssel"
+
+#~ msgid ""
+#~ "Please enter here your license key, which you have received after the "
+#~ "purchase via e-mail. If you have a single license and would like to use "
+#~ "the license on a different domain, then click \"Disable license\"."
+#~ msgstr ""
+#~ "Bitte hier den Lizenschlüssel eintragen, welcher nach dem Kauf per E-Mail "
+#~ "zugestellt wurde. Falls eine Single Lizenz auf einer andere Domain "
+#~ "übertragen werden soll, bitte auf \"Lizenz deaktivieren\" klicken."
+
+#~ msgid "Activation key"
+#~ msgstr "Lizenzschlüssel"
+
+#~ msgid "Activation state"
+#~ msgstr "Status"
+
+#~ msgid "invalid"
+#~ msgstr "ist ungültig"
+
+#~ msgid "Accept Terms & Conditions"
+#~ msgstr "Allgemeine Geschäftsbedingungen akzeptieren"
+
+#~ msgid ""
+#~ "By activating the license, I agree to the <a href=\"https://"
+#~ "wpmarketinglabs.com/agb\" target=\"_blank\">terms & conditions</a>."
+#~ msgstr ""
+#~ "Durch die Aktivierung der Lizenz stimme ich den allgemeinen <a "
+#~ "href=\"https://wpmarketinglabs.com/agb\" "
+#~ "target=\"_blank\">Geschäftsbedingungen</a> zu."
+
+#~ msgid "License sucessfully deactivated."
+#~ msgstr "Lizenz erfolgreich deaktiviert."
+
+#~ msgid "success"
+#~ msgstr "Das hat geklappt"
+
+#~ msgid "failed"
+#~ msgstr "Das hat nicht geklappt"
+
+#~ msgid "Success : Giphy Settings Saved"
+#~ msgstr "Giphy Einstellungen erfolgreich gespeichert"
+
+#~ msgid "Error : Please check entered Giphy Credentials"
+#~ msgstr "Fehler: Bitte Giphy Anmeldedaten überprüfen"
+
+#~ msgid "There was an error verifying the license."
+#~ msgstr "Leider trat bei der Verifizierung der Lizenz ein Fehler auf."
+
+#~ msgid "Please accept Terms & Conditions to activate the plugin"
+#~ msgstr ""
+#~ "Fehler: Bitte die Allgemeinen Geschäftsbedingungen akzeptieren, um das "
+#~ "Plugin zu aktivieren"
+
+#~ msgid "License successfully verified."
+#~ msgstr "Lizenz erfolgreich verifiziert."
+
+#~ msgid ""
+#~ "Error while verifying your license. Please try again or contact our "
+#~ "support: <a href=\"mailto:support@wpmarketinglabs.helpcrunch-mail.com\" "
+#~ "target=\"_blank\">Click here</a>"
+#~ msgstr ""
+#~ "Leider trat bei der Verifizierung der Lizenz ein Fehler auf. Bitte erneut "
+#~ "versuchen oder den Support <a href=\"mailto:support@wpmarketinglabs."
+#~ "helpcrunch-mail.com\" target=\"_blank\">hier kontaktieren</a>"
+
+#~ msgid "License updated successfully."
+#~ msgstr "Lizenz erfolgreich aktualisiert."
+
+#~ msgid ""
+#~ "Error while updating your license. Please try again or contact our "
+#~ "support: <a href=\"mailto:support@wpmarketinglabs.helpcrunch-mail.com\" "
+#~ "target=\"_blank\">Click here</a>"
+#~ msgstr ""
+#~ "Leider trat bei der Aktualisierung ein Fehler auf. Bitte den Support <a "
+#~ "href=“mailto:support@wpmarketinglabs.helpcrunch-mail.com” "
+#~ "target=“_blank”>hier kontaktieren.</a>"
+
+#~ msgid "Upgrade to PRO"
+#~ msgstr "Auf PRO upgraden"
+
+#~ msgid "You have reached end of limit"
+#~ msgstr "Sie haben das Ende des Limits erreicht"
+
+#~ msgid "Load Content from"
+#~ msgstr "Inhalte laden von"
+
+#~ msgid "ON"
+#~ msgstr "EIN"
+
+#~ msgid "OFF"
+#~ msgstr "AUS"
+
+#~ msgid "Select and Confirm All"
+#~ msgstr "Auswählen und alle bestätigen"
+
+#~ msgid "Confirm Selection"
+#~ msgstr "Auswahl bestätigen"
+
+#~ msgid ""
+#~ "The new value has been set and will take effect after reloading the page"
+#~ msgstr ""
+#~ "Der neue Wert wurde gesetzt und wird aktiv, sobald die Seite neu geladen "
+#~ "wird"
+
+#~ msgid "valid"
+#~ msgstr "Gültig"
+
+#, fuzzy
+#~| msgid "Status"
+#~ msgid "Top Bar Status"
+#~ msgstr "Status"
+
+#~ msgid "View"
+#~ msgstr "Anzeigen"
+
+#~ msgid "Giphy Integration"
+#~ msgstr "Giphy Integration"
+
+#~ msgid "Social Photo Link Ad Smart Link"
+#~ msgstr "Social Foto Link Ad Smart Link"
+
+#~ msgid "Social Sharing Image - Custom Smart Link"
+#~ msgstr "Social Sharing Bild - Smart Link"
+
+#~ msgid "Social Photo Link Ad Image"
+#~ msgstr "Social Foto Link Ad Bild"
+
+#~ msgid "Social Description"
+#~ msgstr "Social Beschreibungstext"
+
+#~ msgid "Facebook Title"
+#~ msgstr "Facebook Titel"
+
+#~ msgid "Facebook Description"
+#~ msgstr "Facebook Beschreibungstext"
+
+#~ msgid "Cookie Notice will be placed on:"
+#~ msgstr "Conversion Tracking Code wird auf folgenden Seiten geladen:"
+
+#~ msgid ""
+#~ "These Categories are shown in the Cookie Notice. The user can manually "
+#~ "decide which of these Categories shall be loaded once the use of Cookies "
+#~ "has been accepted."
+#~ msgstr ""
+#~ "Diese Kategorien werden im Cookie Hinweis angezeigt. Der Benutzer kann "
+#~ "manuell selektieren, welche dieser Kategorie geladen werden sollen, "
+#~ "sobald die Verwendung von Cookies akzeptiert wurde."
+
+#, fuzzy
+#~| msgid "Back to list"
+#~ msgid "Back to List"
+#~ msgstr "Zurück"
+
+#~ msgid "Accept Cookies"
+#~ msgstr "Cookies akzeptieren"
+
+#~ msgid ""
+#~ "Select this if you\"re about to add a conversion code with events such as "
+#~ "facebook pixel event or google ads conversion snippet event."
+#~ msgstr ""
+#~ "Wählen Sie diese Option, wenn Sie einen Konvertierungscode mit "
+#~ "Ereignissen wie Facebook-Pixel-Ereignis oder Google-Anzeigen-"
+#~ "Konvertierungs-Snippet-Ereignis hinzufügen möchten."
+
+#~ msgid "Decline"
+#~ msgstr "“Ablehnen” Button"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#, fuzzy
+#~| msgid "Before Body Close"
+#~ msgid "Body Close"
+#~ msgstr "Vor Body Close"
+
+#~ msgid "Test"
+#~ msgstr "Test de_DE"
+
+#, fuzzy
+#~| msgid "Facebook Image"
+#~ msgid "Facebook Ads"
+#~ msgstr "Facebook Bild"
+
+#, fuzzy
+#~| msgid "Select Google Ads Pixel"
+#~ msgid "Google Ads"
+#~ msgstr "Google Ads Site Tag wählen"
+
+#, fuzzy
+#~| msgid "Please enter only Google Analytics ID"
+#~ msgid "Google Analytics"
+#~ msgstr "Bitte Google Ads Event Snippet-ID eintragen"
+
+#, fuzzy
+#~| msgid "Site Verification Code"
+#~ msgid "Google Site Verification"
+#~ msgstr "Google Seach Console Bestätigung"
+
+#, fuzzy
+#~| msgid "Linked to"
+#~ msgid "LinkedIn Ads"
+#~ msgstr "Verlinkt zu"
+
+#, fuzzy
+#~| msgid "General Audiences"
+#~ msgid "Perfect Audience"
+#~ msgstr "Allgemeines Publikum"
+
+#, fuzzy
+#~| msgid "Retargeting Url"
+#~ msgid "Retargeter"
+#~ msgstr "WPrt URL"
+
+#~ msgid "There is some error to verify license"
+#~ msgstr "Es gibt einen Fehler bei der Überprüfung der Lizenz"
+
+#~ msgid "Add New two"
+#~ msgstr "Neuen Code hinzufügen"
+
+#~ msgid "Click here"
+#~ msgstr "Klicke hier"
+
+#~ msgid " for an Upgrade to the PRO Version."
+#~ msgstr " um ein Upgrade auf die PRO Version zu machen."
+
+#~ msgid "Template 4"
+#~ msgstr "Shortcode"
+
+#~ msgid "Template 5"
+#~ msgstr "Vorlage 5"
+
+#~ msgid "Select Design"
+#~ msgstr "Design auswählen"
+
+#~ msgid "back to list"
+#~ msgstr "zurück"
+
+#, fuzzy
+#~| msgid "Please select Cookie Notice to edit."
+#~ msgid "Please make sure to select an active Cookie Notice."
+#~ msgstr "Cookie Kategorie wählen."
+
+#~ msgid ""
+#~ "Uses the photo defined in tab Social Settings->Facebook Photo Link Ad "
+#~ "Image"
+#~ msgstr ""
+#~ "Diese Funktion verwendet das in den \"Social Einstellungen\" hinterlegte "
+#~ "Bild ->"
+
+#~ msgid "Social Settings"
+#~ msgstr "Social Einstellungen"
+
+#~ msgid ""
+#~ "This option adds the selected Cookie Notice. <br><br>For an external "
+#~ "Smart Link, the landing page will load directly with an overlay of the "
+#~ "Cookie Notice, and the visitor has first to confirm on the landing page "
+#~ "if/which of these cookies are accepted or not.<br><br>This is a solution "
+#~ "to create GDPR-compliant Smart Links for pages that you own, which might "
+#~ "have been created with 3rd party tools that are not GDPR-compliant. By "
+#~ "adding the Cookie Notice, you can ensure that the cookies are being "
+#~ "managed in accordance with the law.<br><br>"
+#~ msgstr ""
+#~ "Diese Option fügt den ausgewählten Cookie-Hinweis hinzu.<br><br>Bei einem "
+#~ "externen Smart Link wird die Zielseite direkt mit einem Overlay des "
+#~ "Cookie-Hinweises geladen, und der Besucher muss zuerst auf der Zielseite "
+#~ "bestätigen, ob / welche Cookies akzeptiert werden.<br><br>Diese Option "
+#~ "ist eine ideale Lösung, um DSGVO-konforme Smart Links für eigene Seiten "
+#~ "zu erstellen, die bspw. mit Tools erstellt wurden, welche keine DSGVO-"
+#~ "konforme Cookie-Verwaltung bieten. Durch das Hinzufügen des Cookie-"
+#~ "Hinweises kann sichergestellt werden, dass die Cookies gemäß den "
+#~ "geltenden Bestimmungen verarbeitet werden.<br><br>"
+
+#~ msgid ""
+#~ "Please note: edit the placement and the design/layout in the Cookie "
+#~ "Notice section. You can create multiple Cookie Notices (with different "
+#~ "codes and designs), and assign them to any of the Smart Links."
+#~ msgstr ""
+#~ "Bitte beachten: Die Platzierung und das Design / Layout können im Menu "
+#~ "Cookie-Hinweis bearbeitet werden. Es können mehrere Hinweise (mit "
+#~ "unterschiedlichen Codes und Designs) erstellt und dann den gewünschten "
+#~ "Smart Links zugewiesen werden."
+
+#~ msgid "There was an error while updating"
+#~ msgstr "Leider trat beim Aktualisieren ein Fehler auf"
+
+#~ msgid ""
+#~ "Enter your Google Analytics tracking id (UA-XXXXXXX-XX). This option "
+#~ "actually only supports the Global Site Tag (gtag.js) code. For older "
+#~ "versions please use the ''Between ''HEAD'' Tag'' integration."
+#~ msgstr ""
+#~ "Bitte die Google Analytics Tracking ID (UA-XXXXXXXXXXXXX-XX) eingeben. "
+#~ "Diese Option unterstützt derzeit nur den Code Global Site Tag (gtag.js). "
+#~ "Für ältere Versionen bitte die Integration \"Zwischen 'HEAD' Tag "
+#~ "einfügen\" verwenden."
+
+#~ msgid "Require Cookie consent BEFORE redirect "
+#~ msgstr "Cookie-Zustimmung VOR der Weiterleitung erforderlich "
+
+#~ msgid " to update the Smart Link settings on Facebook."
+#~ msgstr " um die Smart Link Einstellungen auf Facebook zu aktualisieren."
+
+#~ msgid ""
+#~ "If this option is activated, the user will only be redirected to the "
+#~ "target URL if the \"Cookie Notice\" has been confirmed. The text that is "
+#~ "being displayed can be adjusted in the tab 'Redirect Notice'."
+#~ msgstr ""
+#~ "Wenn diese Option aktiviert ist, wird der Nutzer nur zur Zielseite "
+#~ "weitergeleitet, wenn der Cookie Hinweis bestätigt wurde. Der "
+#~ "eingeblendete Hinweis kann unter \"Redirect Hinweis\" angepasst werden."
+
+#~ msgid "Overlay"
+#~ msgstr "Overlay"
+
+#~ msgid "Select campaign type to export"
+#~ msgstr "Kampagnen-Typ wählen"
+
+#~ msgid "Code was successfully saved"
+#~ msgstr "Code erfolgreich gespeichert"
+
+#~ msgid "Code was successfully updated"
+#~ msgstr "Code erfolgreich aktualisiert"
+
+#~ msgid "Pre-select recommended Categories"
+#~ msgstr "Vorauswahl empfohlener Kategorien"
+
+#~ msgid ""
+#~ "Based on the displayed Categories, specify which of these should be pre-"
+#~ "selected. These are loaded after the user has accepted the use of "
+#~ "cookies. The user can manually uncheck these Categories."
+#~ msgstr ""
+#~ "Basierend auf den angezeigten Kategorien kann festgelegt werden, welche "
+#~ "dieser Kategorien vorselektiert sein sollen. Diese werden geladen, "
+#~ "nachdem der Benutzer die Verwendung von Cookies akzeptiert hat. Der "
+#~ "Benutzer kann diese Kategorien einzeln deaktivieren."
+
+#~ msgid "Please accept terms and conditions"
+#~ msgstr "Bitte die Allgemeinen Geschäftsbedingungen beachten"
+
+#~ msgid "Links"
+#~ msgstr "Ziel URL"
+
+#~ msgid "Link Name"
+#~ msgstr "Link Name"
+
+#~ msgid "There is mismatch in License key"
+#~ msgstr "Der Lizenzschlüssel konnte nicht erkannt werden"
+
+#~ msgid "wpretarget"
+#~ msgstr "WPretarget"
+
+#~ msgid "Read more Text"
+#~ msgstr "Mehr lesen-Text"
+
+#~ msgid "Please enter powered by link name"
+#~ msgstr "Bitte die Link-Bezeichnung für \"Powered by\"eingeben"
+
+#~ msgid "Impressum"
+#~ msgstr "Link"
+
+#~ msgid "URL to link Impressum"
+#~ msgstr "Ziel URL"
+
+#~ msgid "Please enter impressum link name"
+#~ msgstr "Bitte die Link-Bezeichnung eingeben"
+
+#~ msgid "Text"
+#~ msgstr "Text"
+
+#~ msgid "Call-to-action Text"
+#~ msgstr "Button Text"
+
+#~ msgid "Call-to-Action URL"
+#~ msgstr "Ziel-URL"
+
+#~ msgid "Overlay Type"
+#~ msgstr "Overlay Stil"
+
+#~ msgid "Template 2"
+#~ msgstr "Sticky Bar"
+
+#~ msgid "Template 6"
+#~ msgstr "Vorlage 6"
+
+#~ msgid "Template 7"
+#~ msgstr "Vorlage 7"
+
+#~ msgid "Template 8"
+#~ msgstr "Callout Modal (Standard)"
+
+#~ msgid "Show multiple script in page"
+#~ msgstr "Overlay Design(s) auswählen"
+
+#~ msgid "Chat on Messenger"
+#~ msgstr "Chat starten"
+
+#~ msgid "Select AdWords Pixel"
+#~ msgstr "Google Ads Site Tag wählen"
+
+#~ msgid "Url"
+#~ msgstr "URL"
+
+#~ msgid "Input"
+#~ msgstr "Einträge"
+
+#~ msgid "Campaign Settings"
+#~ msgstr "Smart Link Einstellungen"
+
+#~ msgid ""
+#~ "Important notice: \"Codes\" for internal WordPress content can be managed "
+#~ "<a href=\"?page=codes\" target=\"_blank\">here</a>"
+#~ msgstr ""
+#~ "Der Typ <b>\"Extern\"</b> erlaubt es, eine beliebige Ziel-URL zu wählen "
+#~ "und daraus einen einen gebrandeten Smart Link zu erstellen. Bevor der "
+#~ "Nutzer auf der Zielseite landet, können die gewünschten Codes und/oder "
+#~ "eine Zwischenseite mit einem Cookie Hinweis eingefügt werden. <br>\n"
+#~ "Bei dem Typ <b>\"Externes Overlay\"</b> gibt es noch mehr Möglichkeiten, "
+#~ "indem die Zielseite direkt als gebrandeter Smart Link eingeframt wird, "
+#~ "und wenn gewünscht dann mit einem oder mehreren Overlays ausgestattet "
+#~ "werden kann (bspw. Cookie Hinweis, Call-to-Action, Chat Box, …). <br>\n"
+#~ "Bei Auswahl des Typs <b>\"Internes Overlay\"</b> können solche Overlays "
+#~ "auch auf internen WordPress Inhalten dargestellt werden (bspw. Seiten, "
+#~ "Beiträge, Kategorien). Damit kann bspw. ein Call-to-Action mit einem Lead "
+#~ "Magneten eingefügt werden, oder unterschiedliche Overlays für "
+#~ "verschiedene Blog-Kategorien genutzt werden. <br>\n"
+#~ "Codes, die übergreifend für interne WordPress Inhalte genutzt werden "
+#~ "sollen, können <a href=\"?page=codes\" target=\"_blank\">hier</a> in der "
+#~ "Sektion <b>\"Codes”</b> verwaltet werden"
+
+#~ msgid "Pixel Name is required"
+#~ msgstr "Bitte einen Namen festlegen"
+
+#~ msgid "Pixel Name"
+#~ msgstr "Code Name"
+
+#~ msgid "Type of Script"
+#~ msgstr "Script Typ"
+
+#~ msgid ""
+#~ "Please select here multiple overlay type to display. No selection will "
+#~ "display only the last edited or added overlay."
+#~ msgstr ""
+#~ "Bei einem Smart Link können mehrere Arten von Overlays gleichzeitig "
+#~ "verwendet werden, um bspw. die \"Cookie Notice\", eine \"Social Proof "
+#~ "Bubble\" und eine \"Chat Box\" anzuzeigen. Bitte hier die gewünschten "
+#~ "Overlay Designs auswählen, und dann die Einstellungen der gewählten "
+#~ "Designs über das untenstehende Dropdown Menu anpassen."
+
+#~ msgid " - (Overlay with call to action)"
+#~ msgstr " - (Overlay mit Call-to-Action)"
+
+#~ msgid " - (Content box)"
+#~ msgstr " - (Content Box)"
+
+#~ msgid " - (Social proof bubble)"
+#~ msgstr " - (Social Proof Bubble)"
+
+#~ msgid " - (Chat box Facebook™ style)"
+#~ msgstr " - (Chat Box)"
+
+#~ msgid " - (Add my own script)"
+#~ msgstr " - (Eigenes Script)"
+
+#~ msgid "Chat box Facebook™ style"
+#~ msgstr "Chat Box"
+
+#~ msgid ""
+#~ "Add a fully customizable social proof element to your Smart Links that "
+#~ "can display pre-defined lead or sale notifications to your page visitors, "
+#~ "which boosts conversion."
+#~ msgstr ""
+#~ "Füge ein komplett anpassbares Social-Proof-Element auf der Seite ein, das "
+#~ "vordefinierte Lead- und Sales-Benachrichtigungen für Besucher anzeigt, "
+#~ "was die Konversion steigert."
+
+#~ msgid "Overlay with call to action"
+#~ msgstr "Overlay mit Call-to-Action"
+
+#~ msgid ""
+#~ "Select the desired button style and add any text with a hyperlink to an e-"
+#~ "mail address, contact form, support helpdesk system, frequently asked "
+#~ "questions (FAQ),... You can also use <a href=\"https://getemoji.com\" "
+#~ "target=\"_blank\">emojis</a> for that. Set the background color and "
+#~ "position, and whether to display a shadow or not (if applicable)."
+#~ msgstr ""
+#~ "Wähle den gewünschten Button-Stil aus und füge einen beliebigen Text mit "
+#~ "einem Hyperlink zu einer E-Mail-Adresse, Kontaktformular, Support-"
+#~ "Helpdesk System, häufig gestellten Fragen (FAQ), ... hinzu. Du kannst "
+#~ "auch <a href=\"https://getemoji.com\" target=\"_blank\">Emojis</a> dafür "
+#~ "nutzen. Lege die Hintergrundfarbe und die Position fest, und ob ein "
+#~ "Schatten angezeigt werden soll oder nicht."
+
+#~ msgid ""
+#~ "Add a Call-to-action overlay notification to the Smart Link. If the "
+#~ "visitor clicks on the button or text link, he will be redirected to the "
+#~ "target URL."
+#~ msgstr ""
+#~ "Füge der Smart Link ein Overlay mit einem Call-to-Action hinzu. Wenn der "
+#~ "Besucher auf die Schaltfläche oder den Textlink klickt, wird er zur Ziel-"
+#~ "URL weitergeleitet."
+
+#~ msgid "Read more Button"
+#~ msgstr "“Mehr Info” Button"
+
+#~ msgid "Select type of overlay"
+#~ msgstr "Overlay Button Typ wählen"
+
+#~ msgid " - (Button with icon/text/URL)"
+#~ msgstr " - (Button mit Icon/Text/URL)"
+
+#~ msgid "<a href=\"mailto:info@yourdomain.com\">Questions!?</a>"
+#~ msgstr "<a href=\"mailto:info@yourdomain.com\">Fragen!?</a>"
+
+#~ msgid "Button with icon/text/URL"
+#~ msgstr "Button mit Icon/Text/URL"
+
+#~ msgid "WPretarget Links"
+#~ msgstr "WPretarget Links"
+
+#~ msgid "WPretarget Link"
+#~ msgstr "WPretarget"
+
+#~ msgid "Add URL"
+#~ msgstr "URL hinzufügen "
+
+#~ msgid "URLs and Overlays"
+#~ msgstr "URLs und Overlays"
+
+#~ msgid "URLs"
+#~ msgstr "URLs"
+
+#~ msgid "Copy URL"
+#~ msgstr "URL kopieren"
+
+#~ msgid "Facebook Photo Link Ad URL"
+#~ msgstr "Facebook Foto Link Ad URL"
+
+#~ msgid "Read More"
+#~ msgstr "Weiterlesen"
+
+#~ msgid "WPretarget URL"
+#~ msgstr "URL"
+
+#~ msgid "WPretarget Settings"
+#~ msgstr "Einstellungen"
+
+#~ msgid "Transfer from Post/Page =>  "
+#~ msgstr "Übernommen von Seite/Beitrag =>  "
+
+#~ msgid "More information about %s"
+#~ msgstr "Mehr Informationen über %s"
+
+#~ msgid ""
+#~ "First Remove Code From Page/Post. Code Already exists with previous box "
+#~ "with post id =>"
+#~ msgstr "Bitte Code zuerst von der zugeordneten Seite löschen =>"
+
+#~ msgid ""
+#~ "WPretarget - Important notice: it is no longer possible to add codes "
+#~ "directly from a page or post. Instead, all the codes are being managed "
+#~ "centrally in the WPretarget dashboard. Please move all existing HTML / "
+#~ "Javascript codes from any individual pages / posts to the \"Codes\" menu!"
+#~ msgstr ""
+#~ "WPretarget - Wichtiger Hinweis: Es ist nicht mehr möglich, Codes direkt "
+#~ "auf einer Seite oder einem Beitrag hinzuzufügen. Stattdessen werden alle "
+#~ "Codes zentral im WPretarget-Dashboard verwaltet. Bitte alle bestehenden "
+#~ "HTML- / Javascript-Codes von den einzelnen Seiten / Posts in das Menü "
+#~ "\"Codes\" übertragen!"
+
+#~ msgid "Custom Global Codes"
+#~ msgstr "Globale Codes"
+
+#~ msgid "Domain"
+#~ msgstr "Domain"
+
+#, fuzzy
+#~| msgid "Target"
+#~ msgid "Tag"
+#~ msgstr "Linkziel"
+
+#, fuzzy
+#~| msgid "Upload Image"
+#~ msgid "My Uploads"
+#~ msgstr "Bild hochladen"
+
+#~ msgid "License successfully verified. Please reload the page."
+#~ msgstr ""
+#~ "Die Lizenz wurde erfolgreich verifiziert. Bitte die Seite neu laden, um "
+#~ "WPretarget zu nutzen."
+
+#~ msgid "License updated successfully. Please reload the page."
+#~ msgstr ""
+#~ "Die Lizenz wurde erfolgreich aktualisiert. Bitte die Seite neu laden, um "
+#~ "WPretarget zu nutzen."
+
+#~ msgid "Size should be 1200 x 1200 pixels for best results. Click "
+#~ msgstr ""
+#~ "Die Größe sollte 1200 x 1200 Pixel betragen, um optimale Ergebnisse zu "
+#~ "erzielen. Klicke "
+
+#~ msgid ""
+#~ ", to update the URL settings on Facebook. If you want to use an animated "
+#~ "image, upload your GIF-file directly to "
+#~ msgstr ""
+#~ ", um die URL Einstellungen auf Facebook zu aktualisieren, Wenn Du ein "
+#~ "animiertes Bild nutzen möchtest, lade Deine GIF-Datei direkt bei "
+
+#~ msgid " / search for a suitable image, and then paste the Giphy URL here."
+#~ msgstr ""
+#~ " hoch/suche dort ein passendes Bild, und füge dann die Giphy-URL ein."
+
+#~ msgid "Select Global Option"
+#~ msgstr "Globale Option wählen"
+
+#~ msgid "Accept Cookies: Optional Categories (not pre-selected)"
+#~ msgstr "Cookies akzeptieren: Optionale Kategorien (nicht vorausgewählt)"
+
+#~ msgid "Format: 1200 x 1200 Pixel"
+#~ msgstr "Empfohlen: 1200 x 1200 Pixel"
+
+#~ msgid "Facebook Link Ad Photo"
+#~ msgstr "Facebook Link Ad Foto"
+
+#~ msgid ""
+#~ "IMPORTANT: if you want any of these categories to keep being active after "
+#~ "the user has ‘Accepted’ or ‘Declined’ the use of cookies, make sure to "
+#~ "also add them in the corresponding fields below!"
+#~ msgstr ""
+#~ "WICHTIG: Wenn Sie möchten, dass eine dieser Kategorien aktiv bleibt, "
+#~ "nachdem der Benutzer die Verwendung von Cookies \"Akzeptiert\" oder "
+#~ "\"Abgelehnt\" festgelegt hat, fügen Sie diese ebenfalls in die "
+#~ "entsprechenden Felder ein!"
+
+#~ msgid "Facebook Image"
+#~ msgstr "Facebook Bild"
+
+#~ msgid "Make Global For"
+#~ msgstr "Globale Option wählen"
+
+#~ msgid "Reloading"
+#~ msgstr "Seite neu laden"
+
+#~ msgid "Enable to reload the page after cookies are accepted"
+#~ msgstr ""
+#~ "Option aktivieren um die Seite neu zu laden, nachdem dem Cookie-Hinweis "
+#~ "zugestimmt wurde"
+
+#~ msgid "You are being redirected... <br>[cookie-notice]"
+#~ msgstr "Sie werden weitergeleitet ... <br> [cookie-notice]"
+
+#~ msgid "Accept Button "
+#~ msgstr "“Akzeptieren” Button  "
+
+#~ msgid "Background Color "
+#~ msgstr "Hintergrundfarbe "
+
+#~ msgid "Text Color "
+#~ msgstr "Textfarbe "
+
+#~ msgid "Please select default Cookie-Category and users choice"
+#~ msgstr "Standardkategorie und Benutzerauswahl wählen"
+
+#~ msgid "Enable read more info link"
+#~ msgstr ""
+#~ "Zusätzlichen Button anzeigen, der auf weitere Informationen verweist "
+#~ "(Seite oder spezifische URL wählen)"
+
+#~ msgid "The text of the more info button."
+#~ msgstr "Button Text, der auf weitere Informationen verweist"
+
+#~ msgid "Script Blocking"
+#~ msgstr "Cookie Management"
+
+#~ msgid "(Default Cookie-Category cookie will be always loaded)"
+#~ msgstr ""
+#~ "(Diese Cookies werden immer geladen, auch wenn der Nutzer auf "
+#~ "\"Ablehnen\" klickt)"
+
+#~ msgid "Users Choice Cookie-Category / Load when user accepts Cookie notice "
+#~ msgstr "Codes dieser Kategorie(n) nur laden, wenn diese akzeptiert werden"
+
+#~ msgid ""
+#~ "(Open to user choice and if user accept without selecting any choice then "
+#~ "these category will be loaded or if user select choice then it will "
+#~ "override the default)"
+#~ msgstr ""
+#~ "(Diese Cookies benötigen eine explizite Bestätigung des Benutzers, um "
+#~ "geladen zu werden)"
+
+#~ msgid ""
+#~ "(If the user declines the use of Cookies, these Cookie Categories will be "
+#~ "loaded anyway after the user has clicked the decline-button)."
+#~ msgstr ""
+#~ "(Cookies dieser Kategorien werden geladen, auch wenn der Benutzer auf "
+#~ "\"Ablehnen\" klickt)"
+
+#~ msgid "Comment:"
+#~ msgstr "Beschreibung:"
+
+#~ msgid ""
+#~ "Please update category to platform to work proper with cookie notice."
+#~ msgstr ""
+#~ "WICHTIG: Um die Funktion \"Cookie Hinweis\" nutzen zu können, müssen "
+#~ "zuerst die Kategorien unter WPretarget -> Cookie Hinweis -> Kategorien "
+#~ "festgelegt werden. Danach können die Codes den jeweiligen Kategorien "
+#~ "zugewiesen werden. Der Benutzer sieht dann im “Cookie Hinweis”, was für "
+#~ "Cookies auf der Seite verwendet werden und kann diese pro Kategorie "
+#~ "akzeptieren oder ablehnen."
+
+#~ msgid ""
+#~ "WPretarget Please transfer Conversion Tracking Pixel from post and pages "
+#~ "to Conversion Tracking Code in Code Module to make your site fully GDPR "
+#~ "Compliance!"
+#~ msgstr ""
+#~ "WPretarget - Wichtiger Hinweis: neu ist keine Erfassung von Codes direkt "
+#~ "auf Seiten/Beiträgen mehr möglich. Stattdessen werden alle Codes "
+#~ "übersichtlich in der zentralen WPretarget Oberfläche verwaltet. Deshalb "
+#~ "bitte alle HTML/Javascript Codes, welche direkt auf Seiten/Beiträgen "
+#~ "hinterlegt wurden, neu im Menu “Codes” erfassen!"
+
+#~ msgid ""
+#~ "WPretarget Please change Facebook Pixel, Google Adwords, Adwords Snippet "
+#~ "from full code to only Pixel Id in Code to make it smoothly working with "
+#~ "Pixel Events and Woocommerce"
+#~ msgstr ""
+#~ "WPretarget - Wichtiger Hinweis: Um Standard-Events (Facebook Ads und "
+#~ "Google Ads) zu verwenden, aktualisiere bitte Deine Einträge im Menu "
+#~ "“Codes” und gib nur die Pixel-IDs ein, anstelle des gesamten JavaScript-"
+#~ "Code-Snippets."
+
+#~ msgid "Add New Platform"
+#~ msgstr "Neuen Tag erstellen"
+
+#~ msgid ""
+#~ "The page is being redirected to another site. Please accept cookie notice "
+#~ "to proceed.[cookie-notice]"
+#~ msgstr ""
+#~ "Du wirst auf eine andere Seite weitergeleitet. Bitte akzeptiere den "
+#~ "Cookie-Hinweis um fortzufahren. <b>[cookie-notice]"
+
+#~ msgid "Fail to save settings"
+#~ msgstr "Einstellungen können nicht gespeichert werden"
+
+#~ msgid ""
+#~ "Please note: This link will load third-party content using iframe-"
+#~ "technology.\n"
+#~ "The content has been enhanced by the party that shared the link to "
+#~ "include interactive features or tracking information. These features are "
+#~ "not necessarily associated with or endorsed by the owner of the content.\n"
+#~ "To accept the <a href=\"https://www.wpretarget.net/terms/\" "
+#~ "target=\"_blank\"> terms & conditions </a>, please click the button below "
+#~ "or close this page to cancel."
+#~ msgstr ""
+#~ "Hinweis: Dieser Link lädt Inhalte von Drittanbietern mittels iframe-"
+#~ "Technologie.\n"
+#~ "Diese Inhalte wurde von der Partei, die den Link geteilt hat, um "
+#~ "interaktive Elemente oder Tracking-Informationen erweitert. Diese "
+#~ "Elemente haben nicht zwingend einen Bezug zum Eigentümer des Inhalts.\n"
+#~ "Um die <a href=\"https://www.wpretarget.net/agb\" "
+#~ "target=\"_blank\">Allgemeinen Geschäftsbedingungen zu akzeptieren, bitte "
+#~ "auf den untenstehenden Button klicken, oder diese Seite schließen, um den "
+#~ "Vorgang abzubrechen."
+
+#~ msgid "Questions !?"
+#~ msgstr "Fragen !?"
+
+#~ msgid "Action URL"
+#~ msgstr "Ziel URL"
+
+#~ msgid "Bubble Message"
+#~ msgstr "Text"
+
+#~ msgid "External URL was successfully saved"
+#~ msgstr "Externe URL erfolgreich aktualisiert"
+
+#~ msgid "External URL was successfully updated"
+#~ msgstr "Die externe URL wurde erfolgreich aktualisiert"
+
+#~ msgid "There was an error while updating External URLs"
+#~ msgstr "Leider trat beim Aktualisieren des Externe URLs ein Fehler auf"
+
+#~ msgid ""
+#~ "The page will load third party content using iframe. Please accept cookie "
+#~ "notice to proceed."
+#~ msgstr ""
+#~ "Diese Seite lädt Inhalte über ein IFRAME. Bitte Cookie-Hinweis "
+#~ "akzeptieren um fortzufahren."
+
+#, fuzzy
+#~| msgid "Recommended: 1200 x 627 Pixel."
+#~ msgid "Recommended: 1200 x 1200 Pixel."
+#~ msgstr "Empfohlen: 1200 x 627 Pixel."
+
+#, fuzzy
+#~| msgid "Recommended: Square Format, min. 800 x 800 Pixel."
+#~ msgid "Recommended: Square Format, min. 1200 x 1200 Pixel."
+#~ msgstr "Empfohlen: quadratisches Format, min. 800 x 800 Pixel."
+
+#~ msgid "Necessary to accept cookie notice"
+#~ msgstr "Benötigt die Zustimmung beim Cookie-Hinweis"
+
+#, fuzzy
+#~| msgid "Close"
+#~ msgid "Close Tag"
+#~ msgstr "Schliessen"
+
+#~ msgid "Wordpress Post"
+#~ msgstr "Beitrag wählen"
+
+#~ msgid "Wordpress Page"
+#~ msgstr "Seite wählen"
+
+#~ msgid "Change Language"
+#~ msgstr "Sprache ändern"
+
+#~ msgid ""
+#~ "WPretarget Please add all the \"Conversion Tracking Pixel\", \"Facebook "
+#~ "Pixel\" and \"Code\" to Page and Post through Code Module. In next "
+#~ "version we are removing meta boxes from page and post."
+#~ msgstr ""
+#~ "Wichtiger Hinweis: Alle Conversion Pixel (Facebook Events, Google Ads "
+#~ "Purchase Snippet etc.) über \"Codes\" erfassen und als Conversion "
+#~ "Tracking Code deklarieren."
+
+#~ msgid ""
+#~ "First Remove Code From Page/ Post.Code Already exists with previous box "
+#~ "with post id =>"
+#~ msgstr "Code existiert bereits"
+
+#~ msgid "Overlays"
+#~ msgstr "Overlays"
+
+#~ msgid "Popup"
+#~ msgstr "Popup Einstellungen"
+
+#~ msgid "Button URL"
+#~ msgstr "ZielURL"
+
+#~ msgid "Show blog name"
+#~ msgstr "Seitentitel anzeigen"
+
+#~ msgid "Use image size 100px*100px for better resolution"
+#~ msgstr "Empfohlen: 100 x 100 Pixel"
+
+#~ msgid "RT Platform"
+#~ msgstr "RT-Plattform"
+
+#~ msgid "Load when user declines cookie notice"
+#~ msgstr ""
+#~ "Codes dieser Kategorie(n) nur laden, wenn der Cookie-Hinweis abgelehnt "
+#~ "wird"
+
+#~ msgid "(if user decline then these category cookies will be loaded)"
+#~ msgstr ""
+#~ "(Diese Cookies werden gesetzt, wenn der Benutzer auf \"Ablehnen\" klickt)"
+
+#~ msgid ""
+#~ "Using this option will not work with manual shortcode process and will "
+#~ "block all iframe on page"
+#~ msgstr ""
+#~ "Diese Option funktioniert nur wenn der Shortcode für iFrames NICHT "
+#~ "verwendet wird"
+
+#~ msgid "Enter category"
+#~ msgstr "Kategorie eingeben"
+
+#, fuzzy
+#~| msgid "Cookie Category"
+#~ msgid "Cookie Category"
+#~ msgstr "Cookie-Kategorie"
+
+#, fuzzy
+#~| msgid "Select Adword Pixel"
+#~ msgid "Select Adwords Pixel"
+#~ msgstr "Google Ads Site Tag wählen"
+
+#~ msgid "Pixel Delay"
+#~ msgstr "Zeitverzögerung"
+
+#~ msgid "Add New External URLs"
+#~ msgstr "Neue externe URLs hinzufügen"
+
+#~ msgid "This website uses cookies related to "
+#~ msgstr "Diese Seite verwendet Cookies in Bezug auf "
+
+#~ msgid "Allowed"
+#~ msgstr "Erlaubt"
+
+#~ msgid "Where To Appear"
+#~ msgstr "Einfügen in"
+
+#~ msgid "Platform was successfully updated"
+#~ msgstr "Der Tag wurde erfolgreich aktualisiert"
+
+#~ msgid "Update Cookie Category"
+#~ msgstr "Cookie-Kategorie aktualisieren"
+
+#~ msgid "Add New Cookie Category"
+#~ msgstr "Neue Cookie-Kategorie hinzufügen"
+
+#~ msgid "Position "
+#~ msgstr "Position "
+
+#~ msgid "Please enter cancel button text"
+#~ msgstr "Bitte geben Sie den Text für den Abbrechen-Button ein"
+
+#~ msgid "Pre Checked Category"
+#~ msgstr "Vorüberprüfte Kategorie"
+
+#~ msgid "Default short code to display \"Changing your consent\""
+#~ msgstr "Standard-Funktionscode zum Anzeigen \"Ihre Zustimmung ändern\""
+
+#, fuzzy
+#~| msgid "Load cookies on accept by user"
+#~ msgid "Load cookie on decline by user"
+#~ msgstr "Laden Sie Cookies beim Akzeptieren durch Benutzer"
+
+#~ msgid "Select Retargeting Pixels"
+#~ msgstr "Retargeting Tag auswählen (mehrfache Auswahl möglich)"
+
+#~ msgid "This Custom Retargeting URL already exists"
+#~ msgstr "Dieser Permalink ist bereits vorhanden"
+
+#~ msgid "Enter your custom retargeting URL"
+#~ msgstr "Tippe hier den gewünschten Slug ein"
+
+#~ msgid "Candy"
+#~ msgstr "Süßigkeiten"
+
+#~ msgid "Bean"
+#~ msgstr "Bohne"
+
+#~ msgid "Retargeting Platform"
+#~ msgstr "Retargeting Plattform"
+
+#~ msgid "Retargeting Pixel Data"
+#~ msgstr "Retargeting Tag Informationen"
+
+#~ msgid "Retargeting Pixel Name"
+#~ msgstr "Retargeting Tag Name"
+
+#~ msgid "Retargeting Code"
+#~ msgstr "Retargeting Code"
+
+#~ msgid "Retargeting Code is required"
+#~ msgstr "Retargeting Code wird benötigt"
+
+#~ msgid "Retargeting Pixel"
+#~ msgstr "Retargeting Tag"
+
+#~ msgid "Form"
+#~ msgstr "Bilden"
+
+#~ msgid "Hidden"
+#~ msgstr "Versteckt"
+
+#~ msgid "Please select atleast one method to block and allow cookies"
+#~ msgstr ""
+#~ "Bitte wählen Sie mindestens eine Methode um Cookies zu blockieren und zu "
+#~ "erlauben"
+
+#~ msgid "Please select codes in selected script block option"
+#~ msgstr "Bitte wählen Sie die Codes in der ausgewählten Skriptblock-Option"
+
+#~ msgid "Please select codes in selected script block  option"
+#~ msgstr "Please select codes in selected script block  option"
+
+#~ msgid "Cookie Display Message"
+#~ msgstr "Cookie-Displaymitteilung"
+
+#~ msgid "Load all cookies when site loads and delete on cancel of user"
+#~ msgstr ""
+#~ "Laden Sie alle Cookies, wenn die Website beim Abbrechen des Benutzers "
+#~ "geladen und gelöscht wird"
+
+#~ msgid "Load when user arrives on site"
+#~ msgstr "Laden, wenn der Benutzer vor Ort ankommt"
+
+#~ msgid "Load what when user arrives on site"
+#~ msgstr "Laden Sie was, wenn der Benutzer vor Ort ankommt"
+
+#~ msgid "Enter the cookie display message."
+#~ msgstr "Geben Sie die Cookie-Displaymeldung ein."
+
+#~ msgid "_blank"
+#~ msgstr "_leer"
+
+#~ msgid "_self"
+#~ msgstr "_selbst"
+
+#~ msgid "WPrt Link Data"
+#~ msgstr "WPrt Link Informationen"
+
+#~ msgid "Campaign ID"
+#~ msgstr "Kampagne ID"
+
+#~ msgid "Content IDs"
+#~ msgstr "Content-IDs"
+
+#~ msgid ""
+#~ "Recommended: 1200 x 627 Pixel<br>jpg, png, gif (also animated) are "
+#~ "supported."
+#~ msgstr ""
+#~ "Empfohlen: 1200 x 627 Pixel <br>jpg, png, gif (auch animiert) werden "
+#~ "unterstützt."
+
+#~ msgid "There was an error while saving WPrt Link"
+#~ msgstr "Leider trat beim Speichern des WPrt Links ein Fehler auf"
+
+#~ msgid "WPrt Link Name is required"
+#~ msgstr "Bitte einen Namen für die Kampagne definieren"
+
+#~ msgid "Toggle Popup Settings"
+#~ msgstr "Popup Einstellungen ein- und ausblenden"
+
+#~ msgid "Cost"
+#~ msgstr "Wert"
+
+#~ msgid "Add to wishlist"
+#~ msgstr "Zur Wunschliste hinzufügen"
+
+#~ msgid "Add payment info"
+#~ msgstr "Zahlungsinformationen hinzufügen"
+
+#~ msgid "Licence"
+#~ msgstr "Lizenz"
+
+#~ msgid "Licence not found"
+#~ msgstr "Keine gültige Lizenz."
+
+#~ msgid ""
+#~ "Licence was successfully saved and verified. Please reload Page to "
+#~ "activated WPRetarget."
+#~ msgstr ""
+#~ "Die Lizenz wurde erfolgreich verifiziert. Bitte lade die Seite neu um "
+#~ "WPretarget zu aktivieren"
+
+#~ msgid ""
+#~ "Licence was successfully updated. Please reload Page to activated "
+#~ "WPRetarget."
+#~ msgstr ""
+#~ "Die Lizenz wurde erfolgreich aktualisiert. Bitte lade die Seite neu um "
+#~ "WPretarget zu aktivieren"
+
+#~ msgid "There was an error while updating your licence"
+#~ msgstr "Leider trat beim Aktualisieren der Kampagne ein Fehler auf"
+
+#~ msgid "Please enter your Licence-Details to get Support and receive Updates"
+#~ msgstr ""
+#~ "Bitte trage deinen Lizenzschlüssel ein um Support sowie Updates zu "
+#~ "erhalten"
+
+#~ msgid "Licence Key"
+#~ msgstr "Lizenzschlüssel"
+
+#~ msgid "Licence State"
+#~ msgstr "Lizenz-Status"
