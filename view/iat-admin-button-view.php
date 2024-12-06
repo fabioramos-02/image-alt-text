@@ -13,9 +13,9 @@ $without_alt_media_count = $class_iat_obj->fn_iat_without_alt_media_count();
                 <input type="hidden" name="nonce" value="<?php echo wp_create_nonce('iat_copy_bulk_post_title_to_alt_text'); ?>">
                 <input type="hidden" id="iat_ajax_call" name="ajax_call" value="0" />
                 <input type="hidden" id="iat_page" name="page" value="<?php echo $page; ?>" />
-                <button type="button" class="btn btn-secondary btn-sm" id="iat-copy-bulk-post-title-to-alt-text-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="Using this button will copy the Image Title as alt text to all media files.">
+                <button type="button" class="btn btn-secondary btn-sm" id="iat-copy-bulk-post-title-to-alt-text-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="Usando este botão, o título da imagem será copiado como texto alternativo para todas as mídias.">
                     <i class="loader me-1" id="iat-copy-bulk-post-title-to-alt-text-loader" style="display:none;"></i>
-                    <?php _e('Bulk Alt Text By Image Title', IMAGE_ALT_TEXT); ?>
+                    <?php _e('Texto Alternativo em Massa com o Título da Imagem', IMAGE_ALT_TEXT); ?>
                 </button>
             </form>
         </div>
@@ -25,11 +25,19 @@ $without_alt_media_count = $class_iat_obj->fn_iat_without_alt_media_count();
                 <input type="hidden" name="nonce" value="<?php echo wp_create_nonce('iat_copy_bulk_attached_post_title_to_alt_text'); ?>">
                 <input type="hidden" id="iat_ajax_call" name="ajax_call" value="0" />
                 <input type="hidden" id="iat_page" name="page" value="<?php echo $page; ?>" />
-                <button type="button" class="btn btn-secondary btn-sm" id="iat-copy-bulk-attached-post-title-to-alt-text-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="Using this button will copy the attached page/post title as alt text to all media files.">
+                <button type="button" class="btn btn-secondary btn-sm" id="iat-copy-bulk-attached-post-title-to-alt-text-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="Usando este botão, o título da página/post anexado será copiado como texto alternativo para todas as mídias.">
                     <i class="loader me-1" id="iat-copy-bulk-attached-post-title-to-alt-text-loader" style="display:none;"></i>
-                    <?php _e('Bulk Alt Text By Attached Page/Post Title', IMAGE_ALT_TEXT); ?>
+                    <?php _e('Texto Alternativo em Massa com o Título da Página/Post Anexado', IMAGE_ALT_TEXT); ?>
                 </button>
             </form>
+        </div>
+        
+        <!-- Novo botão para Geração de Texto Alternativo em Massa -->
+        <div class="iat-generate-bulk-alt-text-area">
+            <button type="button" class="btn btn-primary btn-sm" id="iat-generate-bulk-alt-text-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="Gerar texto alternativo para todas as imagens que não possuem alt text.">
+                <i class="loader me-1" id="iat-generate-bulk-alt-text-loader" style="display:none;"></i>
+                <?php _e('Gerar Texto Alternativo em Massa', IMAGE_ALT_TEXT); ?>
+            </button>
         </div>
     </div>
 <?php } ?>
