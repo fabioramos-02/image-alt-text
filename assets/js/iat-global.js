@@ -77,3 +77,45 @@ jQuery(document).on('click', '#iat-generate-bulk-alt-text-btn', function() {
         }
     });
 });
+jQuery(document).ready(function($) {
+    $('#iat-generate-bulk-alt-text-btn').click(function() {
+        var imageUrls = []; // Array para armazenar as URLs das imagens
+        $('.image-url-input').each(function() {
+            var imageUrl = $(this).val(); // Supondo que você tenha um campo de entrada para a URL da imagem
+            if (imageUrl) {
+                imageUrls.push(imageUrl); // Adiciona a URL ao array
+            }
+        });
+
+        if (imageUrls.length === 0) {
+            alert('Por favor, forneça as URLs das imagens.');
+            return;
+        }
+
+        $('#iat-generate-bulk-alt-text-loader').show();
+
+        $.ajax({
+            url: iatObj.ajaxUrl,
+            type: 'POST',
+            data: {
+                action: 'iat_generate_bulk_alt_text', // O nome da ação
+                nonce: iatObj.nonce,
+                image_urls: imageUrls // Passa o array de URLs de imagem
+            },
+            success: function(response) {
+                $('#iat-generate-bulk-alt-text-loader').hide();
+
+                if (response.success) {
+                    alert('Texto alternativo gerado com sucesso para todas as imagens!');
+                    console.log(response.data); // Exibe o resultado no console
+                } else {
+                    alert('Erro: ' + response.data.message);
+                }
+            },
+            error: function() {
+                $('#iat-generate-bulk-alt-text-loader').hide();
+                alert('Ocorreu um erro ao gerar os textos alternativos.');
+            }
+        });
+    });
+});

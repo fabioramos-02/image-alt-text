@@ -388,3 +388,25 @@ function fnIatCopyAttachedPostTitleToAltText(component, postId) {
         }
     });
 }
+jQuery(document).ready(function($) {
+    $('#iat-generate-bulk-alt-text-btn').click(function() {
+        $('#iat-generate-bulk-alt-text-loader').show();
+
+        $.ajax({
+            url: iatObj.ajaxUrl,  // Usa o ajaxUrl que você passou via wp_localize_script
+            type: 'POST',
+            data: {
+                action: 'iat_generate_bulk_alt_text_action',
+                nonce: iatObj.nonce // Passa o nonce correto
+            },
+            success: function(response) {
+                $('#iat-generate-bulk-alt-text-loader').hide();
+                alert(response.message);
+            },
+            error: function() {
+                $('#iat-generate-bulk-alt-text-loader').hide();
+                alert('Ocorreu um erro ao gerar o texto alternativo.');
+            }
+        });
+    });
+});

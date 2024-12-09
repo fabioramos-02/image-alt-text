@@ -1,44 +1,49 @@
-<?php>
-// Função para gerar texto alternativo para todas as imagens sem alt text
-function gerar_alt_texto_em_massa() {
-    // Verifica se o usuário tem permissão para executar essa ação
-    if (!current_user_can('manage_options')) {
-        wp_send_json_error(array('message' => 'Permissão negada.'));
+<?php
+function generate_alt_text_from_openai($image_url)
+{
+    // Verifica se a chave da API está definida
+    $api_key = getenv('OPENAI_API_KEY');
+    if (!$api_key) {
+        return 'Erro: chave da API da OpenAI não configurada.';
     }
 
-    // Obter todas as imagens que não possuem texto alternativo (alt text)
-    $args = array(
-        'post_type' => 'attachment',
-        'post_status' => 'inherit',
-        'meta_query' => array(
-            array(
-                'key' => '_wp_attachment_image_alt',
-                'value' => '',
-                'compare' => 'NOT EXISTS' // Apenas imagens sem alt text
-            )
-        ),
-        'posts_per_page' => -1, // Pegar todas as imagens
+    // Define o endpoint da API da OpenAI
+    $url = 'https://api.openai.com/v1/completions';
+
+    // Dados para a requisição
+    $data = array(
+        'model' => 'gpt-3.5-turbo', // Ou o modelo que você escolher
+        'messages' => [
+            ['role' => 'system', 'content' => 'Gerar texto alternativo para imagem'],
+            ['role' => 'user', 'content' => 'Descreva a imagem para ser inserida em um site governamental, seja claro, simples e utilize linguagem cidadã: ' . $image_url]
+        ]
     );
-    
-    $imagens_sem_alt = get_posts($args);
 
-    if ($imagens_sem_alt) {
-        foreach ($imagens_sem_alt as $imagem) {
-            // Gerar o texto alternativo para cada imagem usando a API do ChatGPT
-            $url_imagem = wp_get_attachment_url($imagem->ID);
-            $alt_text = gerar_alt_texto_com_chatgpt($url_imagem); // Função para gerar alt text
-            
-            // Atualizar o alt text da imagem
-            update_post_meta($imagem->ID, '_wp_attachment_image_alt', $alt_text);
-        }
-        
-        wp_send_json_success(array('message' => 'Texto alternativo gerado para todas as imagens!'));
-    } else {
-        wp_send_json_error(array('message' => 'Nenhuma imagem encontrada sem alt text.'));
+    // Envia a requisição para a API
+    $response = wp_remote_post($url, array(
+        'method'    => 'POST',
+        'body'      => json_encode($data),
+        'headers'   => array(
+            'Content-Type'  => 'application/json',
+            'Authorization' => 'Bearer ' . $api_key
+        ),
+    ));
+
+    // Verifica se houve erro na requisição
+    if (is_wp_error($response)) {
+        return 'Erro ao gerar texto alternativo: ' . $response->get_error_message();
     }
 
-    wp_die(); // Finaliza a execução da requisição Ajax
-}
+    // Obtém o corpo da resposta
+    $result = wp_remote_retrieve_body($response);
 
-// Registrando a ação AJAX
-add_action('wp_ajax_generate_bulk_alt_text', 'gerar_alt_texto_em_massa');
+    // Converte o resultado JSON para um array PHP
+    $response_data = json_decode($result, true);
+
+    // Verifica se a resposta é válida
+    if (isset($response_data['choices'][0]['message']['content'])) {
+        return $response_data['choices'][0]['message']['content'];
+    } else {
+        return 'Descrição não encontrada.';
+    }
+}

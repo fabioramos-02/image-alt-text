@@ -27,8 +27,38 @@ class iat_general
         add_action('admin_notices', [$this, 'iat_admin_notices']);
         /* admin scripts */
         add_action('admin_enqueue_scripts', [$this, 'iat_admin_scripts']);
+        // adicionar ação para gerar o alt text
+        add_action('wp_ajax_iat_generate_alt_text', 'iat_generate_alt_text_callback');
+
+        add_action('wp_ajax_iat_generate_bulk_alt_text', 'iat_generate_bulk_alt_text_callback');
     }
 
+    public function iat_generate_bulk_alt_text_callback()
+    {
+        // Verifica se a requisição é válida
+        if (!isset($_POST['image_urls']) || !isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'iat_image_alt_text')) {
+            wp_send_json_error(['message' => 'Erro de segurança ou URLs não fornecidas']);
+            wp_die();
+        }
+
+        // Pega o array de URLs das imagens
+        $image_urls = $_POST['image_urls'];
+        $alt_texts = []; // Array para armazenar os textos alternativos gerados
+
+        // Itera sobre as URLs das imagens e gera o texto alternativo
+        foreach ($image_urls as $image_url) {
+            $alt_text = generate_alt_text_from_openai($image_url);
+            $alt_texts[] = [
+                'image_url' => $image_url,
+                'alt_text' => $alt_text
+            ];
+        }
+
+        // Retorna os textos alternativos gerados
+        wp_send_json_success(['alt_texts' => $alt_texts]);
+
+        wp_die();
+    }
     public function fn_iat_add_admin_menu_page()
     {
         $menus = [
@@ -69,7 +99,7 @@ class iat_general
             $menus['main']['menu_slug'],
             $menus['main']['function'],
             $menus['main']['icon_url'],
-			11
+            11
         );
         $this->fn_iat_admin_assets($image_alt_text);
 
@@ -133,7 +163,7 @@ class iat_general
         /* localize script for iat-admin-js */
         wp_localize_script('iat-admin-js', 'iatObj', [
             'ajaxUrl' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('iat_image_alt_text'),
+            'nonce'   => wp_create_nonce('iat_image_alt_text'),  // Definindo o nonce
             'msg1' => esc_html(__('Are you sure you want to copy the alt text? If "With Alt" is selected, this action will update existing alt text with the post name. If "Without Alt" is selected, it will fill all missing alt text for media items using the corresponding post name.', IMAGE_ALT_TEXT)),
             'msg2' => esc_html(__('Are you sure you want to copy the alt text? If "With Alt" is selected, this action will update attached post name to alt text . If "Without Alt" is selected, it will fill all missing alt text for media items using the corresponding attached post name.', IMAGE_ALT_TEXT)),
             'msg3' => esc_html(__('Great, All your images have alt text, Any images without alt text will appear here.', IMAGE_ALT_TEXT))
@@ -231,6 +261,25 @@ class iat_general
             }
         }
         echo json_encode($output);
+        wp_die();
+    }
+
+    function iat_generate_alt_text_callback()
+    {
+        if (!isset($_POST['image_url']) || !isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'iat_image_alt_text')) {
+            wp_send_json_error(['message' => 'Erro de segurança ou URL da imagem não fornecida']);
+            wp_die();
+        }
+
+        // Pega a URL da imagem enviada via AJAX
+        $image_url = sanitize_text_field($_POST['image_url']);
+
+        // Chama a função da OpenAI para gerar o alt text
+        $alt_text = generate_alt_text_from_openai($image_url);
+
+        // Retorna o resultado para o JavaScript
+        wp_send_json_success(['alt_text' => $alt_text]);
+
         wp_die();
     }
 

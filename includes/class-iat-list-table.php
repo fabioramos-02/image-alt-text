@@ -28,7 +28,45 @@ class class_iat_list_table
         add_action('wp_ajax_iat_get_existing_alt_media_list', array($this, 'fn_iat_get_existing_alt_media_list'));
         /* update existing alt text */
         add_action('wp_ajax_iat_update_alt_txt_action', array($this, 'fn_iat_update_alt_txt_action'));
+
+        add_action('wp_ajax_iat_generate_bulk_alt_text', array($this, 'fn_iat_generate_bulk_alt_text_action'));
+
     }
+
+    
+    public function fn_iat_generate_bulk_alt_text_action() {
+        // Verifica o nonce para segurança
+        $nonce = isset($_POST['nonce']) ? sanitize_text_field($_POST['nonce']) : '';
+        if (!wp_verify_nonce($nonce, 'iat_generate_bulk_alt_text_nonce')) {
+            die(__('Falha na verificação de segurança.', 'text-domain'));
+        }
+    
+        // Recupere todas as imagens sem texto alternativo
+        $posts_args = array(
+            'post_type' => 'attachment',
+            'numberposts' => -1,
+        );
+        $posts = get_posts($posts_args);
+    
+        // Loop para processar cada imagem
+        foreach ($posts as $post) {
+            if ($post->ID) {
+                $post_id = $post->ID;
+                $url = wp_get_original_image_url($post_id);
+    
+                // Gera o texto alternativo usando a função que chama a API do OpenAI
+                $alt_text = generate_alt_text_from_openai($url);
+    
+                // Atualiza o texto alternativo no post
+                update_post_meta($post_id, '_wp_attachment_image_alt', $alt_text);
+            }
+        }
+    
+        // Resposta de sucesso
+        echo json_encode(array('message' => 'Texto alternativo gerado para todas as imagens.'));
+        wp_die();
+    }
+
 
     public function fn_iat_get_missing_alt_media_list()
     {
@@ -74,7 +112,6 @@ class class_iat_list_table
         echo json_encode(array('data' => $missing_alt_media_list_array));
         wp_die();
     }
-
     public function fn_iat_get_existing_alt_media_list()
     {
 
