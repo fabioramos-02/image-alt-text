@@ -41,7 +41,7 @@ class class_iat
         }
 
         if (!wp_verify_nonce(sanitize_text_field($_POST['nonce']), 'iat_image_alt_text')) {
-            wp_die(esc_html(__('Security check. Hacking not allowed', IMAGE_ALT_TEXT)));
+            wp_die(esc_html(__('Verificação de segurança. Hacking não permitido', IMAGE_ALT_TEXT)));
         }
 
         $this->fn_iat_get_attachment_data('without-alt');
@@ -54,7 +54,7 @@ class class_iat
         }
 
         if (!wp_verify_nonce(sanitize_text_field($_POST['nonce']), 'iat_image_alt_text')) {
-            wp_die(esc_html(__('Security check. Hacking not allowed', IMAGE_ALT_TEXT)));
+            wp_die(esc_html(__('Verificação de segurança. Hacking não permitido', IMAGE_ALT_TEXT)));
         }
 
         $this->fn_iat_get_attachment_data('with-alt');
@@ -185,7 +185,7 @@ class class_iat
         $html .= '<div class="iat-copy-post-title-to-alt-text" id="iat-copy-post-title-to-alt-text-' . $post_id . '">';
         $html .= '<p class="mt-1" data-post-title="' . $post_title . '" data-type="' . $type . '" onclick="fnIatCopyPostTitleToAltText(this, ' . $post_id . ')">';
         $html .= '<i class="loader-1 me-1" id="iat-copy-post-title-loader-' . $post_id . '" style="display:none;"></i>';
-        $html .= 'Copy image title to alt text';
+        $html .= 'Copiar título da imagem para texto alternativo';
         $html .= '</p>';
         $html .= '</div>';
         $html .= '<div id="iat-copy-post-title-to-alt-text-display-msg-' . $post_id . '" style="display:none;">';
@@ -214,7 +214,7 @@ class class_iat
             $html .= '<div class="iat-display-ex-alt-text" id="iat-display-ex-alt-text-' . $post_id . '">Alt text: <b>' . esc_html($post_alt) . '</b></div>';
             $html .= '<div class="iat-display-updated-ex-alt-text" id="iat-display-updated-ex-alt-text-' . $post_id . '" style="display:none">Updated text: <b style="color:green;font-weight:600;"></b></div>';
             $html .= '<div class="iat-updated-ex-alt-text-btn-area d-flex align-items-center" id="iat-updated-ex-alt-text-btn-area-' . $post_id . '">';
-            $html .= '<input type="text" class="form-control form-control-sm me-3" id="iat-updated-ex-alt-text-input-' . esc_attr($post_id) . '" placeholder="Enter alt text" />';
+            $html .= '<input type="text" class="form-control form-control-sm me-3" id="iat-updated-ex-alt-text-input-' . esc_attr($post_id) . '" placeholder="Insira o texto alternativo" />';
             $html .= '<button type="button" class="btn btn-secondary btn-sm iat-update-ex-alt-text-btn" id="iat-update-ex-alt-text-btn-' . $post_id . '" data-post-id="' . esc_attr($post_id) . '">';
             $html .= '<i class="loader me-1" id="iat-update-ex-alt-text-loader-' . esc_attr($post_id) . '" style="display:none;"></i>Update';
             $html .= '</button>';
@@ -224,7 +224,7 @@ class class_iat
             $html .= '<div class="iat-add-alt-text" id="iat-add-alt-text-' . $post_id . '">';
             $html .= '<div class="iat-display-added-alt-text" id="iat-display-added-alt-text-' . $post_id . '" style="display:none">Added text: <b style="color:green;font-weight:600;"></b></div>';
             $html .= '<div class="iat-add-alt-text-btn-area d-flex align-items-center" id="iat-add-alt-text-btn-area-' . $post_id . '">';
-            $html .= '<input type="text" class="form-control form-control-sm me-3" id="iat-add-alt-text-input-' . esc_attr($post_id) . '" placeholder="Enter alt text" />';
+            $html .= '<input type="text" class="form-control form-control-sm me-3" id="iat-add-alt-text-input-' . esc_attr($post_id) . '" placeholder="Insira o texto alternativo" />';
             $html .= '<button type="button" class="btn btn-secondary btn-sm iat-add-alt-text-btn" id="iat-add-alt-text-btn-' . esc_attr($post_id) . '" data-post-id="' . esc_attr($post_id) . '">';
             $html .= '<i class="loader me-1" id="iat-add-alt-text-loader-' . esc_attr($post_id) . '" style="display:none;"></i>Add';
             $html .= '</button>';
@@ -268,7 +268,7 @@ class class_iat
             $html .= '<div class="iat-copy-attached-post-title-to-alt-text" id="iat-copy-attached-post-title-to-alt-text-' . $post_id . '">';
             $html .= '<p class="mt-1" data-post-title="' . $post_title . '" data-type="' . $type . '" onclick="fnIatCopyAttachedPostTitleToAltText(this, ' . $post_id . ')">';
             $html .= '<i class="loader-1 me-1" id="iat-copy-attached-post-title-loader-' . $post_id . '" style="display:none;"></i>';
-            $html .= __('Copy page/post title to alt text', IMAGE_ALT_TEXT);
+            $html .= __('Copiar título da página/postagem para texto alternativo', IMAGE_ALT_TEXT);
             $html .= '</p>';
             $html .= '</div>';
             $html .= '<div id="iat-copy-attached-post-title-to-alt-text-display-msg-' . $post_id . '" style="display:none;">';
@@ -296,12 +296,12 @@ class class_iat
         }
 
         if (!wp_verify_nonce(sanitize_text_field($_POST['nonce']), 'iat_image_alt_text')) {
-            wp_die(esc_html(__('Security check. Hacking not allowed', IMAGE_ALT_TEXT)));
+            wp_die(esc_html(__('Verificação de segurança. Hacking não permitido', IMAGE_ALT_TEXT)));
         }
 
         $output = [
             'flg' => 0,
-            'message' => esc_html(__('Please enter alt text to update.', IMAGE_ALT_TEXT)),
+            'message' => esc_html(__('Insira o texto alternativo para atualizar.', IMAGE_ALT_TEXT)),
         ];
 
         $post_id = isset($_POST['post_id']) ? sanitize_text_field($_POST['post_id']) : '';
@@ -310,10 +310,10 @@ class class_iat
         if ($alt_text) {
             if (update_post_meta($post_id, '_wp_attachment_image_alt', trim($alt_text))) {
                 $flg = 1;
-                $message = esc_html(__('Alt text added.', IMAGE_ALT_TEXT));
+                $message = esc_html(__('Texto alternativo adicionado.', IMAGE_ALT_TEXT));
             } else {
                 $flg = 0;
-                $message = esc_html(__('Something is wrong to add alt text', IMAGE_ALT_TEXT));
+                $message = esc_html(__('Algo está errado ao adicionar texto alternativo', IMAGE_ALT_TEXT));
             }
             $output = [
                 'flg' => $flg,
@@ -335,7 +335,7 @@ class class_iat
 
         $nonce = sanitize_text_field($_POST['nonce']);
         if (!wp_verify_nonce($nonce, 'iat_image_alt_text')) {
-            wp_die(esc_html(__('Security check. Hacking not allowed', IMAGE_ALT_TEXT)));
+            wp_die(esc_html(__('Verificação de segurança. Hacking não permitido', IMAGE_ALT_TEXT)));
         }
 
         $output = [
@@ -354,10 +354,10 @@ class class_iat
             } else {
                 if (update_post_meta($post_id, '_wp_attachment_image_alt', trim($title_to_alt_text))) {
                     $flg = 1;
-                    $message = esc_html(__('Alt text updated.', IMAGE_ALT_TEXT));
+                    $message = esc_html(__('Texto alternativo atualizado.', IMAGE_ALT_TEXT));
                 } else {
                     $flg = 0;
-                    $message = esc_html(__('Failed to update alt text.', IMAGE_ALT_TEXT));
+                    $message = esc_html(__('Falha ao atualizar o texto alternativo.', IMAGE_ALT_TEXT));
                 }
             }
             $output = [
@@ -378,7 +378,7 @@ class class_iat
         }
 
         if (!wp_verify_nonce(sanitize_text_field($_POST['nonce']), 'iat_copy_bulk_post_title_to_alt_text')) {
-            die(esc_html(__('Security check. Hacking not allowed', IMAGE_ALT_TEXT)));
+            die(esc_html(__('Verificação de segurança. Hacking não permitido', IMAGE_ALT_TEXT)));
         }
 
         $page = isset($_POST['page']) ? sanitize_text_field($_POST['page']) : '';
@@ -456,7 +456,7 @@ class class_iat
         }
 
         if (!wp_verify_nonce(sanitize_text_field($_POST['nonce']), 'iat_copy_bulk_attached_post_title_to_alt_text')) {
-            die(esc_html(__('Security check. Hacking not allowed', IMAGE_ALT_TEXT)));
+            die(esc_html(__('Verificação de segurança. Hacking não permitido', IMAGE_ALT_TEXT)));
         }
 
         $page = isset($_POST['page']) ? sanitize_text_field($_POST['page']) : '';
@@ -539,12 +539,12 @@ class class_iat
         }
 
         if (!wp_verify_nonce(sanitize_text_field($_POST['nonce']), 'iat_image_alt_text')) {
-            wp_die(esc_html(__('Security check. Hacking not allowed', IMAGE_ALT_TEXT)));
+            wp_die(esc_html(__('Verificação de segurança. Hacking não permitido', IMAGE_ALT_TEXT)));
         }
 
         $output = [
             'flg' => 0,
-            'message' => esc_html(__('Please enter alt text to update.', IMAGE_ALT_TEXT))
+            'message' => esc_html(__('Insira o texto alternativo para atualizar.', IMAGE_ALT_TEXT))
         ];
 
         $post_id = isset($_POST['post_id']) ? sanitize_text_field($_POST['post_id']) : '';
@@ -554,14 +554,14 @@ class class_iat
         if ($ex_alt_text) {
             if ($current_alt_text === $ex_alt_text) {
                 $flg = 0;
-                $message = esc_html(__('Alt text entered is the same as the previous one. Please add new alt text.', IMAGE_ALT_TEXT));
+                $message = esc_html(__('O texto alternativo inserido é o mesmo que o anterior. Por favor, adicione um novo texto alternativo.', IMAGE_ALT_TEXT));
             } else {
                 if (update_post_meta($post_id, '_wp_attachment_image_alt', trim($ex_alt_text))) {
                     $flg = 1;
-                    $message = esc_html(__('Alt text updated.', IMAGE_ALT_TEXT));
+                    $message = esc_html(__('Texto alternativo atualizado.', IMAGE_ALT_TEXT));
                 } else {
                     $flg = 0;
-                    $message = esc_html(__('Failed to update alt text.', IMAGE_ALT_TEXT));
+                    $message = esc_html(__('Falha ao atualizar o texto alternativo.', IMAGE_ALT_TEXT));
                 }
             }
             $output = [
@@ -610,7 +610,7 @@ class class_iat
 
         $nonce = sanitize_text_field($_POST['nonce']);
         if (!wp_verify_nonce($nonce, 'iat_image_alt_text')) {
-            wp_die(esc_html(__('Security check. Hacking not allowed', IMAGE_ALT_TEXT)));
+            wp_die(esc_html(__('Verificação de segurança. Hacking não permitido', IMAGE_ALT_TEXT)));
         }
 
         $output = [
@@ -629,10 +629,10 @@ class class_iat
             } else {
                 if (update_post_meta($post_id, '_wp_attachment_image_alt', trim($post_title_to_alt_text))) {
                     $flg = 1;
-                    $message = esc_html(__('Alt text updated.', IMAGE_ALT_TEXT));
+                    $message = esc_html(__('Texto alternativo atualizado.', IMAGE_ALT_TEXT));
                 } else {
                     $flg = 0;
-                    $message = esc_html(__('Failed to update alt text.', IMAGE_ALT_TEXT));
+                    $message = esc_html(__('Falha ao atualizar o texto alternativo.', IMAGE_ALT_TEXT));
                 }
             }
             $output = [

@@ -12,13 +12,13 @@ if (file_exists($header_file)) {
             <tr>
                 <?php
                 $headers = [
-                    __('Image', IMAGE_ALT_TEXT),
-                    __('Image Title', IMAGE_ALT_TEXT),
+                    __('Imagem', IMAGE_ALT_TEXT),
+                    __('Título da Imagem', IMAGE_ALT_TEXT),
                     __('URL', IMAGE_ALT_TEXT),
-                    __('Attached To', IMAGE_ALT_TEXT),
-                    __('Update Alt Text', IMAGE_ALT_TEXT),
-                    __('Date', IMAGE_ALT_TEXT),
-                    __('Action', IMAGE_ALT_TEXT)
+                    __('Anexado a', IMAGE_ALT_TEXT),
+                    __('Atualizar texto alternativo', IMAGE_ALT_TEXT),
+                    __('Data', IMAGE_ALT_TEXT),
+                    __('Ações', IMAGE_ALT_TEXT)
                 ];
                 foreach ($headers as $header) {
                     echo "<th>$header</th>";

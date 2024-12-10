@@ -14,9 +14,9 @@
     <h2 class="nav-tab-wrapper">
         <?php
         $pages = [
-            'with-alt'     => __('With Alt', IMAGE_ALT_TEXT),
-            'without-alt'  => __('Without Alt', IMAGE_ALT_TEXT),
-            'pro-coming-soon' => __('Pro Coming Soon', IMAGE_ALT_TEXT)
+            'with-alt'     => __('Com Texto', IMAGE_ALT_TEXT),
+            'without-alt'  => __('Sem Texto', IMAGE_ALT_TEXT),
+            'pro-coming-soon' => __('Pro Em breve', IMAGE_ALT_TEXT)
         ];
         foreach ($pages as $slug => $title) {
             $class = isset($_GET['page']) && $_GET['page'] === $slug ? ' nav-tab-active' : '';
