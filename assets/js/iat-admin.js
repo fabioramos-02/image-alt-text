@@ -10,86 +10,45 @@
     });
   });
 
-  $(document).on("click", "#iat-generate-bulk-alt-text-btn", function (e) {
-    e.preventDefault();
+  // Gerar texto alternativo em massa usando ChatGPT
+  jQuery(document).ready(function ($) {
+    $("#iat-generate-bulk-alt-text-btn").on("click", function (e) {
+      e.preventDefault();
+      if (
+        confirm(
+          "Tem certeza de que deseja gerar texto alternativo para todas as imagens?"
+        )
+      ) {
+        $("#iat-generate-bulk-alt-text-loader").show();
+        $(this).prop("disabled", true);
 
-    if (confirm(iatObj.msg1)) {
-      $.ajax({
-        type: "POST",
-        url: iatObj.ajaxUrl,
-        data: {
-          action: "iat_generate_bulk_alt_text_from_gpt",
-          nonce: iatObj.nonce,
-        },
-        beforeSend: function () {
-          $("#iat-generate-bulk-alt-text-loader").show();
-        },
-        success: function (res) {
-          if (res.data.flg == 0) {
-            toastr.error(res.data.message, "Error", {
-              closeButton: true,
-              progressBar: true,
-              positionClass: "toast-top-right",
-              timeOut: 5000,
-            });
-          } else {
-            toastr.success(
-              "Textos alternativos gerados com sucesso!",
-              "Sucesso",
-              {
-                closeButton: true,
-                progressBar: true,
-                positionClass: "toast-top-right",
-                timeOut: 5000,
-              }
-            );
-          }
-        },
-        complete: function () {
-          $("#iat-generate-bulk-alt-text-loader").hide();
-        },
-      });
-    }
-  });
-
-  function generateBulkAltText(data) {
-    $.ajax({
-      type: "POST",
-      url: iatObj.ajaxUrl,
-      data: {
-        action: "iat_generate_bulk_alt_text_from_gpt",
-        nonce: iatObj.nonce,
-        form_data: data,
-      },
-      beforeSend: function () {
-        $("#iat-copy-bulk-post-title-to-alt-text-loader").show();
-      },
-      success: function (res) {
-        if (res.data.flg == 0) {
-          toastr.error(res.data.message, "Error", {
-            closeButton: true,
-            progressBar: true,
-            positionClass: "toast-top-right",
-            timeOut: 5000,
-          });
-        } else {
-          toastr.success(
-            "Textos alternativos gerados com sucesso!",
-            "Sucesso",
-            {
-              closeButton: true,
-              progressBar: true,
-              positionClass: "toast-top-right",
-              timeOut: 5000,
+        $.ajax({
+          type: "POST",
+          url: iatObj.ajaxUrl, // Deve ser definido no frontend com wp_localize_script
+          data: {
+            action: "iat_generate_bulk_alt_text",
+            nonce: iatObj.nonce,
+          },
+          success: function (response) {
+            if (response.success) {
+              alert("Textos alternativos gerados com sucesso!");
+            } else {
+              alert(
+                "Erro ao gerar textos alternativos: " + response.data.message
+              );
             }
-          );
-        }
-      },
-      complete: function () {
-        $("#iat-copy-bulk-post-title-to-alt-text-loader").hide();
-      },
+          },
+          error: function () {
+            alert("Erro na solicitação AJAX.");
+          },
+          complete: function () {
+            $("#iat-generate-bulk-alt-text-loader").hide();
+            $("#iat-generate-bulk-alt-text-btn").prop("disabled", false);
+          },
+        });
+      }
     });
-  }
+  });
 
   /* adicionar texto alternativo */
   $(document).on("click", ".iat-add-alt-text-btn", function (e) {

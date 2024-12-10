@@ -31,7 +31,7 @@ $without_alt_media_count = $class_iat_obj->fn_iat_without_alt_media_count();
                 </button>
             </form>
         </div>
-        
+
         <!-- Novo botão para Geração de Texto Alternativo em Massa -->
         <div class="iat-generate-bulk-alt-text-area">
             <button type="button" class="btn btn-primary btn-sm" id="iat-generate-bulk-alt-text-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="Gerar texto alternativo para todas as imagens que não possuem alt text.">

@@ -21,9 +21,9 @@ class iat_general
         add_action('admin_head', [$this, 'fn_iat_remove_sub_menu_page']);
         /* remind me later */
         add_action('wp_ajax_iat_remind_me_later', [$this, 'fn_iat_remind_me_later']);
-        /* do not show again */
+        /* não mostrar novamente */
         add_action('wp_ajax_iat_do_not_show_again', [$this, 'fn_iat_do_not_show_again']);
-        /* admin notice for Review */
+        /* aviso do administrador para revisão */
         add_action('admin_notices', [$this, 'iat_admin_notices']);
         /* admin scripts */
         add_action('admin_enqueue_scripts', [$this, 'iat_admin_scripts']);
