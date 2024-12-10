@@ -138,7 +138,7 @@ class class_iat_list_table
             $alt_txt_updated = update_post_meta($post_id, '_wp_attachment_image_alt', $alt_text);
             if ($alt_txt_updated) {
                 $flg = 1;
-                $message = esc_html(__('Alt text added.', IMAGE_ALT_TEXT));
+                $message = esc_html(__('Texto alternativo adicionado.', IMAGE_ALT_TEXT));
                 $output = array(
                     'flg' => $flg,
                     'message' => $message,
@@ -146,7 +146,7 @@ class class_iat_list_table
             }
         } else {
             $flg = 0;
-            $message = esc_html(__('Please enter alt text to update.', IMAGE_ALT_TEXT));
+            $message = esc_html(__('Insira o texto alternativo para atualizar.', IMAGE_ALT_TEXT));
             $output = array(
                 'flg' => $flg,
                 'message' => $message,
@@ -176,7 +176,7 @@ class class_iat_list_table
             $alt_txt_updated = update_post_meta($post_id, '_wp_attachment_image_alt', $name_to_alt);
             if ($alt_txt_updated) {
                 $flg = 1;
-                $message = esc_html(__('Copied name added as alt text.', IMAGE_ALT_TEXT));
+                $message = esc_html(__('Nome copiado adicionado como texto alternativo.', IMAGE_ALT_TEXT));
                 $output = array(
                     'flg' => $flg,
                     'message' => $message,
@@ -203,8 +203,8 @@ class class_iat_list_table
         /* check nonce */
         $wp_nonce = sanitize_text_field( $_POST['nonce'] );
         if (!wp_verify_nonce($wp_nonce, 'iat_copy_all_name_to_alt_nonce')) {
-            $message = esc_html(__('Copied name added as alt text.', IMAGE_ALT_TEXT));
-            die((__('Security check. Hacking not allowed', IMAGE_ALT_TEXT)));
+            $message = esc_html(__('Nome copiado adicionado como texto alternativo.', IMAGE_ALT_TEXT));
+            die((__('Verificação de segurança. Hacking não permitido', IMAGE_ALT_TEXT)));
         }
 
         /* ajax call */
@@ -247,7 +247,7 @@ class class_iat_list_table
                                 $alt_txt_updated = update_post_meta($post_id, '_wp_attachment_image_alt', $post_title);
                                 if ($alt_txt_updated) {
                                     $flg = 1;
-                                    $message = esc_html(__('Copied name added as alt text.', IMAGE_ALT_TEXT));
+                                    $message = esc_html(__('Nome copiado adicionado como texto alternativo.', IMAGE_ALT_TEXT));
                                     $output = array(
                                         'flg' => $flg,
                                         'message' => $message,
@@ -256,7 +256,7 @@ class class_iat_list_table
                                     );
                                 } else {
                                     $flg = 0;
-                                    $message = esc_html(__('Something is wrong to copied text.', IMAGE_ALT_TEXT));
+                                    $message = esc_html(__('Algo está errado no texto copiado.', IMAGE_ALT_TEXT));
                                     $output = array(
                                         'flg' => $flg,
                                         'message' => $message,
@@ -264,7 +264,7 @@ class class_iat_list_table
                                 }
                             } else {
                                 $flg = 1;
-                                $message = esc_html(__('Copied name added as alt text.', IMAGE_ALT_TEXT));
+                                $message = esc_html(__('Nome copiado adicionado como texto alternativo.', IMAGE_ALT_TEXT));
                                 $output = array(
                                     'flg' => $flg,
                                     'message' => $message,
@@ -285,7 +285,7 @@ class class_iat_list_table
             }
         } else {
             $flg = 0;
-            $message = esc_html(__('No data available.', IMAGE_ALT_TEXT));
+            $message = esc_html(__('Não há dados disponíveis.', IMAGE_ALT_TEXT));
             $output = array(
                 'flg' => $flg,
                 'message' => $message,
@@ -314,14 +314,14 @@ class class_iat_list_table
             $ex_alt_txt_updated = update_post_meta($post_id, '_wp_attachment_image_alt', $ex_alt_text);
             if ($ex_alt_txt_updated) {
                 $flg = 1;
-                $message = esc_html(__('Alt text updated.', IMAGE_ALT_TEXT));
+                $message = esc_html(__('Texto alternativo atualizado.', IMAGE_ALT_TEXT));
                 $output = array(
                     'flg' => $flg,
                     'message' => $message,
                 );
             } else {
                 $flg = 0;
-                $message = esc_html(__('Alt text entered same as previous. Please add new alt text.', IMAGE_ALT_TEXT));
+                $message = esc_html(__('Texto alternativo inserido igual ao anterior. Por favor, adicione novo texto alternativo.', IMAGE_ALT_TEXT));
                 $output = array(
                     'flg' => $flg,
                     'message' => $message,
@@ -329,7 +329,7 @@ class class_iat_list_table
             }
         } else {
             $flg = 0;
-            $message = esc_html(__('Please enter alt text to update.', IMAGE_ALT_TEXT));
+            $message = esc_html(__('Insira o texto alternativo para atualizar.', IMAGE_ALT_TEXT));
             $output = array(
                 'flg' => $flg,
                 'message' => $message,
