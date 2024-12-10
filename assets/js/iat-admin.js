@@ -10,21 +10,47 @@
     });
   });
 
-  $(document).on(
-    "click",
-    "#iat-copy-bulk-post-title-to-alt-text-btn",
-    function (e) {
-      e.preventDefault();
+  $(document).on("click", "#iat-generate-bulk-alt-text-btn", function (e) {
+    e.preventDefault();
 
-      // Confirmação antes de iniciar
-      if (confirm(iatObj.msg1)) {
-        var data = $("#iat-copy-bulk-post-title-to-alt-text-form").serialize();
-
-        // Chama a função para gerar os textos alternativos em massa
-        generateBulkAltText(data);
-      }
+    if (confirm(iatObj.msg1)) {
+      $.ajax({
+        type: "POST",
+        url: iatObj.ajaxUrl,
+        data: {
+          action: "iat_generate_bulk_alt_text_from_gpt",
+          nonce: iatObj.nonce,
+        },
+        beforeSend: function () {
+          $("#iat-generate-bulk-alt-text-loader").show();
+        },
+        success: function (res) {
+          if (res.data.flg == 0) {
+            toastr.error(res.data.message, "Error", {
+              closeButton: true,
+              progressBar: true,
+              positionClass: "toast-top-right",
+              timeOut: 5000,
+            });
+          } else {
+            toastr.success(
+              "Textos alternativos gerados com sucesso!",
+              "Sucesso",
+              {
+                closeButton: true,
+                progressBar: true,
+                positionClass: "toast-top-right",
+                timeOut: 5000,
+              }
+            );
+          }
+        },
+        complete: function () {
+          $("#iat-generate-bulk-alt-text-loader").hide();
+        },
+      });
     }
-  );
+  });
 
   function generateBulkAltText(data) {
     $.ajax({
@@ -39,9 +65,8 @@
         $("#iat-copy-bulk-post-title-to-alt-text-loader").show();
       },
       success: function (res) {
-        var res = JSON.parse(res);
-        if (res.flg == 0) {
-          toastr.error(res.message, "Error", {
+        if (res.data.flg == 0) {
+          toastr.error(res.data.message, "Error", {
             closeButton: true,
             progressBar: true,
             positionClass: "toast-top-right",
@@ -66,7 +91,7 @@
     });
   }
 
-  /* add alt text */
+  /* adicionar texto alternativo */
   $(document).on("click", ".iat-add-alt-text-btn", function (e) {
     e.preventDefault();
     var postId = $(this).data("post-id");
@@ -119,7 +144,7 @@
     });
   });
 
-  /* update alt text with alt list (existing) */
+  /* atualizar texto alt com lista alt (existente) */
   $(document).on("click", ".iat-update-ex-alt-text-btn", function (e) {
     e.preventDefault();
     var postId = $(this).data("post-id");
@@ -171,7 +196,7 @@
     });
   });
 
-  /* copy bulk post title to alt text */
+  /* copiar título de postagem em massa para texto alternativo */
   $(document).on(
     "click",
     "#iat-copy-bulk-post-title-to-alt-text-btn",
@@ -184,7 +209,7 @@
     }
   );
 
-  /* copy bulk attached post title to alt text */
+  /* copiar título do post anexado em massa para texto alternativo */
   $(document).on(
     "click",
     "#iat-copy-bulk-attached-post-title-to-alt-text-btn",
@@ -199,7 +224,7 @@
     }
   );
 
-  /* copy url */
+  /* copiar url */
   $(document).on("click", ".iat-copy-url-span p", function (e) {
     e.preventDefault();
     var postID = $(this).data("post-id");
@@ -279,6 +304,7 @@
     });
   }
 
+  // funcao para copiar titulo de postagem para texto alternativo
   function fnCopyBulkPostTitleToAltText(data) {
     $.ajax({
       type: "POST",
@@ -331,6 +357,7 @@
     });
   }
 
+  /* copiar título do post anexado para texto alternativo */
   function fnCopyBulkAttachedPostTitleToAltText(data) {
     $.ajax({
       type: "POST",
@@ -383,7 +410,7 @@
     });
   }
 
-  /* function about to copy url or text. */
+  /* função prestes a copiar url ou texto. */
   function fnIatCopyUrl(text) {
     var copyText = text.trim();
     let input = document.createElement("input");
@@ -396,7 +423,7 @@
   }
 })(jQuery);
 
-/* copy name or post title to alt text */
+/* copiar nome ou título do post para texto alternativo */
 function fnIatCopyPostTitleToAltText(component, postId) {
   var postTitle = jQuery(component).data("post-title");
   var type = jQuery(component).data("type");
@@ -452,7 +479,7 @@ function fnIatCopyPostTitleToAltText(component, postId) {
   });
 }
 
-/* copy attached post name to alt text */
+/* copiar o nome do post anexado para o texto alternativo */
 function fnIatCopyAttachedPostTitleToAltText(component, postId) {
   var postTitle = jQuery(component).data("post-title");
   var type = jQuery(component).data("type");

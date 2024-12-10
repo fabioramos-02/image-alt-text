@@ -38,44 +38,111 @@ class class_iat
         add_action('wp_ajax_iat_generate_bulk_alt_text_from_gpt', [$this, 'iat_generate_bulk_alt_text_from_gpt']);
     }
 
-    public function iat_generate_bulk_alt_text_from_gpt() {
-        if ( !isset($_POST['nonce']) || !wp_verify_nonce( $_POST['nonce'], 'iat_nonce' ) ) {
-            die('Invalid nonce');
+    public function iat_generate_alt_text_from_gpt()
+    {
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'iat_nonce')) {
+            wp_send_json_error(['message' => 'Invalid nonce']);
+            return;
         }
-    
-        $form_data = $_POST['form_data'];
-        // Lógica para gerar os textos alternativos em massa
-        // Exemplo de integração com a API do ChatGPT (utilize suas credenciais)
-    
-        $response = get_alt_text_from_gpt_bulk($form_data);
-    
-        wp_send_json_success();
+
+        $post_id = $_POST['post_id'];
+        $post_title = get_the_title($post_id);
+
+        // Chama a API para gerar texto alternativo
+        $alt_text = $this->get_alt_text_from_gpt($post_title);
+
+        // Retorna o texto alternativo
+        wp_send_json_success(['alt_text' => $alt_text]);
     }
-    
-    public function get_alt_text_from_gpt($text) {
-        $api_key = getenv('CHAT_GPT_API_KEY'); // Chave da API
+
+    public function iat_generate_bulk_alt_text_from_gpt()
+    {
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'iat_nonce')) {
+            wp_send_json_error(['message' => 'Invalid nonce']);
+            return;
+        }
+
+        $form_data = $_POST['form_data'];
+        error_log(print_r($form_data, true)); // Verifica se os dados estão sendo recebidos corretamente
+
+        // Lógica para gerar textos alternativos em massa
+        $responses = $this->get_alt_text_from_gpt_bulk($form_data);
+
+        // Verifica a resposta
+        error_log(print_r($responses, true)); // Verifica as respostas da API
+
+        wp_send_json_success(['responses' => $responses]);
+    }
+    // Gera o texto alternativo utilizando a API do ChatGPT
+    public function get_alt_text_from_gpt($text)
+    {
+        $api_key = get_option('OPENAI_API_KEY'); // Chave da API armazenada no WordPress
+        $url = 'https://api.openai.com/v1/completions';
+        $headers = [
+            'Content-Type' => 'application/json',
+            'Authorization' => 'Bearer ' . $api_key,
+        ];
+
+        $data = [
+            'model' => 'gpt-3.5-turbo',
+            'prompt' => 'Gerar um texto alternativo para a seguinte imagem: ' . $text,
+            'max_tokens' => 50
+        ];
+
+        // Envia a requisição para a API do ChatGPT
+        $response = wp_remote_post($url, [
+            'method'    => 'POST',
+            'headers'   => $headers,
+            'body'      => json_encode($data),
+        ]);
+
+        // Verifica se a resposta foi bem-sucedida
+        if (is_wp_error($response)) {
+            return 'Erro ao gerar texto alternativo: ' . $response->get_error_message();
+        }
+
+        $body = wp_remote_retrieve_body($response);
+        $result = json_decode($body);
+
+        // Retorna o texto gerado pela API, ou uma mensagem de erro
+        return isset($result->choices[0]->text) ? $result->choices[0]->text : 'Texto alternativo não gerado';
+    }
+
+    // Gera textos alternativos em massa utilizando a API do ChatGPT
+    public function get_alt_text_from_gpt_bulk($form_data) {
+        $api_key = get_option('CHAT_GPT_API_KEY'); // Chave da API
         $url = 'https://api.openai.com/v1/completions';
         $headers = [
             'Content-Type' => 'application/json',
             'Authorization' => 'Bearer ' . $api_key,
         ];
     
-        $data = [
-            'model' => 'gpt-3.5-turbo',
-            'prompt' => 'Gerar um texto alternativo para a seguinte imagem: ' . $text,
-            'max_tokens' => 50
-        ];
+        $responses = [];
+        foreach ($form_data as $item) {
+            $text = $item['title']; // Supondo que 'title' seja o campo que contém o texto a ser processado
+            $data = [
+                'model' => 'gpt-3.5-turbo',
+                'prompt' => 'Gerar um texto alternativo para a seguinte imagem: ' . $text,
+                'max_tokens' => 50
+            ];
     
-        $response = wp_remote_post($url, [
-            'method'    => 'POST',
-            'headers'   => $headers,
-            'body'      => json_encode($data),
-        ]);
+            $response = wp_remote_post($url, [
+                'method'    => 'POST',
+                'headers'   => $headers,
+                'body'      => json_encode($data),
+            ]);
     
-        $body = wp_remote_retrieve_body($response);
-        $result = json_decode($body);
+            // Verifique se houve erro na requisição
+            if ( is_wp_error( $response ) ) {
+                $responses[] = 'Erro ao gerar texto alternativo: ' . $response->get_error_message();
+            } else {
+                $body = wp_remote_retrieve_body($response);
+                $result = json_decode($body);
+                $responses[] = $result->choices[0]->text ?? 'Texto alternativo não gerado';
+            }
+        }
     
-        return $result->choices[0]->text ?? 'Texto alternativo não gerado';
+        return $responses;
     }
 
     public function fn_iat_get_without_alt_text_list()

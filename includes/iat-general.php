@@ -134,10 +134,9 @@ class iat_general
         wp_localize_script('iat-admin-js', 'iatObj', [
             'ajaxUrl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('iat_image_alt_text'),
-            'msg1' => esc_html(__('Are you sure you want to copy the alt text? If "With Alt" is selected, this action will update existing alt text with the post name. If "Without Alt" is selected, it will fill all missing alt text for media items using the corresponding post name.', IMAGE_ALT_TEXT)),
-            'msg2' => esc_html(__('Are you sure you want to copy the alt text? If "With Alt" is selected, this action will update attached post name to alt text . If "Without Alt" is selected, it will fill all missing alt text for media items using the corresponding attached post name.', IMAGE_ALT_TEXT)),
-            'msg3' => esc_html(__('Great, All your images have alt text, Any images without alt text will appear here.', IMAGE_ALT_TEXT))
-        ]);
+            'msg1' => esc_html(__('Tem certeza de que deseja copiar o texto alt? Se "Com Alt" for selecionado, esta ação atualizará o texto alt existente com o nome do post. Se "Sem Alt" for selecionado, ele preencherá todo o texto alt ausente para itens de mídia usando o nome do post correspondente.', IMAGE_ALT_TEXT)),
+            'msg2' => esc_html(__('Tem certeza de que deseja copiar o texto alt? Se "Com Alt" for selecionado, esta ação atualizará o nome do post anexado para texto alt . Se "Sem Alt" for selecionado, ele preencherá todo o texto alt ausente para itens de mídia usando o nome do post anexado correspondente.', IMAGE_ALT_TEXT)),
+            'msg3' => esc_html(__('Ótimo, todas as suas imagens têm texto alternativo. Todas as imagens sem texto alternativo aparecerão aqui.', IMAGE_ALT_TEXT))        ]);
     }
 
 
