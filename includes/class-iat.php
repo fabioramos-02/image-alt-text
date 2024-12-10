@@ -32,15 +32,15 @@ class class_iat
         add_action('wp_ajax_iat_copy_attached_post_title_to_alt_text', [$this, 'fn_iat_copy_attached_post_title_to_alt_text']);
         /* copiar título do post anexado em massa para texto alternativo */
         add_action('wp_ajax_iat_copy_bulk_attached_post_title_to_alt_text', [$this, 'fn_iat_copy_bulk_attached_post_title_to_alt_text']);
-
+        
         /* Gerar texto alternativo em massa */
         add_action('wp_ajax_iat_generate_bulk_alt_text', [$this, 'iat_generate_bulk_alt_text_callback']);
-
         // Gerar texto alternativo individual
         add_action('wp_ajax_iat_generate_individual_alt_text', [$this, 'fn_iat_generate_individual_alt_text']);
     }
 
 
+    // Função para gerar texto alternativo individual
     public function fn_iat_generate_individual_alt_text()
     {
         // Verificação de Nonce e Permissões
@@ -69,19 +69,11 @@ class class_iat
         $api_endpoint = "https://api.openai.com/v1/chat/completions";
 
         $request_data = [
-            'model'    => 'gpt-4o',
+            'model'    => 'gpt-4',
             'messages' => [
                 [
-                    'role' => "user",
-                    'content' => [
-                        ['type' => "text", 'text' => "Descreva está imagem com linguagem simles e acessível para ser utilzado em um site governamental"],
-                        [
-                            'type' => "image_url",
-                            'image_url' => [
-                                "url" => $image_url,
-                            ],
-                        ]
-                    ],
+                    'role'    => 'user',
+                    'content' => "Descreva o conteúdo desta imagem baseada na seguinte URL: $image_url",
                 ],
             ],
         ];
@@ -116,6 +108,7 @@ class class_iat
         }
     }
 
+    // Função para gerar texto alternativo em massa
     public function iat_generate_bulk_alt_text_callback()
     {
         // Verificação de Nonce e Permissões
@@ -170,19 +163,11 @@ class class_iat
             }
 
             $request_data = [
-                'model'    => 'gpt-4o',
+                'model'    => 'gpt-4',
                 'messages' => [
                     [
-                        'role' => "user",
-                        'content' => [
-                            ['type' => "text", 'text' => "Descreva está imagem com linguagem simles e acessível para ser utilzado em um site governamental"],
-                            [
-                                'type' => "image_url",
-                                'image_url' => [
-                                    "url" => $image_url,
-                                ],
-                            ]
-                        ],
+                        'role'    => 'user',
+                        'content' => "Descreva o conteúdo desta imagem baseada na seguinte URL: $image_url",
                     ],
                 ],
             ];
@@ -221,6 +206,8 @@ class class_iat
             'ajax_call'  => $ajax_call + 1,
         ]);
     }
+
+    // Função para atualizar texto alternativo existente
     public function fn_iat_get_without_alt_text_list()
     {
         if (!current_user_can('manage_options')) {
