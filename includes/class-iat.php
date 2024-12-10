@@ -16,22 +16,66 @@ class class_iat
         $this->conn = $wpdb;
         $this->wp_posts = $this->conn->prefix . 'posts';
         $this->wp_postmeta = $this->conn->prefix . 'postmeta';
-        /* without alt text list */
+        /* sem lista de texto alternativo */
         add_action('wp_ajax_iat_get_without_alt_text_list', [$this, 'fn_iat_get_without_alt_text_list']);
-        /* with alt list  */
+        /* com lista alt */
         add_action('wp_ajax_iat_get_with_alt_text_list', [$this, 'fn_iat_get_with_alt_text_list']);
-        /* add alt text */
+        /* adicionar texto alternativo */
         add_action('wp_ajax_iat_add_alt_text', [$this, 'fn_iat_add_alt_text']);
-        /* copy post title to alt text */
+        /* copiar título do post para texto alternativo */
         add_action('wp_ajax_iat_copy_post_title_to_alt_text', [$this, 'fn_iat_copy_post_title_to_alt_text']);
-        /* copy bulk post title to alt text  */
+        /* copiar título de postagem em massa para texto alternativo */
         add_action('wp_ajax_iat_copy_bulk_post_title_to_alt_text', [$this, 'fn_iat_copy_bulk_post_title_to_alt_text']);
-        /* update with alt text */
+        /* atualizar com texto alternativo */
         add_action('wp_ajax_iat_update_existing_alt_text', [$this, 'fn_iat_update_existing_alt_text']);
-        /* copy attached post title to alt text */
+        /* copiar título do post anexado para texto alternativo */
         add_action('wp_ajax_iat_copy_attached_post_title_to_alt_text', [$this, 'fn_iat_copy_attached_post_title_to_alt_text']);
-        /* copy bulk attached post title to alt text */
+        /* copiar título do post anexado em massa para texto alternativo */
         add_action('wp_ajax_iat_copy_bulk_attached_post_title_to_alt_text', [$this, 'fn_iat_copy_bulk_attached_post_title_to_alt_text']);
+        //gerar texto alternativo com GPT
+        add_action('wp_ajax_iat_generate_alt_text_from_gpt', [$this, 'iat_generate_alt_text_from_gpt']);
+        //gerar texto alternativo em massa com GPT
+        add_action('wp_ajax_iat_generate_bulk_alt_text_from_gpt', [$this, 'iat_generate_bulk_alt_text_from_gpt']);
+    }
+
+    public function iat_generate_bulk_alt_text_from_gpt() {
+        if ( !isset($_POST['nonce']) || !wp_verify_nonce( $_POST['nonce'], 'iat_nonce' ) ) {
+            die('Invalid nonce');
+        }
+    
+        $form_data = $_POST['form_data'];
+        // Lógica para gerar os textos alternativos em massa
+        // Exemplo de integração com a API do ChatGPT (utilize suas credenciais)
+    
+        $response = get_alt_text_from_gpt_bulk($form_data);
+    
+        wp_send_json_success();
+    }
+    
+    public function get_alt_text_from_gpt($text) {
+        $api_key = getenv('CHAT_GPT_API_KEY'); // Chave da API
+        $url = 'https://api.openai.com/v1/completions';
+        $headers = [
+            'Content-Type' => 'application/json',
+            'Authorization' => 'Bearer ' . $api_key,
+        ];
+    
+        $data = [
+            'model' => 'gpt-3.5-turbo',
+            'prompt' => 'Gerar um texto alternativo para a seguinte imagem: ' . $text,
+            'max_tokens' => 50
+        ];
+    
+        $response = wp_remote_post($url, [
+            'method'    => 'POST',
+            'headers'   => $headers,
+            'body'      => json_encode($data),
+        ]);
+    
+        $body = wp_remote_retrieve_body($response);
+        $result = json_decode($body);
+    
+        return $result->choices[0]->text ?? 'Texto alternativo não gerado';
     }
 
     public function fn_iat_get_without_alt_text_list()
@@ -226,7 +270,11 @@ class class_iat
             $html .= '<div class="iat-add-alt-text-btn-area d-flex align-items-center" id="iat-add-alt-text-btn-area-' . $post_id . '">';
             $html .= '<input type="text" class="form-control form-control-sm me-3" id="iat-add-alt-text-input-' . esc_attr($post_id) . '" placeholder="Insira o texto alternativo" />';
             $html .= '<button type="button" class="btn btn-secondary btn-sm iat-add-alt-text-btn" id="iat-add-alt-text-btn-' . esc_attr($post_id) . '" data-post-id="' . esc_attr($post_id) . '">';
-            $html .= '<i class="loader me-1" id="iat-add-alt-text-loader-' . esc_attr($post_id) . '" style="display:none;"></i>Add';
+            $html .= '<i class="loader me-1" id="iat-add-alt-text-loader-' . esc_attr($post_id) . '" style="display:none;"></i>Adicionar';
+            $html .= '</button>';
+            // criar botão gerar texto alternativo
+            $html .= '<button type="button" class="btn btn-primary btn-sm iat-generate-alt-text-btn" id="iat-generate-alt-text-btn-' . esc_attr($post_id) . '" data-post-id="' . esc_attr($post_id) . '">';
+            $html .= '<i class="loader me-1" id="iat-generate-alt-text-loader-' . esc_attr($post_id) . '" style="display:none;"></i>Gerar';
             $html .= '</button>';
             $html .= '</div>';
             $html .= '</div>';
