@@ -1,4 +1,4 @@
-/* review remind me later */
+/* revisar lembrar-me mais tarde */
 jQuery(document).on('click', '#remind-me-later', function (e) {
     e.preventDefault();
     var data = {
@@ -19,7 +19,7 @@ jQuery(document).on('click', '#remind-me-later', function (e) {
     });
 });
 
-/* review do not show again */
+/* revisão não mostrar novamente */
 jQuery(document).on('click', '#do-not-show-again', function (e) {
     e.preventDefault();
     var data = {

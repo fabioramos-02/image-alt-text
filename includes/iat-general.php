@@ -69,7 +69,7 @@ class iat_general
             $menus['main']['menu_slug'],
             $menus['main']['function'],
             $menus['main']['icon_url'],
-			11
+            11
         );
         $this->fn_iat_admin_assets($image_alt_text);
 
@@ -130,13 +130,15 @@ class iat_general
             wp_enqueue_script($handle);
         }
 
-        /* localize script for iat-admin-js */
+        /* localizar script para iat-admin-js */
         wp_localize_script('iat-admin-js', 'iatObj', [
             'ajaxUrl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('iat_image_alt_text'),
             'msg1' => esc_html(__('Tem certeza de que deseja copiar o texto alt? Se "Com Alt" for selecionado, esta ação atualizará o texto alt existente com o nome do post. Se "Sem Alt" for selecionado, ele preencherá todo o texto alt ausente para itens de mídia usando o nome do post correspondente.', IMAGE_ALT_TEXT)),
             'msg2' => esc_html(__('Tem certeza de que deseja copiar o texto alt? Se "Com Alt" for selecionado, esta ação atualizará o nome do post anexado para texto alt . Se "Sem Alt" for selecionado, ele preencherá todo o texto alt ausente para itens de mídia usando o nome do post anexado correspondente.', IMAGE_ALT_TEXT)),
-            'msg3' => esc_html(__('Ótimo, todas as suas imagens têm texto alternativo. Todas as imagens sem texto alternativo aparecerão aqui.', IMAGE_ALT_TEXT))        ]);
+            'msg3' => esc_html(__('Ótimo, todas as suas imagens têm texto alternativo. Todas as imagens sem texto alternativo aparecerão aqui.', IMAGE_ALT_TEXT)),
+            'msg4' => esc_html(__('Tem certeza de que deseja gerar o texto alt?', IMAGE_ALT_TEXT)),
+        ]);
     }
 
 
@@ -197,7 +199,7 @@ class iat_general
                     );
                 } else {
                     $flg = 0;
-                    $message = __('Something is wrong', IMAGE_ALT_TEXT);
+                    $message = __('Algo está errado', IMAGE_ALT_TEXT);
                     $output = array(
                         'flg' => $flg,
                         'message' => $message
@@ -222,7 +224,7 @@ class iat_general
                 );
             } else {
                 $flg = 0;
-                $message = __('Something is wrong', IMAGE_ALT_TEXT);
+                $message = __('Algo está errado', IMAGE_ALT_TEXT);
                 $output = array(
                     'flg' => $flg,
                     'message' => $message
@@ -251,18 +253,18 @@ class iat_general
                 <div class="notice notice-success is-dismissible review-notice mt-3">
                     <p>
                         <?php
-                        _e('If you\'ve found our WordPress plugin <strong>Image Alt Text</strong> helpful, we would greatly appreciate it if you could take a moment to leave us a review. Your feedback helps us improve our plugin and also lets other users know the value of our product. Thank you for taking the time to share your thoughts!', IMAGE_ALT_TEXT);
+                        _e('Se você achou nosso plugin WordPress <strong>Image Alt Text</strong> útil, ficaríamos muito gratos se você pudesse reservar um momento para nos deixar uma avaliação. Seu feedback nos ajuda a melhorar nosso plugin e também permite que outros usuários saibam o valor do nosso produto. Obrigado por reservar um tempo para compartilhar suas ideias!', IMAGE_ALT_TEXT);
                         ?>
                     </p>
                     <p>
                         <a role="button" href="https://wordpress.org/support/plugin/image-alt-text/reviews/#new-post" target="_blank" class="button button-primary">
-                            <?php _e('Review', IMAGE_ALT_TEXT); ?>
+                            <?php _e('Análise', IMAGE_ALT_TEXT); ?>
                         </a>
                         <button class="button button-primary is-dismissible" id="remind-me-later">
-                            <?php _e('Remind me later', IMAGE_ALT_TEXT); ?>
+                            <?php _e('Lembre-me mais tarde', IMAGE_ALT_TEXT); ?>
                         </button>
                         <button class="button button-primary" id="do-not-show-again">
-                            <?php _e('Do not show again', IMAGE_ALT_TEXT); ?>
+                            <?php _e('Não mostrar novamente', IMAGE_ALT_TEXT); ?>
                         </button>
                     </p>
                 </div>
