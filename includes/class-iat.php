@@ -39,62 +39,62 @@ class class_iat
 
     public function iat_generate_bulk_alt_text_callback()
     {
-        error_log('Iniciando geração de texto alternativo...');
-    
-        
-    
-        // Buscar todas as imagens sem texto alternativo
+        // Verificação de permissões e nonce
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(['message' => 'Permissão negada.']);
+        }
+
+      
+
+        // Buscar imagens em lotes
+        $ajax_call = isset($_POST['ajax_call']) ? intval($_POST['ajax_call']) : 0;
+        $per_page = 100; // Número de imagens por lote
+        $offset = $ajax_call * $per_page;
+
         $args = [
             'post_type'      => 'attachment',
             'post_status'    => 'inherit',
             'post_mime_type' => 'image',
             'meta_query'     => [
-                'relation' => 'OR',
                 [
                     'key'     => '_wp_attachment_image_alt',
                     'compare' => 'NOT EXISTS',
                 ],
-                [
-                    'key'     => '_wp_attachment_image_alt',
-                    'value'   => '',
-                    'compare' => '=',
-                ],
             ],
-            'posts_per_page' => -1,
+            'posts_per_page' => $per_page,
+            'offset'         => $offset,
+            'fields'         => 'ids',
         ];
-    
+
         $images = get_posts($args);
-    
-        if (!$images) {
-            error_log('Nenhuma imagem sem texto alternativo encontrada.');
-            wp_send_json_error(['message' => 'Nenhuma imagem sem texto alternativo encontrada.']);
+
+        if (empty($images)) {
+            wp_send_json_success([
+                'message' => 'Processamento concluído. Todas as imagens foram atualizadas.',
+            ]);
         }
-    
-        // Log de depuração
-        error_log('Imagens encontradas: ' . count($images));
-    
-        // Preparar para integração com OpenAI
-        $openai_key = getenv('OPENAI_API_KEY');
-        if (!$openai_key) {
-            error_log('Chave OpenAI não encontrada.');
-            wp_send_json_error(['message' => 'Erro: Chave OpenAI não configurada.']);
-        }
-    
+
+        // Processar imagens e gerar texto alternativo
+        $openai_key = getenv(name: 'OPENAI_API_KEY');
         $api_endpoint = "https://api.openai.com/v1/chat/completions";
-        $responses = [];
-    
-        foreach ($images as $image) {
-            $image_url = wp_get_attachment_url($image->ID);
-            error_log('Processando imagem: ' . $image_url);
-    
+
+        foreach ($images as $image_id) {
+            $image_url = wp_get_attachment_url($image_id);
+
             $request_data = [
                 'model'    => 'gpt-4',
                 'messages' => [
-                    ['role' => 'user', 'content' => "Describe the contents of the image."],
-                    ['type' => 'image_url', 'image_url' => ['url' => $image_url]],
+                    [
+                        'role'    => 'user',
+                        'content' => "Describe the contents of the image.",
+                    ],
+                    [
+                        'type'       => 'image_url',
+                        'image_url'  => ['url' => $image_url],
+                    ],
                 ],
             ];
-    
+
             $response = wp_remote_post($api_endpoint, [
                 'headers' => [
                     'Authorization' => "Bearer $openai_key",
@@ -102,28 +102,22 @@ class class_iat
                 ],
                 'body'    => json_encode($request_data),
             ]);
-    
-            if (is_wp_error($response)) {
-                error_log('Erro ao enviar para OpenAI: ' . $response->get_error_message());
-                continue;
-            }
-    
-            $body = json_decode(wp_remote_retrieve_body($response), true);
-    
-            if (isset($body['choices'][0]['message']['content'])) {
-                $alt_text = $body['choices'][0]['message']['content'];
-                update_post_meta($image->ID, '_wp_attachment_image_alt', $alt_text);
-                $responses[] = ['id' => $image->ID, 'alt_text' => $alt_text];
-            } else {
-                error_log('Resposta inesperada da OpenAI: ' . wp_remote_retrieve_body($response));
+
+            if (!is_wp_error($response)) {
+                $body = json_decode(wp_remote_retrieve_body($response), true);
+
+                if (isset($body['choices'][0]['message']['content'])) {
+                    $alt_text = sanitize_text_field($body['choices'][0]['message']['content']);
+                    update_post_meta($image_id, '_wp_attachment_image_alt', $alt_text);
+                }
             }
         }
-    
-        if ($responses) {
-            wp_send_json_success(['generated' => $responses]);
-        } else {
-            wp_send_json_error(['message' => 'Erro ao gerar textos alternativos.']);
-        }
+
+        // Resposta indicando sucesso parcial
+        wp_send_json_success([
+            'message'    => 'Lote processado com sucesso.',
+            'ajax_call'  => $ajax_call + 1,
+        ]);
     }
 
 

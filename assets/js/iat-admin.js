@@ -11,43 +11,74 @@
   });
 
   // Gerar texto alternativo em massa usando ChatGPT
-  jQuery(document).ready(function ($) {
-    $("#iat-generate-bulk-alt-text-btn").on("click", function (e) {
-      e.preventDefault();
-      if (
-        confirm(
-          "Tem certeza de que deseja gerar texto alternativo para todas as imagens?"
-        )
-      ) {
-        $("#iat-generate-bulk-alt-text-loader").show();
-        $(this).prop("disabled", true);
+  $("#iat-generate-bulk-alt-text-btn").on("click", function (e) {
+    e.preventDefault();
 
-        $.ajax({
-          type: "POST",
-          url: iatObj.ajaxUrl, // Deve ser definido no frontend com wp_localize_script
-          data: {
-            action: "iat_generate_bulk_alt_text",
-            nonce: iatObj.nonce,
-          },
-          success: function (response) {
-            if (response.success) {
-              alert("Textos alternativos gerados com sucesso!");
+    if (
+      !confirm(
+        "Tem certeza de que deseja gerar texto alternativo para todas as imagens?"
+      )
+    ) {
+      return;
+    }
+
+    const loader = $("#iat-generate-bulk-alt-text-loader");
+    const button = $(this);
+    loader.show();
+    button.prop("disabled", true);
+
+    let ajaxCall = 0;
+
+    function processBatch() {
+      $.ajax({
+        type: "POST",
+        url: iatObj.ajaxUrl,
+        data: {
+          action: "iat_generate_bulk_alt_text",
+          nonce: iatObj.nonce,
+          ajax_call: ajaxCall,
+        },
+        success: function (response) {
+          if (response && response.success) {
+            alert(response.message || "Lote processado com sucesso!");
+
+            if (response.ajax_call !== undefined) {
+              ajaxCall = response.ajax_call;
+              processBatch(); // Próximo lote
             } else {
-              alert(
-                "Erro ao gerar textos alternativos: " + response.data.message
-              );
+              alert("Processamento concluído!");
+              loader.hide();
+              button.prop("disabled", false);
             }
-          },
-          error: function () {
-            alert("Erro na solicitação AJAX.");
-          },
-          complete: function () {
-            $("#iat-generate-bulk-alt-text-loader").hide();
-            $("#iat-generate-bulk-alt-text-btn").prop("disabled", false);
-          },
-        });
-      }
-    });
+          } else {
+            let errorMessage = "Erro ao gerar textos alternativos";
+
+            if (response && response.data && response.data.message) {
+              errorMessage += ": " + response.data.message;
+            } else if (response && response.message) {
+              errorMessage += ": " + response.message;
+            } else if (typeof response === "string") {
+              errorMessage += ": " + response;
+            } else {
+              errorMessage += ": Erro desconhecido.";
+              console.error("Resposta inesperada:", response);
+            }
+
+            alert(errorMessage);
+            loader.hide();
+            button.prop("disabled", false);
+          }
+        },
+        error: function () {
+          alert("Erro na solicitação AJAX.");
+          loader.hide();
+          button.prop("disabled", false);
+        },
+      });
+    }
+
+    // Iniciar processamento
+    processBatch();
   });
 
   /* adicionar texto alternativo */
