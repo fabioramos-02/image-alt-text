@@ -18,19 +18,19 @@ class class_iat
         $this->wp_postmeta = $this->conn->prefix . 'postmeta';
         /* without alt text list */
         add_action('wp_ajax_iat_get_without_alt_text_list', [$this, 'fn_iat_get_without_alt_text_list']);
-        // com lista alt
+        /* with alt list  */
         add_action('wp_ajax_iat_get_with_alt_text_list', [$this, 'fn_iat_get_with_alt_text_list']);
-        // adicionar texto alternativo
+        /* add alt text */
         add_action('wp_ajax_iat_add_alt_text', [$this, 'fn_iat_add_alt_text']);
-        // copiar o titulo do post para o texto alternativo
+        /* copy post title to alt text */
         add_action('wp_ajax_iat_copy_post_title_to_alt_text', [$this, 'fn_iat_copy_post_title_to_alt_text']);
-        // copiar o titulo do post em massa para o texto alternativo
+        /* copy bulk post title to alt text  */
         add_action('wp_ajax_iat_copy_bulk_post_title_to_alt_text', [$this, 'fn_iat_copy_bulk_post_title_to_alt_text']);
-        // atualizar com texto alternativo
+        /* update with alt text */
         add_action('wp_ajax_iat_update_existing_alt_text', [$this, 'fn_iat_update_existing_alt_text']);
-        // copiar o titulo do post anexado para o texto alternativo
+        /* copy attached post title to alt text */
         add_action('wp_ajax_iat_copy_attached_post_title_to_alt_text', [$this, 'fn_iat_copy_attached_post_title_to_alt_text']);
-        // copiar o titulo do post anexado para o texto alternativo
+        /* copy bulk attached post title to alt text */
         add_action('wp_ajax_iat_copy_bulk_attached_post_title_to_alt_text', [$this, 'fn_iat_copy_bulk_attached_post_title_to_alt_text']);
     }
 
