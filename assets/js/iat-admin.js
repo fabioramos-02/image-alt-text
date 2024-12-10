@@ -1,6 +1,7 @@
 (function ($) {
   $(document).ready(function () {
     /* exibir com texto alternativo tabela de dados do lado do servidor */
+    console.log("Nonce Image Alt Text:", iatObj.nonce); // Verificar o nonce
     fnIatWithAltTextDataTable();
     /* exibir sem texto alternativo tabela de dados do lado do servidor */
     fnIatWithoutAltTextDataTable();
@@ -14,11 +15,7 @@
   $("#iat-generate-bulk-alt-text-btn").on("click", function (e) {
     e.preventDefault();
 
-    if (
-      !confirm(
-        "Tem certeza de que deseja gerar texto alternativo para todas as imagens?"
-      )
-    ) {
+    if (!confirm(iatObj.msg4)) {
       return;
     }
 
@@ -35,12 +32,14 @@
         url: iatObj.ajaxUrl,
         data: {
           action: "iat_generate_bulk_alt_text",
-          nonce: iatObj.nonce, // Assegure-se de que o nonce está correto
+          nonce: iatObj.nonce, // Nonce correto
           ajax_call: ajaxCall,
         },
         success: function (response) {
           if (response && response.success) {
-            alert(response.message || "Lote processado com sucesso!");
+            if (response.message) {
+              console.log("Mensagem da API:", response.message);
+            }
 
             if (response.ajax_call !== undefined) {
               ajaxCall = response.ajax_call;
@@ -49,6 +48,9 @@
               alert("Processamento concluído!");
               loader.hide();
               button.prop("disabled", false);
+              // Recarregar as tabelas para refletir as mudanças
+              $("#with-alt-list-table").DataTable().ajax.reload();
+              $("#without-alt-list-table").DataTable().ajax.reload();
             }
           } else {
             let errorMessage = "Erro ao gerar textos alternativos";
@@ -69,8 +71,9 @@
             button.prop("disabled", false);
           }
         },
-        error: function () {
-          alert("Erro na solicitação AJAX.");
+        error: function (xhr, status, error) {
+          console.error("Erro na solicitação AJAX:", status, error);
+          alert("Erro na solicitação AJAX: " + error);
           loader.hide();
           button.prop("disabled", false);
         },
@@ -79,6 +82,68 @@
 
     // Iniciar processamento
     processBatch();
+  });
+
+  /* Gerar texto alternativo individual */
+  $(document).on("click", ".iat-generate-alt-text-btn", function (e) {
+    e.preventDefault();
+    var postId = $(this).data("post-id");
+    var loader = $("#iat-generate-alt-text-loader-" + postId);
+    var button = $(this);
+
+    if (
+      !confirm(
+        "Tem certeza de que deseja gerar o texto alternativo para esta imagem?"
+      )
+    ) {
+      return;
+    }
+
+    loader.show();
+    button.prop("disabled", true);
+
+    $.ajax({
+      type: "POST",
+      url: iatObj.ajaxUrl,
+      data: {
+        action: "iat_generate_individual_alt_text",
+        nonce: iatObj.nonce,
+        post_id: postId,
+      },
+      success: function (response) {
+        if (response.success) {
+          toastr.success(response.data.message, "Sucesso", {
+            closeButton: true,
+            progressBar: true,
+            positionClass: "toast-top-right",
+          });
+          // Atualizar o campo de texto alternativo na interface
+          $("#iat-display-added-alt-text-" + postId)
+            .show()
+            .find("b")
+            .text(response.data.alt_text);
+          // Opcional: Atualizar outros elementos da interface conforme necessário
+        } else {
+          toastr.error(response.data.message, "Erro", {
+            closeButton: true,
+            progressBar: true,
+            positionClass: "toast-top-right",
+          });
+        }
+      },
+      error: function (xhr, status, error) {
+        console.error("Erro na solicitação AJAX:", status, error);
+        toastr.error("Erro na solicitação AJAX: " + error, "Erro", {
+          closeButton: true,
+          progressBar: true,
+          positionClass: "toast-top-right",
+        });
+      },
+      complete: function () {
+        loader.hide();
+        button.prop("disabled", false);
+      },
+    });
   });
 
   /* adicionar texto alternativo */
