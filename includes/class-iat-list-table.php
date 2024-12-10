@@ -36,7 +36,7 @@ class class_iat_list_table
     public function fn_iat_get_missing_alt_media_list()
     {
 
-        /* get all media post_type is attachment */
+        /* obter todas as mídias post_type é anexo */
         $posts_args = array(
             'post_type' => 'attachment',
             'numberposts' => -1
