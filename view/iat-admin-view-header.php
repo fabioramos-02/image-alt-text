@@ -4,8 +4,8 @@
             <img src="<?php echo esc_url(IAT_FILE_URL . 'assets/images/image-alt-text-logo.png'); ?>" alt="<?php esc_attr_e('Image Alt Text', IMAGE_ALT_TEXT); ?>">
         </div>
         <div class="col-md-6 col-sm-6">
-            <a href="https://mediahygiene.com" target="_blank">
-                <img style="float:right;" src="<?php echo esc_url(IAT_FILE_URL . 'assets/images/media-hygiene-promotion.jpg'); ?>" alt="<?php esc_attr_e('Image Alt Text', IMAGE_ALT_TEXT); ?>">
+            <a href="https://www.ms.gov.br/" target="_blank">
+                <img style="float:right; width: 300px;" src="<?php echo esc_url(IAT_FILE_URL . 'assets/images/logoGov.png'); ?>" alt="<?php esc_attr_e('Image Alt Text', IMAGE_ALT_TEXT); ?>">
             </a>
         </div>
     </div>
