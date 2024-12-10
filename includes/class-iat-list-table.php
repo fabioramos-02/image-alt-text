@@ -16,20 +16,93 @@ class class_iat_list_table
         $this->conn = $wpdb;
         $this->wp_posts = $this->conn->prefix . 'posts';
         $this->wp_postmeta = $this->conn->prefix . 'postmeta';
-        /* get server side datatable */
+        /* obter tabela de dados do lado do servidor */
         add_action('wp_ajax_iat_get_missing_alt_media_list', array($this, 'fn_iat_get_missing_alt_media_list'));
-        /* add alternative text */
+        /* adicionar texto alternativo */
         add_action('wp_ajax_iat_add_alt_txt_action', array($this, 'fn_iat_add_alt_txt_action'));
-        /* copy name to alt text */
+        /* copiar nome para texto alternativo */
         add_action('wp_ajax_iat_copy_name_to_alt_txt_action', array($this, 'fn_iat_copy_name_to_alt_txt_action'));
-        /* all copy name to alt text */
+        /* todos os nomes de cópias para texto alternativo */
         add_action('wp_ajax_iat_copy_all_name_to_alt_action', array($this, 'fn_iat_copy_all_name_to_alt_action'));
-        /* existing alt list  */
+        /* lista alt existente */
         add_action('wp_ajax_iat_get_existing_alt_media_list', array($this, 'fn_iat_get_existing_alt_media_list'));
-        /* update existing alt text */
+        /* atualiza texto alternativo existente */
         add_action('wp_ajax_iat_update_alt_txt_action', array($this, 'fn_iat_update_alt_txt_action'));
+
+        // Gerar texto alternativo individual
+        add_action('wp_ajax_iat_generate_individual_alt_text', [$this, 'fn_iat_generate_individual_alt_text']);
     }
 
+    public function fn_iat_generate_individual_alt_text()
+    {
+        // Verificação de permissões e nonce
+        check_ajax_referer('iat_nonce_action', 'nonce');
+
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(['message' => 'Permissão negada.']);
+        }
+
+        $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
+
+        if ($post_id <= 0) {
+            wp_send_json_error(['message' => 'ID da postagem inválido.']);
+        }
+
+        $image_url = wp_get_attachment_url($post_id);
+        if (!$image_url) {
+            wp_send_json_error(['message' => 'URL da imagem não encontrada.']);
+        }
+
+        $openai_key = getenv('OPENAI_API_KEY');
+
+        if (!$openai_key) {
+            wp_send_json_error(['message' => 'Chave da API do OpenAI não configurada.']);
+        }
+
+        $api_endpoint = "https://api.openai.com/v1/chat/completions";
+
+        $request_data = [
+            'model'    => 'gpt-4o',
+            'messages' => [
+                [
+                    'role' => "user",
+                    'content' => [
+                        ['type' => "text", 'text' => "Descreva está imagem com linguagem simles e acessível para ser utilzado em um site governamental"],
+                        [
+                            'type' => "image_url",
+                            'image_url' => [
+                                "url" => $image_url,
+                            ],
+                        ]
+                    ],
+                ],
+            ],
+        ];
+
+        $response = wp_remote_post($api_endpoint, [
+            'headers' => [
+                'Authorization' => "Bearer $openai_key",
+                'Content-Type'  => 'application/json',
+            ],
+            'body'    => json_encode($request_data),
+        ]);
+
+        if (is_wp_error($response)) {
+            error_log('API OpenAI Error: ' . $response->get_error_message());
+            wp_send_json_error(['message' => 'Erro na requisição à API do OpenAI.']);
+        }
+
+        $body = json_decode(wp_remote_retrieve_body($response), true);
+
+        if (isset($body['choices'][0]['message']['content'])) {
+            $alt_text = sanitize_text_field($body['choices'][0]['message']['content']);
+            update_post_meta($post_id, '_wp_attachment_image_alt', $alt_text);
+            wp_send_json_success(['message' => 'Texto alternativo gerado com sucesso.', 'alt_text' => $alt_text]);
+        } else {
+            error_log('API OpenAI Response: ' . wp_remote_retrieve_body($response));
+            wp_send_json_error(['message' => 'Resposta inválida da API do OpenAI.']);
+        }
+    }
     public function fn_iat_get_missing_alt_media_list()
     {
 
@@ -51,10 +124,10 @@ class class_iat_list_table
             foreach ($posts as $post) {
                 if ($post->ID) {
                     $post_id = $post->ID;
-                    $post_mime_type = sanitize_mime_type( $post->post_mime_type );
+                    $post_mime_type = sanitize_mime_type($post->post_mime_type);
                     $post_title = $post->post_title;
                     $url = wp_get_original_image_url($post_id);
-                                        
+
                     $post_date = date("F j, Y, g:i a", strtotime($post->post_date));
                     if (str_contains($post_mime_type, 'image')) {
                         $post_alt = get_post_meta($post_id, '_wp_attachment_image_alt', true);
@@ -95,7 +168,7 @@ class class_iat_list_table
             foreach ($posts as $post) {
                 if ($post->ID) {
                     $post_id = $post->ID;
-                    $post_mime_type = sanitize_mime_type( $post->post_mime_type );
+                    $post_mime_type = sanitize_mime_type($post->post_mime_type);
                     $post_title = $post->post_title;
                     $url = wp_get_original_image_url($post_id);
 
@@ -126,7 +199,7 @@ class class_iat_list_table
 
         $post_id = '';
         if (isset($_POST['post_id']) &&  $_POST['post_id'] != '') {
-            $post_id = sanitize_text_field( $_POST['post_id'] );
+            $post_id = sanitize_text_field($_POST['post_id']);
         }
 
         $alt_text = '';
@@ -154,7 +227,7 @@ class class_iat_list_table
         }
         /* Count Images without Alt Text */
         $image_count = $this->iat_missing_alt_media();
-        $output['total'] = $image_count; 
+        $output['total'] = $image_count;
         echo json_encode($output);
         wp_die();
     }
@@ -164,7 +237,7 @@ class class_iat_list_table
         $post_id = '';
         $image_count =  0;
         if (isset($_POST['post_id']) && $_POST['post_id'] != '') {
-            $post_id = sanitize_text_field( $_POST['post_id'] );
+            $post_id = sanitize_text_field($_POST['post_id']);
         }
 
         $name_to_alt = '';
@@ -192,7 +265,7 @@ class class_iat_list_table
         }
         /* Count Images without Alt Text */
         $image_count = $this->iat_missing_alt_media();
-        $output['total'] = $image_count;                
+        $output['total'] = $image_count;
         echo json_encode($output);
         wp_die();
     }
@@ -201,14 +274,14 @@ class class_iat_list_table
     {
 
         /* check nonce */
-        $wp_nonce = sanitize_text_field( $_POST['nonce'] );
+        $wp_nonce = sanitize_text_field($_POST['nonce']);
         if (!wp_verify_nonce($wp_nonce, 'iat_copy_all_name_to_alt_nonce')) {
             $message = esc_html(__('Nome copiado adicionado como texto alternativo.', IMAGE_ALT_TEXT));
             die((__('Verificação de segurança. Hacking não permitido', IMAGE_ALT_TEXT)));
         }
 
         /* ajax call */
-        $ajax_call = sanitize_text_field( $_POST['ajax_call'] );
+        $ajax_call = sanitize_text_field($_POST['ajax_call']);
 
         /* count how many ajax call will apply */
         $posts_check_sql = 'select ID from ' . $this->wp_posts . ' where post_type = "attachment" AND post_mime_type LIKE "%image%"';
@@ -238,7 +311,7 @@ class class_iat_list_table
             foreach ($posts as $post) {
                 if ($post->ID) {
                     $post_id = $post->ID;
-                    $post_mime_type = sanitize_mime_type( $post->post_mime_type );
+                    $post_mime_type = sanitize_mime_type($post->post_mime_type);
                     $post_title = sanitize_title($post->post_title);
                     if (str_contains($post_mime_type, 'image')) {
                         if ($post_title != '') {
@@ -292,7 +365,7 @@ class class_iat_list_table
             );
         }
         $image_count = $this->iat_missing_alt_media();
-        $output['total'] = $image_count;              
+        $output['total'] = $image_count;
         echo json_encode($output);
         wp_die();
     }
@@ -302,7 +375,7 @@ class class_iat_list_table
 
         $post_id = '';
         if (isset($_POST['post_id']) &&  $_POST['post_id'] != '') {
-            $post_id = sanitize_text_field( $_POST['post_id'] );
+            $post_id = sanitize_text_field($_POST['post_id']);
         }
 
         $ex_alt_text = '';
@@ -339,15 +412,15 @@ class class_iat_list_table
         wp_die();
     }
 
-    public function iat_missing_alt_media(){        
-        $sql = "SELECT count(*) as total FROM ".$this->wp_posts." as wp, ".$this->wp_postmeta." as pm where wp.post_mime_type like '%image%' and wp.ID = pm.post_id and pm.meta_key= '_wp_attachment_image_alt' and pm.meta_value = ''";
-        $result = $this->conn->get_results($sql);        
-        if(isset($result) && isset($result[0])){
+    public function iat_missing_alt_media()
+    {
+        $sql = "SELECT count(*) as total FROM " . $this->wp_posts . " as wp, " . $this->wp_postmeta . " as pm where wp.post_mime_type like '%image%' and wp.ID = pm.post_id and pm.meta_key= '_wp_attachment_image_alt' and pm.meta_value = ''";
+        $result = $this->conn->get_results($sql);
+        if (isset($result) && isset($result[0])) {
             return $count = $result[0]->total;
-        }else{
+        } else {
             return $count = 0;
         }
-        
     }
 }
 

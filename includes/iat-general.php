@@ -87,6 +87,7 @@ class iat_general
     }
 
 
+    // funcao responsavel por remover sub menu
     public function fn_iat_remove_sub_menu_page()
     {
         remove_submenu_page('with-alt', 'with-alt');
@@ -94,6 +95,7 @@ class iat_general
         remove_submenu_page('with-alt', 'pro-coming-soon');
     }
 
+    // funcao responsavel por adicionar css e js
     public function fn_iat_admin_assets($hook_suffix)
     {
         add_action('admin_print_styles-' . $hook_suffix, array($this, 'fn_iat_css'));

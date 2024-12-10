@@ -35,16 +35,95 @@ class class_iat
 
         /* Gerar texto alternativo em massa */
         add_action('wp_ajax_iat_generate_bulk_alt_text', [$this, 'iat_generate_bulk_alt_text_callback']);
+
+        // Gerar texto alternativo individual
+        add_action('wp_ajax_iat_generate_individual_alt_text', [$this, 'fn_iat_generate_individual_alt_text']);
     }
 
-    public function iat_generate_bulk_alt_text_callback()
+
+    public function fn_iat_generate_individual_alt_text()
     {
-        // Verificação de permissões e nonce
+        // Verificação de Nonce e Permissões
+        check_ajax_referer('iat_image_alt_text', 'nonce');
+
         if (!current_user_can('manage_options')) {
             wp_send_json_error(['message' => 'Permissão negada.']);
         }
 
-      
+        $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
+
+        if ($post_id <= 0) {
+            wp_send_json_error(['message' => 'ID da postagem inválido.']);
+        }
+
+        $image_url = wp_get_attachment_url($post_id);
+        if (!$image_url) {
+            wp_send_json_error(['message' => 'URL da imagem não encontrada.']);
+        }
+
+        $openai_key = getenv('OPENAI_API_KEY');
+        if (!$openai_key) {
+            wp_send_json_error(['message' => 'Chave da API do OpenAI não configurada.']);
+        }
+
+        $api_endpoint = "https://api.openai.com/v1/chat/completions";
+
+        $request_data = [
+            'model'    => 'gpt-4o',
+            'messages' => [
+                [
+                    'role' => "user",
+                    'content' => [
+                        ['type' => "text", 'text' => "Descreva está imagem com linguagem simles e acessível para ser utilzado em um site governamental"],
+                        [
+                            'type' => "image_url",
+                            'image_url' => [
+                                "url" => $image_url,
+                            ],
+                        ]
+                    ],
+                ],
+            ],
+        ];
+
+        $response = wp_remote_post($api_endpoint, [
+            'headers' => [
+                'Authorization' => "Bearer $openai_key",
+                'Content-Type'  => 'application/json',
+            ],
+            'body'    => json_encode($request_data),
+            'timeout' => 60,
+        ]);
+
+        if (is_wp_error($response)) {
+            error_log('API OpenAI Error: ' . $response->get_error_message());
+            wp_send_json_error(['message' => 'Erro na requisição à API do OpenAI.']);
+        }
+
+        $body = json_decode(wp_remote_retrieve_body($response), true);
+
+        if (isset($body['choices'][0]['message']['content'])) {
+            $alt_text = sanitize_text_field($body['choices'][0]['message']['content']);
+            if (!empty($alt_text)) {
+                update_post_meta($post_id, '_wp_attachment_image_alt', $alt_text);
+                wp_send_json_success(['message' => 'Texto alternativo gerado com sucesso.', 'alt_text' => $alt_text]);
+            } else {
+                wp_send_json_error(['message' => 'Texto alternativo retornado vazio pela API do OpenAI.']);
+            }
+        } else {
+            error_log('API OpenAI Response: ' . wp_remote_retrieve_body($response));
+            wp_send_json_error(['message' => 'Resposta inválida da API do OpenAI.']);
+        }
+    }
+
+    public function iat_generate_bulk_alt_text_callback()
+    {
+        // Verificação de Nonce e Permissões
+        check_ajax_referer('iat_image_alt_text', 'nonce');
+
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(['message' => 'Permissão negada.']);
+        }
 
         // Buscar imagens em lotes
         $ajax_call = isset($_POST['ajax_call']) ? intval($_POST['ajax_call']) : 0;
@@ -75,22 +154,35 @@ class class_iat
         }
 
         // Processar imagens e gerar texto alternativo
-        $openai_key = getenv(name: 'OPENAI_API_KEY');
+        $openai_key = getenv('OPENAI_API_KEY'); // Corrigido
+        if (!$openai_key) {
+            wp_send_json_error(['message' => 'Chave da API do OpenAI não configurada.']);
+        }
+
         $api_endpoint = "https://api.openai.com/v1/chat/completions";
 
         foreach ($images as $image_id) {
             $image_url = wp_get_attachment_url($image_id);
 
+            if (!$image_url) {
+                error_log("Imagem com ID $image_id não possui URL.");
+                continue; // Pular para a próxima imagem
+            }
+
             $request_data = [
-                'model'    => 'gpt-4',
+                'model'    => 'gpt-4o',
                 'messages' => [
                     [
-                        'role'    => 'user',
-                        'content' => "Describe the contents of the image.",
-                    ],
-                    [
-                        'type'       => 'image_url',
-                        'image_url'  => ['url' => $image_url],
+                        'role' => "user",
+                        'content' => [
+                            ['type' => "text", 'text' => "Descreva está imagem com linguagem simles e acessível para ser utilzado em um site governamental"],
+                            [
+                                'type' => "image_url",
+                                'image_url' => [
+                                    "url" => $image_url,
+                                ],
+                            ]
+                        ],
                     ],
                 ],
             ];
@@ -101,15 +193,25 @@ class class_iat
                     'Content-Type'  => 'application/json',
                 ],
                 'body'    => json_encode($request_data),
+                'timeout' => 60, // Tempo máximo de espera
             ]);
 
-            if (!is_wp_error($response)) {
-                $body = json_decode(wp_remote_retrieve_body($response), true);
+            if (is_wp_error($response)) {
+                error_log('API OpenAI Error: ' . $response->get_error_message());
+                continue; // Pular para a próxima imagem
+            }
 
-                if (isset($body['choices'][0]['message']['content'])) {
-                    $alt_text = sanitize_text_field($body['choices'][0]['message']['content']);
+            $body = json_decode(wp_remote_retrieve_body($response), true);
+
+            if (isset($body['choices'][0]['message']['content'])) {
+                $alt_text = sanitize_text_field($body['choices'][0]['message']['content']);
+                if (!empty($alt_text)) {
                     update_post_meta($image_id, '_wp_attachment_image_alt', $alt_text);
+                } else {
+                    error_log("Texto alternativo vazio para imagem ID $image_id.");
                 }
+            } else {
+                error_log('API OpenAI Response: ' . wp_remote_retrieve_body($response));
             }
         }
 
@@ -119,8 +221,6 @@ class class_iat
             'ajax_call'  => $ajax_call + 1,
         ]);
     }
-
-
     public function fn_iat_get_without_alt_text_list()
     {
         if (!current_user_can('manage_options')) {
@@ -276,7 +376,7 @@ class class_iat
         $html .= '</p>';
         $html .= '</div>';
         $html .= '<div id="iat-copy-post-title-to-alt-text-display-msg-' . $post_id . '" style="display:none;">';
-        $html .= 'Alt text: <b style="color:green;font-weight:600;"></b>';
+        $html .= 'Texto alternativo: <b style="color:green;font-weight:600;"></b>';
         $html .= '</div>';
         $html .= '</div>';
         return $html;
@@ -298,12 +398,12 @@ class class_iat
         $html = '';
         if ($type == 'with-alt') {
             $html .= '<div class="iat-update-ex-alt-text" id="iat-update-ex-alt-text-' . $post_id . '">';
-            $html .= '<div class="iat-display-ex-alt-text" id="iat-display-ex-alt-text-' . $post_id . '">Alt text: <b>' . esc_html($post_alt) . '</b></div>';
+            $html .= '<div class="iat-display-ex-alt-text" id="iat-display-ex-alt-text-' . $post_id . '">Texto alternativo: <b>' . esc_html($post_alt) . '</b></div>';
             $html .= '<div class="iat-display-updated-ex-alt-text" id="iat-display-updated-ex-alt-text-' . $post_id . '" style="display:none">Updated text: <b style="color:green;font-weight:600;"></b></div>';
             $html .= '<div class="iat-updated-ex-alt-text-btn-area d-flex align-items-center" id="iat-updated-ex-alt-text-btn-area-' . $post_id . '">';
             $html .= '<input type="text" class="form-control form-control-sm me-3" id="iat-updated-ex-alt-text-input-' . esc_attr($post_id) . '" placeholder="Insira o texto alternativo" />';
             $html .= '<button type="button" class="btn btn-secondary btn-sm iat-update-ex-alt-text-btn" id="iat-update-ex-alt-text-btn-' . $post_id . '" data-post-id="' . esc_attr($post_id) . '">';
-            $html .= '<i class="loader me-1" id="iat-update-ex-alt-text-loader-' . esc_attr($post_id) . '" style="display:none;"></i>Update';
+            $html .= '<i class="loader me-1" id="iat-update-ex-alt-text-loader-' . esc_attr($post_id) . '" style="display:none;"></i>Atualizar';
             $html .= '</button>';
             $html .= '</div>';
             $html .= '</div>';
@@ -363,7 +463,7 @@ class class_iat
             $html .= '</p>';
             $html .= '</div>';
             $html .= '<div id="iat-copy-attached-post-title-to-alt-text-display-msg-' . $post_id . '" style="display:none;">';
-            $html .= __('Alt text: ', IMAGE_ALT_TEXT) . '<b style="color:green;font-weight:600;"></b>';
+            $html .= __('Texto alternativo: ', IMAGE_ALT_TEXT) . '<b style="color:green;font-weight:600;"></b>';
             $html .= '</div>';
             $html .= '</div>';
             return $html;

@@ -1,10 +1,10 @@
 (function ($) {
   $(document).ready(function () {
-    /* display with alt text server side datatable */
+    /* exibir com texto alternativo tabela de dados do lado do servidor */
     fnIatWithAltTextDataTable();
-    /* display without alt text server side datatable */
+    /* exibir sem texto alternativo tabela de dados do lado do servidor */
     fnIatWithoutAltTextDataTable();
-    /* tooltip */
+    /* dica de ferramenta */
     $('[data-bs-toggle="tooltip"]').each(function () {
       new bootstrap.Tooltip(this);
     });
@@ -35,7 +35,7 @@
         url: iatObj.ajaxUrl,
         data: {
           action: "iat_generate_bulk_alt_text",
-          nonce: iatObj.nonce,
+          nonce: iatObj.nonce, // Assegure-se de que o nonce está correto
           ajax_call: ajaxCall,
         },
         success: function (response) {
