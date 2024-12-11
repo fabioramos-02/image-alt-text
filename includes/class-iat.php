@@ -68,13 +68,25 @@ class class_iat
 
         $api_endpoint = "https://api.openai.com/v1/chat/completions";
 
+        $promptAcessibilidade = "Você é um agente de acessibilidade responsável por sugerir textos alternativos para imagens. 
+        Seu objetivo é fornecer uma descrição clara, objetiva e curta, usando uma linguagem cidadã simples e acessível. 
+        Considere que as imagens serão disponibilizadas em um site governamental.
+
+        Instruções:
+        - Descreva a imagem.
+        - Seja breve e evite detalhes irrelevantes.
+        - Use no máximo 20 palavras.
+        - Não explique o propósito da imagem, apenas descreva.
+
+        A imagem está disponível neste URL: {$image_url}. Baseie sua descrição nela.";
+
         // Estrutura da solicitação conforme a API do OpenAI
         $request_data = [
             'model'    => 'gpt-4',
             'messages' => [
                 [
                     'role'    => 'user',
-                    'content' => 'Descreva o conteúdo desta imagem: ' . $image_url,
+                    'content' => $promptAcessibilidade,
                 ],
             ],
             'max_tokens' => 60, // Limite de tokens para o texto alternativo
@@ -199,7 +211,7 @@ class class_iat
                 'messages' => [
                     [
                         'role'    => 'user',
-                        'content' => 'Descreva o conteúdo desta imagem: ' . $image_url, // Alterado aqui
+                        'content' => 'Descreva o conteúdo desta imagem: para ser inserido como texto alternativo da imagem utilize linguagem cidadã seja simples e objetivo ' . $image_url, // Alterado aqui
                     ],
                 ],
                 'max_tokens' => 60, // Adicionado aqui
