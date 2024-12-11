@@ -133,7 +133,7 @@ class class_iat
         $this->log_iat("Iniciando geração de alt text em massa.");
 
         // Verificação de Nonce e Permissões
-        check_ajax_referer('iat_image_alt_text', 'nonce'); // Alterado aqui
+        check_ajax_referer('iat_image_alt_text', 'nonce');
 
         if (!current_user_can('manage_options')) {
             $this->log_iat("Permissão negada para o usuário.");
@@ -150,9 +150,15 @@ class class_iat
             'post_status'    => 'inherit',
             'post_mime_type' => 'image',
             'meta_query'     => [
+                'relation' => 'OR',
                 [
                     'key'     => '_wp_attachment_image_alt',
                     'compare' => 'NOT EXISTS',
+                ],
+                [
+                    'key'     => '_wp_attachment_image_alt',
+                    'value'   => '',
+                    'compare' => '=',
                 ],
             ],
             'posts_per_page' => $per_page,
@@ -163,7 +169,7 @@ class class_iat
         $images = get_posts($args);
 
         if (empty($images)) {
-            $this->log_iat("Nenhuma imagem sem alt text encontrada para processar.");
+            $this->log_iat("Nenhuma imagem sem ou com alt text vazio encontrada para processar.");
             wp_send_json_success([
                 'message' => 'Processamento concluído. Todas as imagens foram atualizadas.',
             ]);
