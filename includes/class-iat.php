@@ -88,10 +88,16 @@ class class_iat
             'messages' => [
                 [
                     'role'    => 'user',
-                    'content' => 'Descreva o conteúdo desta imagem: para ser inserido como texto alternativo da imagem utilize linguagem cidadã seja simples e objetivo ' . $image_url, // Alterado aqui
+                    'content' => 'Descreva o conteúdo desta imagem: para ser inserido como texto alternativo da imagem utilize linguagem cidadã seja simples e objetivo',
+                ],
+                [
+                    'type' => 'image_url',
+                    'image_url' => [
+                        'url' => $image_url,
+                    ],
                 ],
             ],
-            'max_tokens' => 60, // Adicionado aqui
+            'max_tokens' => 60,
         ];
 
         $response = wp_remote_post($api_endpoint, [
@@ -207,17 +213,23 @@ class class_iat
             }
 
             $this->log_iat("Processando imagem ID: $image_id com URL: $image_url");
-
             $request_data = [
                 'model'    => 'gpt-4',
                 'messages' => [
                     [
                         'role'    => 'user',
-                        'content' => 'Descreva o conteúdo desta imagem: para ser inserido como texto alternativo da imagem utilize linguagem cidadã seja simples e objetivo ' . $image_url, // Alterado aqui
+                        'content' => 'Descreva o conteúdo desta imagem: para ser inserido como texto alternativo da imagem utilize linguagem cidadã seja simples e objetivo',
+                    ],
+                    [
+                        'type' => 'image_url',
+                        'image_url' => [
+                            'url' => $image_url,
+                        ],
                     ],
                 ],
-                'max_tokens' => 60, // Adicionado aqui
+                'max_tokens' => 60,
             ];
+
 
             $response = wp_remote_post($api_endpoint, [
                 'headers' => [
