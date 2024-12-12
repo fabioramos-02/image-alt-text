@@ -1,5 +1,7 @@
 <?php
 
+use function PHPSTORM_META\type;
+
 defined('ABSPATH') or die('Plugin file cannot be accessed directly.');
 
 class class_iat
@@ -86,10 +88,10 @@ class class_iat
             'messages' => [
                 [
                     'role'    => 'user',
-                    'content' => $promptAcessibilidade,
+                    'content' => 'Descreva o conteúdo desta imagem: para ser inserido como texto alternativo da imagem utilize linguagem cidadã seja simples e objetivo ' . $image_url, // Alterado aqui
                 ],
             ],
-            'max_tokens' => 60, // Limite de tokens para o texto alternativo
+            'max_tokens' => 60, // Adicionado aqui
         ];
 
         $response = wp_remote_post($api_endpoint, [
